@@ -1,0 +1,23 @@
+.quiz-button {
+  font-family: "Effra", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  color: $Main-White;
+  border: none;
+  background-color: $Main-Orange;
+  border-radius: 100px;
+  padding: 16px 25px 16px 28px;
+  text-decoration: none;
+
+  &.second {
+    background-color: $Goods-purple_Text;
+    padding: 20px 63px;
+    font-family: "Open Sans";
+    font-size: 20px;
+    line-height: 163.42%;
+    /* identical to box height, or 33px */
+  }
+}

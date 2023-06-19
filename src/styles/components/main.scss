@@ -1,0 +1,224 @@
+.section-title {
+  font-family: "Effra", sans-serif;
+  font-style: normal;
+  // font-weight: 700;
+  font-weight: 500;
+  // font-size: 56px;
+  @include font-size(56px);
+  line-height: 1.046;
+  color: $Main-Dark_Text;
+  margin: 0px;
+  &.accent {
+    color: $Main-Accent;
+  }
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+.hero {
+  &__wrap {
+    margin-top: 162px;
+  }
+
+  .row {
+    // display: flex;
+  }
+
+  .column {
+    // flex: 50%;
+    &_first {
+      padding-bottom: 266px;
+    }
+    &_second {
+      // background-color: #f9f9f9;
+      position: relative;
+      padding-top: 87px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: 21%;
+        // height: 523px;
+        width: 29vw;
+        height: 29vw;
+
+        border-radius: 100%;
+        background-color: $Goods-purple_Text;
+      }
+
+      img {
+        position: absolute;
+        right: 0px;
+      }
+    }
+  }
+
+  &__container {
+    margin: 20px 38px 0px 202px;
+    @include margin-left(202px);
+  }
+
+  &__buttons {
+    margin-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 33px;
+    align-items: center;
+  }
+
+  .text-second {
+    width: 70%;
+  }
+
+  .actionLink {
+    font-family: "Effra", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: $Main-Orange;
+    text-decoration: none;
+
+    &__arrow {
+      margin-left: 2px;
+      font-size: 20px;
+    }
+  }
+
+  .section-title {
+    line-height: 66px;
+  }
+}
+
+.text-second {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 163.42%;
+  /* or 33px */
+
+  color: #808080;
+  margin-top: 38px;
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 1300px) {
+  .hero {
+    .row {
+      display: block;
+    }
+
+    &__container {
+      margin: 0px 20px;
+      text-align: center;
+    }
+
+    .column {
+      &_first {
+        padding-bottom: 10px;
+      }
+      &_second {
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    .text-second {
+      margin: 15px auto 0px;
+    }
+
+    &__buttons {
+      margin-top: 20px;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .column_second {
+      width: 50%;
+      margin: 0px auto;
+    }
+
+    .text-second {
+      width: 100%;
+    }
+    .section-title {
+      line-height: inherit;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero {
+    .column_second {
+      width: 100%;
+    }
+  }
+}
+
+.UsefulInformation {
+  .section-title {
+    color: $Main-White;
+  }
+
+  &__container {
+    padding: 356px 135px 401px 202px;
+  }
+  &__wrap {
+    .column {
+      &_first {
+        background-color: $Goods-purple;
+      }
+      &_second {
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 217px 202px 0px 61px;
+    margin: 0px;
+    padding-left: 61px;
+    gap: 104px;
+    display: grid;
+  }
+
+  &__item {
+    display: flex;
+    gap: 90px;
+  }
+
+  &__text {
+    font-family: "Effra", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    margin: 0px;
+
+    color: $Main-Dark_Text;
+  }
+
+  &__pills-decoration {
+    position: relative;
+    bottom: 150px;
+    .first-img {
+      left: 200px;
+      bottom: -270px;
+      position: absolute;
+      z-index: 2;
+    }
+    .second-img {
+      position: absolute;
+      right: 320px;
+    }
+  }
+}

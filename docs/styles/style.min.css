@@ -439,19 +439,6 @@ template {
   gap: 30px;
   align-items: center;
 }
-.header .quiz-button {
-  font-family: "Effra", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.18;
-  text-align: center;
-  color: #ffffff;
-  border: none;
-  background-color: #ff7d4e;
-  border-radius: 100px;
-  padding: 16px 25px 16px 28px;
-}
 .header .profile__img {
   padding: 3px;
 }
@@ -501,4 +488,208 @@ template {
   outline-offset: 0;
   pointer-events: none;
   /* visibility: hidden; */
+}
+
+.section-title {
+  font-family: "Effra", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(1.475rem + 2.16vw);
+  line-height: 1.046;
+  color: #000000;
+  margin: 0px;
+}
+@media (min-width: 1200px) {
+  .section-title {
+    font-size: 3.5rem;
+  }
+}
+.section-title.accent {
+  color: #e99478;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+.hero__wrap {
+  margin-top: 162px;
+}
+.hero .column_first {
+  padding-bottom: 266px;
+}
+.hero .column_second {
+  position: relative;
+  padding-top: 87px;
+}
+.hero .column_second::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 21%;
+  width: 29vw;
+  height: 29vw;
+  border-radius: 100%;
+  background-color: #6b5ebb;
+}
+.hero .column_second img {
+  position: absolute;
+  right: 0px;
+}
+.hero__container {
+  margin: 20px 38px 0px 202px;
+  margin-left: calc(2.3875rem + 10.92vw);
+}
+@media (min-width: 1200px) {
+  .hero__container {
+    margin-left: 12.625rem;
+  }
+}
+.hero__buttons {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 33px;
+  align-items: center;
+}
+.hero .text-second {
+  width: 70%;
+}
+.hero .actionLink {
+  font-family: "Effra", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #ff7d4e;
+  text-decoration: none;
+}
+.hero .actionLink__arrow {
+  margin-left: 2px;
+  font-size: 20px;
+}
+.hero .section-title {
+  line-height: 66px;
+}
+
+.text-second {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 163.42%;
+  /* or 33px */
+  color: #808080;
+  margin-top: 38px;
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 1300px) {
+  .hero .row {
+    display: block;
+  }
+  .hero__container {
+    margin: 0px 20px;
+    text-align: center;
+  }
+  .hero .column_first {
+    padding-bottom: 10px;
+  }
+  .hero .column_second::before {
+    display: none;
+  }
+  .hero .text-second {
+    margin: 15px auto 0px;
+  }
+  .hero__buttons {
+    margin-top: 20px;
+    gap: 20px;
+    justify-content: center;
+  }
+  .hero .column_second {
+    width: 50%;
+    margin: 0px auto;
+  }
+  .hero .text-second {
+    width: 100%;
+  }
+  .hero .section-title {
+    line-height: inherit;
+  }
+}
+@media screen and (max-width: 800px) {
+  .hero .column_second {
+    width: 100%;
+  }
+}
+.UsefulInformation .section-title {
+  color: #ffffff;
+}
+.UsefulInformation__container {
+  padding: 356px 135px 401px 202px;
+}
+.UsefulInformation__wrap .column_first {
+  background-color: #9c91e0;
+}
+.UsefulInformation__list {
+  list-style: none;
+  padding: 217px 202px 0px 61px;
+  margin: 0px;
+  padding-left: 61px;
+  gap: 104px;
+  display: grid;
+}
+.UsefulInformation__item {
+  display: flex;
+  gap: 90px;
+}
+.UsefulInformation__text {
+  font-family: "Effra", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  margin: 0px;
+  color: #000000;
+}
+.UsefulInformation__pills-decoration {
+  position: relative;
+  bottom: 150px;
+}
+.UsefulInformation__pills-decoration .first-img {
+  left: 200px;
+  bottom: -270px;
+  position: absolute;
+  z-index: 2;
+}
+.UsefulInformation__pills-decoration .second-img {
+  position: absolute;
+  right: 320px;
+}
+
+.quiz-button {
+  font-family: "Effra", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  background-color: #ff7d4e;
+  border-radius: 100px;
+  padding: 16px 25px 16px 28px;
+  text-decoration: none;
+}
+.quiz-button.second {
+  background-color: #6b5ebb;
+  padding: 20px 63px;
+  font-family: "Open Sans";
+  font-size: 20px;
+  line-height: 163.42%;
+  /* identical to box height, or 33px */
 }
