@@ -84,7 +84,7 @@ function html() {
   return gulp
     .src(paths.src.html)
     .pipe(fileinclude())
-    .pipe(replace(/@img\//g, "img/"))
+    .pipe(replace(/@img\//g, "../img/"))
     .pipe(ifPlugin(isBuild, webpHtmlNosvg()))
     .pipe(
       ifPlugin(

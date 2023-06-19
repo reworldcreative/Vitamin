@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+@font-face {
+  font-family: Effra_Std_Bd;
+  font-display: swap;
+  src: url("../fonts/Effra_Std_Bd.woff2") format("woff2"), url("../fonts/Effra_Std_Bd.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Effra_Std_Md;
+  font-display: swap;
+  src: url("../fonts/Effra_Std_Md.woff2") format("woff2"), url("../fonts/Effra_Std_Md.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Effra_Std_Rg;
+  font-display: swap;
+  src: url("../fonts/Effra_Std_Rg.woff2") format("woff2"), url("../fonts/Effra_Std_Rg.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
