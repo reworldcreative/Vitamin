@@ -1,1 +1,28 @@
-<header></header>
+@@include('./burger.html',{})
+<header class="header">
+    <div class="header__wrap">
+        <button class="burger-button">
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+        </button>
+
+        <a href="#" class="header__logo">
+            <img src="@img/logo.svg" alt="company logo" width="42" height="50">
+        </a>
+
+        <div class="header__buttons">
+            <div class="profile__img">
+                <img src="@img/icons/Profile.svg" alt="profile logo" width="26" height="26">
+            </div>
+            <div class="cart__img">
+                <span class="cart__img_alert"></span>
+                <img src="@img/icons/Cart.svg" alt="cart logo" width="22" height="26">
+            </div>
+
+            <button class="quiz-button">
+                Take the quiz
+            </button>
+        </div>
+    </div>
+</header>

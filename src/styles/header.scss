@@ -1,0 +1,70 @@
+@import "components/burger";
+.header {
+  &__wrap {
+    margin: 30px 30px 0px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .quiz-button {
+    font-family: "Effra", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    color: $Main-White;
+    border: none;
+    background-color: $Main-Orange;
+    border-radius: 100px;
+    padding: 16px 25px 16px 28px;
+  }
+
+  .profile__img {
+    padding: 3px;
+  }
+
+  .cart__img {
+    position: relative;
+    padding: 3px 5px;
+    &_alert {
+      background-color: $Main-Orange;
+      border-radius: 50%;
+      width: 9px;
+      height: 9px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      border: solid 3px white;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .burger-button {
+    display: grid;
+  }
+
+  .header {
+    .quiz-button {
+      display: none;
+    }
+
+    .profile__img {
+      display: none;
+    }
+
+    &__wrap {
+      margin: 0px;
+      padding: 19px 20px 15px;
+      border-bottom: solid 1px rgba(0, 0, 0, 0.07);
+    }
+  }
+}
