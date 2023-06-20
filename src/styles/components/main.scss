@@ -368,16 +368,19 @@
 
   &__pills-decoration {
     position: relative;
+    height: 370px;
     .first-img {
       left: 202px;
-      bottom: -170px;
+      // bottom: -170px;
+      bottom: 200px;
       position: absolute;
       z-index: 2;
     }
     .second-img {
       position: absolute;
       right: 320px;
-      bottom: -365px;
+      // bottom: -365px;
+      bottom: 5px;
     }
   }
 
@@ -423,16 +426,18 @@
     }
 
     &__pills-decoration {
-      height: 280px;
+      height: 400px;
     }
 
     &__pills-decoration {
       .first-img {
         width: 400px;
+        height: auto;
         bottom: auto;
       }
       .second-img {
         width: 600px;
+        height: auto;
         bottom: auto;
         top: 120px;
       }
@@ -522,6 +527,7 @@
     }
 
     &__pills-decoration {
+      height: 280px;
       .first-img {
         left: 0%;
         bottom: 107px;
@@ -573,5 +579,31 @@
     &__decoration_yc {
       right: 37px;
     }
+  }
+}
+
+.TellAbout {
+  &__wrap {
+    margin: 150px auto 0px;
+    text-align: center;
+  }
+
+  &__icon {
+    margin-bottom: 50px;
+  }
+
+  &__container {
+    text-align: center;
+    width: 919px;
+    margin: auto;
+  }
+
+  .section-title {
+    margin-bottom: 32px;
+  }
+
+  .text-second {
+    margin-top: 0px;
+    margin-bottom: 49px;
   }
 }
