@@ -38,7 +38,7 @@ const isDev = !process.argv.includes("--build");
 
 const paths = {
   build: {
-    html: `${buildFolder}/html/`,
+    html: `${buildFolder}/`,
     styles: `${buildFolder}/styles/`,
     scripts: `${buildFolder}/scripts/`,
     img: `${buildFolder}/img/`,
@@ -46,7 +46,7 @@ const paths = {
     files: `${buildFolder}/dev/`,
   },
   src: {
-    html: `${srcFolder}/html/*.html`,
+    html: `${srcFolder}/*.html`,
     styles: `${srcFolder}/styles/style.scss`,
     scripts: `${srcFolder}/scripts/main.js`,
     img: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
@@ -84,7 +84,7 @@ function html() {
   return gulp
     .src(paths.src.html)
     .pipe(fileinclude())
-    .pipe(replace(/@img\//g, "../img/"))
+    .pipe(replace(/@img\//g, "img/"))
     .pipe(ifPlugin(isBuild, webpHtmlNosvg()))
     .pipe(
       ifPlugin(
