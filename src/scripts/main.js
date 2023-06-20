@@ -23,9 +23,9 @@ function loadCSS(url) {
 
 window.addEventListener("DOMContentLoaded", function () {
   loadCSS("https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css");
-  // loadCSS(
-  //   "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
-  // );
+  loadCSS(
+    "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+  );
 
   // var jqueryScript = document.createElement("script");
   // jqueryScript.src = "https://code.jquery.com/jquery-3.7.0.min.js";
