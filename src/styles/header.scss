@@ -53,3 +53,17 @@
     }
   }
 }
+
+@media screen and (max-width: 400px) {
+  .header {
+    &__wrap {
+      padding: 15px 20px 10px;
+    }
+    &__logo {
+      img {
+        width: 33.6px;
+        height: 40px;
+      }
+    }
+  }
+}

@@ -5,7 +5,8 @@
   font-weight: 500;
   // font-size: 56px;
   @include font-size(56px);
-  line-height: 1.046;
+  // line-height: 1.046;
+  line-height: 68px;
   color: $Main-Dark_Text;
   margin: 0px;
   &.accent {
@@ -33,7 +34,7 @@
   .column {
     // flex: 50%;
     &_first {
-      padding-bottom: 266px;
+      padding-bottom: 275px;
     }
     &_second {
       // background-color: #f9f9f9;
@@ -61,12 +62,12 @@
   }
 
   &__container {
-    margin: 20px 38px 0px 202px;
+    margin: 16px 38px 0px 202px;
     @include margin-left(202px);
   }
 
   &__buttons {
-    margin-top: 48px;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     gap: 33px;
@@ -95,6 +96,28 @@
   .section-title {
     line-height: 66px;
   }
+
+  &__decoration {
+    &_ysc {
+      position: absolute;
+      top: -145px;
+      left: 30.7%;
+      transform: rotate(180deg);
+      z-index: -1;
+    }
+    &_yc {
+      position: absolute;
+      top: 170px;
+      right: 4%;
+      z-index: -1;
+    }
+    &_osc {
+      position: absolute;
+      top: 160%;
+      left: 42%;
+      z-index: -1;
+    }
+  }
 }
 
 .text-second {
@@ -110,8 +133,22 @@
   margin-bottom: 0px;
 }
 
+@media screen and (max-width: 1500px) {
+  .hero {
+    &__decoration_osc {
+      top: 170%;
+    }
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .hero {
+    overflow: hidden;
+    position: relative;
+
+    &__wrap {
+      margin-top: 90px;
+    }
     .row {
       display: block;
     }
@@ -126,6 +163,15 @@
         padding-bottom: 10px;
       }
       &_second {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 50%;
+        margin: 0px auto;
+        justify-content: center;
+        display: flex;
+        img {
+          position: relative;
+        }
         &::before {
           display: none;
         }
@@ -142,16 +188,29 @@
       justify-content: center;
     }
 
-    .column_second {
-      width: 50%;
-      margin: 0px auto;
-    }
-
     .text-second {
       width: 100%;
     }
     .section-title {
       line-height: inherit;
+    }
+
+    &__decoration {
+      &_osc {
+        top: 60%;
+        left: -140px;
+      }
+
+      &_ysc {
+        top: 200px;
+        left: auto;
+        right: -70px;
+        transform: rotate(90deg);
+      }
+
+      &_yc {
+        top: 10px;
+      }
     }
   }
 }
@@ -164,9 +223,87 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .hero {
+    &__wrap {
+      margin-top: 40px;
+    }
+    &__decoration_yc {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero {
+    .section-title {
+      font-size: 24px;
+      line-height: 29px;
+      text-align: center;
+    }
+    .text-second {
+      font-size: 14px;
+      line-height: 163.42%;
+    }
+    &__buttons {
+      display: grid;
+    }
+    .column_second {
+      padding-top: 19px;
+      padding-bottom: 40px;
+
+      img {
+        width: 120%;
+        left: 45px;
+      }
+    }
+
+    .quiz-button {
+      &.second {
+        font-family: "Effra", sans-serif;
+      }
+    }
+    .actionLink {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &__decoration {
+      &_ysc {
+        top: 150px;
+        width: 76px;
+        right: -40px;
+      }
+      &_osc {
+        top: 50%;
+        left: -65px;
+        width: 140px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .hero {
+    .column_second img {
+      width: 117%;
+      left: 38px;
+    }
+    &__decoration_ysc {
+      top: 175px;
+      right: -50px;
+    }
+    &__decoration_osc {
+      top: 57%;
+      left: -69px;
+    }
+  }
+}
+
 .UsefulInformation {
   .section-title {
     color: $Main-White;
+    letter-spacing: -0.2px;
   }
 
   &__container {
@@ -176,6 +313,7 @@
     .column {
       &_first {
         background-color: $Goods-purple;
+        position: relative;
       }
       &_second {
       }
@@ -184,7 +322,7 @@
 
   &__list {
     list-style: none;
-    padding: 217px 202px 0px 61px;
+    padding: 215px 202px 0px 61px;
     margin: 0px;
     padding-left: 61px;
     gap: 104px;
@@ -193,7 +331,14 @@
 
   &__item {
     display: flex;
+    align-items: center;
     gap: 90px;
+  }
+
+  &__image {
+    min-width: 105px;
+    display: flex;
+    justify-content: center;
   }
 
   &__text {
@@ -202,6 +347,7 @@
     font-weight: 500;
     font-size: 30px;
     line-height: 36px;
+    letter-spacing: -0.2px;
     margin: 0px;
 
     color: $Main-Dark_Text;
@@ -209,16 +355,210 @@
 
   &__pills-decoration {
     position: relative;
-    bottom: 150px;
     .first-img {
-      left: 200px;
-      bottom: -270px;
+      left: 202px;
+      bottom: -170px;
       position: absolute;
       z-index: 2;
     }
     .second-img {
       position: absolute;
       right: 320px;
+      bottom: -365px;
+    }
+  }
+
+  &__decoration {
+    &_yc {
+      position: absolute;
+      top: 65px;
+      left: 125px;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .UsefulInformation {
+    .row {
+      flex-wrap: wrap;
+    }
+
+    &__container {
+      padding: 70px 20px;
+      text-align: center;
+      z-index: 10;
+      position: relative;
+    }
+
+    .column {
+      &_first {
+        flex: 100%;
+      }
+    }
+
+    &__list {
+      padding: 40px 20px;
+      justify-content: center;
+    }
+
+    &__decoration {
+      &_yc {
+        left: auto;
+        right: 17px;
+        top: -30px;
+      }
+    }
+
+    &__pills-decoration {
+      height: 280px;
+    }
+
+    &__pills-decoration {
+      .first-img {
+        width: 400px;
+        bottom: auto;
+      }
+      .second-img {
+        width: 600px;
+        bottom: auto;
+        top: 120px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .UsefulInformation {
+    &__pills-decoration {
+      .first-img {
+        width: 250px;
+        height: 225px;
+      }
+      .second-img {
+        width: 450px;
+        height: 230px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .UsefulInformation {
+    .section-title {
+      line-height: 50px;
+    }
+    &__list {
+      gap: 50px;
+    }
+    &__pills-decoration {
+      .first-img {
+        left: 20%;
+      }
+      .second-img {
+        right: 20%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .UsefulInformation {
+    &__text {
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: -0.1px;
+    }
+
+    &__list {
+      gap: 40px;
+      width: fit-content;
+    }
+
+    &__item {
+      gap: 26px;
+
+      &:nth-child(2) {
+        .UsefulInformation__image,
+        img {
+          height: 43px;
+        }
+      }
+
+      &:last-child {
+        .UsefulInformation__image,
+        img {
+          height: 48px;
+        }
+      }
+    }
+
+    &__image {
+      width: 47px;
+      height: 37px;
+      min-width: auto;
+
+      img {
+        width: 47px;
+        height: 37px;
+      }
+    }
+
+    .column_second {
+      justify-content: center;
+      display: flex;
+    }
+
+    &__pills-decoration {
+      .first-img {
+        left: 0%;
+        bottom: 105px;
+        width: 202.24px;
+        height: 171.72px;
+      }
+      .second-img {
+        width: 293.74px;
+        height: 170.44px;
+        right: 0px;
+        top: 70px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .UsefulInformation {
+    .section-title {
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0px;
+    }
+    &__decoration_yc {
+      width: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .UsefulInformation {
+    &__pills-decoration {
+      .first-img {
+        width: 168.24px;
+        height: 142.85px;
+        bottom: 135px;
+      }
+      .second-img {
+        width: 256px;
+        height: 148.54px;
+        top: 52px;
+      }
+    }
+
+    &__container {
+      padding: 70px 18px;
+    }
+
+    &__decoration_yc {
+      right: 37px;
     }
   }
 }
