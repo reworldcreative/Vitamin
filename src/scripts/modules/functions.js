@@ -19,3 +19,42 @@ export function isWebp() {
     // document.documentElement.classList.add(className);
   });
 }
+
+////////
+// const supportsWebP = () => {
+//   return (
+//     !![].map &&
+//     document
+//       .createElement("canvas")
+//       .toDataURL("image/webp")
+//       .indexOf("data:image/webp") === 0
+//   );
+// };
+
+// const generatePictureHTML = (image) => {
+//   const imagePath = image.getAttribute("src");
+
+//   if (supportsWebP()) {
+//     const webpPath = imagePath.replace(/\.(png|jpg)$/, ".webp");
+//     const picture = document.createElement("picture");
+//     const sourceWebP = document.createElement("source");
+//     sourceWebP.setAttribute("srcset", webpPath);
+//     sourceWebP.setAttribute("type", "image/webp");
+
+//     const img = document.createElement("img");
+//     img.setAttribute("src", imagePath);
+//     img.setAttribute("alt", image.getAttribute("alt"));
+
+//     picture.appendChild(sourceWebP);
+//     picture.appendChild(img);
+
+//     image.parentNode.replaceChild(picture, image);
+//   }
+// };
+
+// export function changeImages() {
+//   const images = document.querySelectorAll("img");
+//   images.forEach((image) => {
+//     generatePictureHTML(image);
+//   });
+// }
