@@ -108,7 +108,7 @@ function html() {
 function scss(done) {
   gulp
     .src(paths.src.styles, { sourcemaps: isDev })
-    .pipe(replace(/@img\//g, "../img/"))
+    .pipe(replace(/@img\//g, "img/"))
     .pipe(
       sass({
         outputStyle: "expanded",
