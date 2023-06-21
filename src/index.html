@@ -24,8 +24,7 @@
                                 class:"second",
                                 })
 
-                                <a href="#" class="actionLink">Go to the shop <span
-                                        class="actionLink__arrow">></span></a>
+                                @@include('html/components/GoToShop.html',{})
                             </div>
                         </div>
                     </div>
@@ -106,6 +105,48 @@
                     width="95px" height="95px">
             </div>
         </section>
+
+        <section class="ChooseProducts">
+            <div class="ChooseProducts__wrap">
+                <div class="row">
+                    <div class="column column_first">
+                            <div class="ChooseProducts__swiper swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        @@include('html/components/pillsItem.html',{
+                                        class:"Minerals",
+                                        name:"Reacted Zinc",
+                                        image:"@img/vitamins/pillsJar.png",
+                                        discription:"B vitamins are essential for your nervous system and proper brain functioning.",
+                                        color:"green",
+                                        })
+                                    </div>
+                                    <div class="swiper-slide">
+                                        @@include('html/components/pillsItem.html',{
+                                        class:"Vitamins & Dietary Supplements",
+                                        name:"Ortho B Complex",
+                                        image:"@img/vitamins/pillsJar.png",
+                                        discription:"B vitamins are essential for your nervous system and proper brain functioning.",
+                                        color:"purple",
+                                        })
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="column column_second">
+                        <div class="ChooseProducts__container">
+                            <h2 class="section-title">Choose your products</h2>
+                            <p class="text-second">We'll help you create a health plan with vitamins, supplements, and
+                                more that help you feel your best today and support you long-term.</p>
+                            @@include('html/components/GoToShop.html',{})
+                        </div>
+
+                        <img class="ChooseProducts__image" src="@img/pills2.jpg" alt="pills in spoons" width="444px"
+                            height="416px">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     @@include('html/footer.html',{})
@@ -115,7 +156,7 @@
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
     <!-- swiper -->
-    <!-- <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> -->
 
     <script src="scripts/main.min.js"></script>
 </body>

@@ -1,3 +1,4 @@
+@import "pillsItem.scss";
 .section-title {
   font-family: "Effra", sans-serif;
   font-style: normal;
@@ -78,21 +79,6 @@
     width: 70%;
   }
 
-  .actionLink {
-    font-family: "Effra", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    color: $Main-Orange;
-    text-decoration: none;
-
-    &__arrow {
-      margin-left: 2px;
-      font-size: 20px;
-    }
-  }
-
   .section-title {
     line-height: 66px;
   }
@@ -117,6 +103,21 @@
       left: 42%;
       z-index: -1;
     }
+  }
+}
+
+.actionLink {
+  font-family: "Effra", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: $Main-Orange;
+  text-decoration: none;
+
+  &__arrow {
+    margin-left: 2px;
+    font-size: 20px;
   }
 }
 
@@ -530,7 +531,7 @@
       height: 250px;
       .first-img {
         left: 0%;
-        bottom: 72px;
+        bottom: 75px;
         width: 202.24px;
         height: 171.72px;
       }
@@ -538,7 +539,7 @@
         width: 293.74px;
         height: 170.44px;
         right: 0px;
-        top: 70px;
+        top: 67px;
       }
     }
   }
@@ -657,7 +658,7 @@
 @media screen and (max-width: 500px) {
   .TellAbout {
     &__wrap {
-      margin-top: 50px;
+      margin-top: 45px;
     }
     &__icon {
       width: 50px;
@@ -697,6 +698,196 @@
     &__decoration {
       &_pc {
         top: 0px;
+      }
+    }
+  }
+}
+
+.ChooseProducts {
+  &__wrap {
+    margin-top: 170px;
+  }
+
+  &__container {
+    padding: 234px 202px 235px 254px;
+  }
+  .section-title {
+    color: $Main-White;
+    margin-bottom: 32px;
+  }
+
+  .text-second {
+    color: $Main-White;
+    margin-top: 0px;
+    margin-bottom: 32px;
+  }
+
+  .column {
+    &_first {
+      max-width: 50%;
+    }
+    &_second {
+      background-color: $Main-Accent;
+      position: relative;
+    }
+  }
+
+  .actionLink {
+    color: $Main-White;
+    margin-left: 5px;
+  }
+
+  &__image {
+    position: absolute;
+    bottom: -311px;
+    left: 253px;
+  }
+
+  &__swiper {
+    margin-top: 150px;
+    padding-left: 202px !important;
+    position: absolute !important;
+    width: fit-content !important;
+  }
+
+  .swiper-slide {
+    width: fit-content !important;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .ChooseProducts {
+    &__container {
+      padding: 234px 100px 235px 254px;
+    }
+    &__swiper {
+      padding-left: 100px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .ChooseProducts {
+    .row {
+      display: grid;
+    }
+    .column {
+      display: grid;
+      &_first {
+        order: 2;
+        max-width: 100%;
+        margin-top: -150px;
+        position: relative;
+      }
+      &_second {
+        order: 1;
+      }
+    }
+
+    &__image {
+      display: none;
+    }
+
+    &__swiper {
+      position: relative !important;
+      width: 100% !important;
+      padding-left: 0px !important;
+      margin-top: 0px;
+    }
+
+    &__container {
+      padding: 59px 20px 197px;
+      text-align: center;
+    }
+
+    .swiper-wrapper {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .ChooseProducts {
+    &__wrap {
+      margin-top: 50px;
+    }
+    &__swiper {
+      padding-left: 0px !important;
+      width: 100% !important;
+    }
+
+    .swiper-wrapper {
+      padding-left: 20%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .ChooseProducts {
+    .swiper-wrapper {
+      justify-content: unset;
+      padding-left: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ChooseProducts {
+    &__wrap {
+      margin-top: 14px;
+    }
+    .section-title {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 15px;
+    }
+
+    &__container {
+      padding: 59px 20px 157px;
+    }
+
+    .column {
+      display: grid;
+      &_first {
+        margin-top: -120px;
+      }
+    }
+
+    .actionLink {
+      font-size: 14px;
+      line-height: 17px;
+      margin: 0px;
+    }
+
+    .text-second {
+      font-size: 14px;
+      line-height: 163.42%;
+      margin-bottom: 20px;
+    }
+    .swiper-wrapper {
+      justify-content: unset;
+      padding-left: 20px;
+    }
+
+    .swiper-slide {
+      width: 89% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .ChooseProducts {
+    .swiper-slide {
+      width: 88% !important;
+    }
+
+    &__container {
+      padding: 59px 20px 137px;
+    }
+
+    .column {
+      &_first {
+        margin-top: -100px;
       }
     }
   }

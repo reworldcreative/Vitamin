@@ -36,6 +36,30 @@ window.addEventListener("DOMContentLoaded", function () {
 
   var swiperScript = document.createElement("script");
   swiperScript.src =
-    "https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js";
+    "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js";
+
+  swiperScript.onload = function () {
+    if ($(".ChooseProducts__swiper").length > 0) {
+      const ChooseProductsSwiper = new Swiper(".ChooseProducts__swiper", {
+        // slidesPerView: 2,
+        spaceBetween: 33,
+
+        breakpoints: {
+          300: {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+          },
+          600: {
+            slidesPerView: 1.3,
+            spaceBetween: 20,
+          },
+          900: {
+            slidesPerView: 2,
+          },
+        },
+      });
+    }
+  };
+
   document.body.appendChild(swiperScript);
 });

@@ -1,0 +1,116 @@
+.pillsItem {
+  border-radius: 16px;
+  width: fit-content;
+  padding: 40px 30px;
+
+  &.green {
+    background-color: $Goods-Mint_Text;
+  }
+
+  &.purple {
+    background-color: $Goods-purple_Text;
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin: 0px auto;
+  }
+
+  &__container {
+    margin-top: 40px;
+  }
+
+  &__class {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: $Main-White;
+
+    opacity: 0.5;
+    margin-top: 0px;
+    margin-bottom: 12px;
+  }
+
+  &__name {
+    font-family: "Effra", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $Main-White;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
+  &__discription {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 163.42%;
+    color: $Main-White;
+
+    margin: 0px;
+    opacity: 0.7;
+    width: 340px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .pillsItem {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pillsItem {
+    &__image {
+      img {
+        width: 222px;
+        height: 209px;
+      }
+    }
+
+    &__container {
+      // margin-top: 17.6px;
+      margin-top: 13.6px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .pillsItem {
+    &__discription {
+      width: auto;
+      font-size: 14px;
+      line-height: 19px;
+    }
+
+    &__class {
+      font-size: 12px;
+      line-height: 16px;
+      margin-bottom: 10px;
+    }
+
+    &__name {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 15px;
+    }
+
+    &__image {
+      margin-top: -16px;
+      img {
+        // width: 142.64px;
+        // height: 159.33px;
+        width: 100%;
+        height: 187.33px;
+      }
+    }
+  }
+}
