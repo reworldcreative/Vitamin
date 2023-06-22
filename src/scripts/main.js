@@ -59,6 +59,31 @@ window.addEventListener("DOMContentLoaded", function () {
         },
       });
     }
+
+    if ($(".reviews__swiper").length > 0) {
+      const reviewsSwiper = new Swiper(".reviews__swiper", {
+        // slidesPerView: 2,
+        spaceBetween: 32,
+
+        breakpoints: {
+          300: {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+          },
+          600: {
+            slidesPerView: 1.5,
+            spaceBetween: 10,
+          },
+          1000: {
+            slidesPerView: 2.5,
+            spaceBetween: 20,
+          },
+          1300: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    }
   };
 
   document.body.appendChild(swiperScript);
