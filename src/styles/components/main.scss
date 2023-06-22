@@ -282,16 +282,25 @@
 
     &__decoration {
       &_ysc {
-        top: 150px;
+        // top: 150px;
+        top: 65px;
         width: 76px;
         right: -40px;
       }
       &_osc {
-        top: 51%;
+        // top: 51%;
+        top: 45%;
         left: -65px;
         width: 140px;
       }
     }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .actionLink {
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 
@@ -305,11 +314,13 @@
       }
     }
     &__decoration_ysc {
-      top: 175px;
+      // top: 175px;
+      top: 90px;
       right: -50px;
     }
     &__decoration_osc {
-      top: 57%;
+      // top: 57%;
+      top: 51%;
       left: -69px;
     }
   }
@@ -478,6 +489,10 @@
         right: 20%;
       }
     }
+
+    &__decoration_yc {
+      top: -70px;
+    }
   }
 }
 
@@ -580,6 +595,7 @@
 
     &__decoration_yc {
       right: 37px;
+      // top: -70px;
     }
   }
 }
@@ -896,7 +912,7 @@
 
 .reviews {
   &__wrap {
-    margin: 50px 202px 100px;
+    margin: 50px 202px 80px;
   }
 
   &__icon {
@@ -1003,6 +1019,149 @@
 
     .swiper-slide {
       width: 94% !important;
+    }
+  }
+}
+
+.bottom__container {
+  position: relative;
+  overflow: hidden;
+  height: 700px;
+}
+
+.GetStarted {
+  position: relative;
+  overflow: hidden;
+  overflow-y: visible;
+  &__wrap {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  &__icon {
+    margin-top: 0px;
+    margin-bottom: 45px;
+  }
+
+  .section-title {
+    margin-top: 0px;
+    margin-bottom: 35px;
+  }
+
+  .text-second {
+    width: 918px;
+    margin: 0px auto;
+  }
+
+  &__buttons {
+    margin: 50px auto 0px;
+    text-align: center;
+    width: fit-content;
+    display: grid;
+    gap: 32px;
+  }
+
+  &__decoration {
+    &_ysc {
+      position: absolute;
+      transform: rotate(270deg);
+      right: -70px;
+      top: -100px;
+      z-index: -1;
+    }
+
+    &_osc {
+      position: absolute;
+      transform: rotate(90deg);
+      left: 50px;
+      bottom: 380px;
+      z-index: -1;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .GetStarted {
+    &__wrap {
+      margin: 20px 20px 0px;
+    }
+    .text-second {
+      width: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .GetStarted {
+    &__decoration {
+      &_ysc {
+        width: 70px;
+        height: 340px;
+        right: auto;
+        top: -130px;
+        left: -30px;
+      }
+
+      &_osc {
+        transform: rotate(0deg);
+        width: 140px;
+        height: 340px;
+        right: -56px;
+        left: auto;
+        bottom: 135px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .GetStarted {
+    &__icon {
+      width: 49.845px;
+      height: 46.01px;
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      margin-bottom: -5px;
+    }
+
+    .text-second {
+      font-size: 14px;
+      line-height: 163.418%;
+    }
+
+    &__buttons {
+      margin-top: 20px;
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .GetStarted {
+    &__wrap {
+      margin: 10px 20px 0;
+    }
+
+    &__decoration {
+      &_ysc {
+        top: -130px;
+        left: -40px;
+      }
+
+      &_osc {
+        right: -50px;
+      }
+    }
+
+    &__icon {
+      margin-bottom: 8px;
+    }
+
+    &__buttons {
+      margin-top: 21px;
     }
   }
 }

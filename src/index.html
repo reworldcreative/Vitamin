@@ -36,11 +36,11 @@
 
             <div class="hero__decoration">
                 <img class="hero__decoration_ysc" src="@img/decorative/yellow semicircle.svg" alt="yellow semicircle"
-                    aria-hidden="true" width="155px">
+                    aria-hidden="true" width="155px" height="320px">
                 <img class="hero__decoration_yc" src="@img/decorative/yellow circle.svg" alt="yellow circle"
-                    aria-hidden="true" width="95px">
+                    aria-hidden="true" width="95px" height="95px">
                 <img class="hero__decoration_osc" src="@img/decorative/orange semicircle.svg" alt="orange semicircle"
-                    aria-hidden="true" width="280px">
+                    aria-hidden="true" width="280px" height="145px">
             </div>
         </section>
 
@@ -50,7 +50,7 @@
                 <div class="row">
                     <div class="column column_first">
                         <img class="UsefulInformation__decoration_yc" src="@img/decorative/yellow circle.svg"
-                            alt="yellow circle" aria-hidden="true" width="139px">
+                            alt="yellow circle" aria-hidden="true" width="139px" height="139px">
                         <div class="UsefulInformation__container">
                             <h2 class="section-title">Healthy doesn’t have to be hard. We make it easy.</h2>
                         </div>
@@ -188,6 +188,34 @@
                 </div>
             </div>
         </section>
+
+        <div class="bottom__container">
+            <section class="GetStarted">
+                <div class="GetStarted__wrap">
+                    <img class="GetStarted__icon" src="@img/icons/hearthands.svg" alt="heart hands" width="97px" height="89.5px">
+                    <h2 class="section-title">Ready to get started?</h2>
+                    <p class="text-second">We'll help you create a health plan with vitamins, supplements, and more that help you feel your best today and support you long-term.</p>
+                   
+                    <div class="GetStarted__buttons">
+                        @@include('html/components/quizButton.html',{
+                        class:"second",
+                        })
+    
+                        @@include('html/components/GoToShop.html',{})
+                    </div>
+                </div>
+    
+                <div class="GetStarted__decoration">
+                    <img class="GetStarted__decoration_ysc" src="@img/decorative/yellow semicircle.svg" alt="yellow semicircle"
+                        aria-hidden="true" width="140px" height="330px">
+                    <!-- <img class="GetStarted__decoration_osc" src="@img/decorative/orange semicircle.svg" alt="orange semicircle"
+                        aria-hidden="true" width="285px" height="140"> -->
+                </div>
+            </section>
+            <img class="GetStarted__decoration_osc" src="@img/decorative/orange semicircle.svg" alt="orange semicircle"
+            aria-hidden="true" width="285px" height="140">
+            
+        </div>
     </main>
 
     @@include('html/footer.html',{})
