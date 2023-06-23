@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"404"
+})
+
+<body>
+    @@include('html/header.html',{})
+    <main>
+        <section class="errorSection">
+            <div class="errorSection__wrap">
+                <img class="errorSection__img" src="@img/404.svg" alt="404" width="490px" height="202px">
+                <div class="errorSection__container">
+                    <h1 class="errorSection__caption">Page not found</h1>
+                    <p class="errorSection__text">Unfortunately, the page you requested is out of date or does not exist
+                    </p>
+                    @@include('html/components/actionButton.html',{
+                    link:"index.html",
+                    text:"Go to main page",
+                    })
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

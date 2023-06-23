@@ -28,5 +28,7 @@ $rfs-breakpoint: 1500;
   /* visibility: hidden; */
 }
 
-@import "./components/main";
+@import "main";
 @import "./components/quiz-button";
+@import "./components/actionButton";
+@import "404";

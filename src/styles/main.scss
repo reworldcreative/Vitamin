@@ -1,5 +1,5 @@
-@import "pillsItem.scss";
-@import "respond.scss";
+@import "./components/pillsItem.scss";
+@import "./components/respond.scss";
 .section-title {
   font-family: "Effra", sans-serif;
   font-style: normal;
@@ -24,9 +24,17 @@
   flex: 50%;
 }
 
+#mainPage {
+  .header {
+    &__wrap {
+      border-bottom: none;
+    }
+  }
+}
+
 .hero {
   &__wrap {
-    margin-top: 162px;
+    margin-top: 138px;
   }
 
   .row {
