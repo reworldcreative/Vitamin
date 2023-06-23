@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"personal Pack"
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    <main class="personalPack-main">
+        <section class="personal-hero">
+            <div class="personal-hero__wrap">
+                <h1 class="section-title">Alex, we made personalized pack for you!</h1>
+                <p class="personal-hero__caption">Recommenadation</p>
+                <p class="personal-hero__text">Your recommendation is based on your answers and our database of clinical
+                    research. This health plan, made just for you, is recommended for you to feel your best today while
+                    supporting long-term health.</p>
+            </div>
+
+            <div class="personal-hero__decoration">
+                <img class="decoration__yhc" data-src="@img/decorative/yellow half semicircle.svg"
+                    alt="yellow halfcircle" aria-hidden="true" width="158px" height="158px">
+                <img class="decoration__osc" data-src="@img/decorative/orange semicircle.svg" alt="orange semicircle"
+                    aria-hidden="true" width="280px" height="145px">
+            </div>
+        </section>
+    </main>
+
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="scripts/main.min.js"></script>
+
+</body>
+
+</html>

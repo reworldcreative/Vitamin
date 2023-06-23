@@ -1,0 +1,129 @@
+.personalPack-main {
+  overflow-x: clip;
+  position: relative;
+}
+.personal-hero {
+  &__wrap {
+    margin: 70px 202px 85px;
+  }
+
+  .section-title {
+    width: 682px;
+    margin-bottom: 65px;
+    line-height: 59px;
+    letter-spacing: -3px;
+  }
+
+  &__caption {
+    color: $Main-Dark_Text;
+    font-size: 26px;
+    font-family: "Effra", sans-serif;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+
+  &__text {
+    color: $Main-Dark_Text;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 27px;
+    letter-spacing: 0.03px;
+    margin: 0px;
+    width: 918px;
+  }
+
+  .decoration {
+    &__yhc {
+      position: absolute;
+      top: -145px;
+      left: 55%;
+      z-index: -1;
+    }
+    &__osc {
+      position: absolute;
+      top: 80px;
+      right: -95px;
+      z-index: -1;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .personal-hero {
+    &__wrap {
+      margin: 50px 20px 60px;
+    }
+    .section-title {
+      width: auto;
+      letter-spacing: 0;
+      line-height: 45px;
+      margin-bottom: 30px;
+    }
+    &__text {
+      width: auto;
+    }
+    .decoration {
+      &__yhc {
+        left: 40%;
+      }
+      &__osc {
+        right: -145px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .personal-hero {
+    .section-title {
+      font-size: 24px;
+      line-height: 29px;
+      width: 227px;
+    }
+
+    &__caption {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .decoration {
+      &__yhc {
+        width: 76px;
+        height: 76px;
+        left: 66%;
+        top: -65px;
+      }
+      &__osc {
+        width: 140px;
+        height: 70px;
+        right: -88px;
+        top: 75px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .personal-hero {
+    .section-title {
+      width: 172px;
+    }
+
+    .decoration__yhc {
+      left: 60%;
+    }
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .personal-hero {
+    .section-title {
+      width: auto;
+    }
+  }
+}
