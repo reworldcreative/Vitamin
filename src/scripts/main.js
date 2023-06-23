@@ -97,23 +97,31 @@ window.addEventListener("DOMContentLoaded", function () {
 function checkSize() {
   // if ($(window).width() < 1000 && !IscheckSize)
   if ($(window).width() < 1000) {
-    $(".footer__wrap")[0].append($(".footer__copyright")[0]);
-    // IscheckSize = true;
+    if ($(".footer__wrap").length > 0) {
+      $(".footer__wrap")[0].append($(".footer__copyright")[0]);
+      // IscheckSize = true;
+    }
   }
 
   if ($(window).width() > 1000) {
-    $(".footer__logo")[0].append($(".footer__copyright")[0]);
-    // IscheckSize = true;
+    if ($(".footer__logo").length > 0) {
+      $(".footer__logo")[0].append($(".footer__copyright")[0]);
+      // IscheckSize = true;
+    }
   }
 
   if ($(window).width() < 500) {
-    $(".burger-menu__header")[0].append($(".profile__img")[0]);
-    // IscheckSize = true;
+    if ($(".burger-menu__header").length > 0) {
+      $(".burger-menu__header")[0].append($(".profile__img")[0]);
+      // IscheckSize = true;
+    }
   }
 
   if ($(window).width() > 500) {
-    $(".header__buttons")[0].prepend($(".profile__img")[0]);
-    // IscheckSize = true;
+    if ($(".header__buttons").length > 0) {
+      $(".header__buttons")[0].prepend($(".profile__img")[0]);
+      // IscheckSize = true;
+    }
   }
 }
 checkSize();

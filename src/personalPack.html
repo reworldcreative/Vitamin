@@ -24,6 +24,65 @@
                     aria-hidden="true" width="280px" height="145px">
             </div>
         </section>
+
+        <section class="personalPackList">
+            <img class="personalPackList__decoration_yc" data-src="@img/decorative/yellow circle.svg"
+                alt="yellow circle" width="122px" height="122px">
+            <div class="personalPackList__wrap">
+                <h2 class="personalPackList__caption">Your Personalized Pack</h2>
+
+                <ul class="personalPackList__list">
+                    <li class="personalPackList__item">
+                        @@include('html/components/packProduckItem.html',{
+                        image:"@img/vitamins/vitamin_2.png",
+                        class:"Vitamins & Dietary Supplements",
+                        classColor:"purple",
+                        name:"Ortho Molecular Products Orthomega 820",
+                        price:"$61.98",
+                        priceDiscount:"",
+                        showBadge:"",
+                        })
+                    </li>
+                    <li class="personalPackList__item">
+                        @@include('html/components/packProduckItem.html',{
+                        image:"@img/vitamins/vitamin_3.png",
+                        class:"Minerals",
+                        classColor:"green",
+                        name:"Ortho Molecular - Reacted Magnesium",
+                        price:"$61.98",
+                        priceDiscount:"",
+                        showBadge:"",
+                        })
+                    </li>
+                    <li class="personalPackList__item">
+                        @@include('html/components/packProduckItem.html',{
+                        image:"@img/vitamins/vitamin_2.png",
+                        class:"Vitamins & Dietary Supplements",
+                        classColor:"purple",
+                        name:"Ortho Molecular Products Orthomega 820",
+                        price:"$61.98",
+                        priceDiscount:"$61.98",
+                        showBadge:"show",
+                        })
+                    </li>
+                    <li class="personalPackList__item">
+                        @@include('html/components/packProduckItem.html',{
+                        image:"@img/vitamins/vitamin_3.png",
+                        class:"Vitamins & Dietary Supplements",
+                        classColor:"purple",
+                        name:"Ortho Molecular Products - Reacted Selenium",
+                        price:"$61.98",
+                        priceDiscount:"",
+                        showBadge:"",
+                        })
+                    </li>
+                </ul>
+                @@include('html/components/actionButton.html',{
+                link:"#",
+                text:"Continue",
+                })
+            </div>
+        </section>
     </main>
 
     @@include('html/footer.html',{})

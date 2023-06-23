@@ -127,3 +127,129 @@
     }
   }
 }
+
+.personalPackList {
+  position: relative;
+  &__wrap {
+    margin: 0px 142px 95px;
+    padding: 60px 60px 50px;
+    background-color: $Main-Orange_bg;
+    display: grid;
+    gap: 50px;
+    border-radius: 16px;
+  }
+
+  &__caption {
+    color: $Main-Dark_Text;
+    font-size: 36px;
+    letter-spacing: -0.5px;
+    font-family: "Effra", sans-serif;
+    font-weight: 500;
+    margin: 0px;
+    // margin-bottom: 50px;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0px;
+    // gap: 32px;
+    // margin-bottom: 50px;
+  }
+
+  &__item {
+    display: contents;
+  }
+
+  &__decoration_yc {
+    position: absolute;
+    right: 26.9%;
+    top: -60px;
+  }
+}
+
+.action-button {
+  padding: 19px 119px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 163.418%;
+}
+
+@media screen and (max-width: 1750px) {
+  .personalPackList {
+    &__wrap {
+      margin: 0px 40px 95px;
+    }
+  }
+}
+
+@media screen and (max-width: 1550px) {
+  .personalPackList {
+    &__wrap {
+      margin: 0px 0px 95px;
+      padding: 60px 20px;
+    }
+
+    &__list {
+      justify-content: space-around;
+      gap: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .personalPackList {
+    &__wrap {
+      gap: 30px;
+    }
+    &__list {
+      gap: 15px;
+    }
+
+    &__decoration_yc {
+      width: 61px;
+      height: 61px;
+      right: 15%;
+      top: -30px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .personalPackList {
+    &__wrap {
+      padding: 63px 20px 58px;
+      margin: 0px;
+    }
+    &__caption {
+      font-size: 20px;
+      letter-spacing: -0.2px;
+    }
+
+    &__decoration_yc {
+      right: 9%;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .action-button {
+    padding: 19px 0px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .personalPackList {
+    &__wrap {
+      padding: 63px 20px 60px;
+      margin: 0px;
+    }
+    &__decoration_yc {
+      right: 11%;
+    }
+  }
+}
+
+@import "components/packProduckItem";
