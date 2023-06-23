@@ -88,3 +88,31 @@ window.addEventListener("DOMContentLoaded", function () {
 
   document.body.appendChild(swiperScript);
 });
+
+// var IscheckSize = false;
+function checkSize() {
+  // if ($(window).width() < 1000 && !IscheckSize)
+  if ($(window).width() < 1000) {
+    $(".footer__wrap")[0].append($(".footer__copyright")[0]);
+    // IscheckSize = true;
+  }
+
+  if ($(window).width() > 1000) {
+    $(".footer__logo")[0].append($(".footer__copyright")[0]);
+    // IscheckSize = true;
+  }
+
+  if ($(window).width() < 500) {
+    $(".burger-menu__header")[0].append($(".profile__img")[0]);
+    // IscheckSize = true;
+  }
+
+  if ($(window).width() > 500) {
+    $(".header__buttons")[0].prepend($(".profile__img")[0]);
+    // IscheckSize = true;
+  }
+}
+checkSize();
+$(window).resize(function () {
+  checkSize();
+});

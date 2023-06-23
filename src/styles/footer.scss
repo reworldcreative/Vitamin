@@ -1,0 +1,246 @@
+.footer {
+  background-color: $Main-Orange_bg;
+  &__wrap {
+    // padding: 70px 202px;
+    padding: 70px 246px 70px 202px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    text-align: left;
+    width: 124px;
+  }
+
+  &__img {
+    margin-bottom: 59px;
+  }
+
+  &__copyright {
+    color: $Main-Dark_Text;
+    opacity: 0.3;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    margin: 0px;
+  }
+
+  &__caption {
+    font-family: "Effra", sans-serif;
+    color: $Main-Dark_Text;
+    font-size: 18px;
+    // line-height: 250.1%;
+    margin: 0px;
+    margin-bottom: 27px;
+  }
+
+  &__text {
+    color: $Main-Dark_Text;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 250.1%;
+    opacity: 0.5;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  &__navigation {
+    display: flex;
+    // margin-left: 232px;
+    .navigation {
+      display: flex;
+      gap: 161px;
+      &__list {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        // display: grid;
+        gap: 17px 45px;
+        height: 151px;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 315px;
+        // column-count: 2;
+        // column-width: auto;
+      }
+      &__item {
+        width: 140px;
+      }
+
+      &__container {
+        &:last-child {
+          .navigation {
+            &__list {
+              height: 170px;
+            }
+            &__item {
+              width: 205px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contacts {
+    margin-left: 42px;
+  }
+}
+
+.socials {
+  display: grid;
+  gap: 18px;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 20px;
+  list-style: none;
+
+  &__item {
+  }
+
+  &__icon {
+  }
+
+  &__name {
+    color: $Main-Dark_Text;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    margin: 0px;
+    opacity: 0.5;
+  }
+
+  &__link {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .footer {
+    &__wrap {
+      // justify-content: space-between;
+      gap: 40px;
+    }
+
+    &__navigation {
+      margin-left: 0px;
+      .navigation {
+        gap: 30px;
+      }
+    }
+
+    .contacts {
+      margin-left: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .footer {
+    &__wrap {
+      padding: 40px 80px;
+    }
+    &__navigation {
+      width: 100%;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    &__navigation {
+      .navigation {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    &__img {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    &__navigation {
+      .navigation {
+        &__list {
+          height: auto;
+          width: fit-content;
+        }
+        &__item {
+          width: auto;
+        }
+        &__container {
+          &:last-child {
+            .navigation {
+              &__list {
+                height: auto;
+                width: fit-content;
+              }
+              &__item {
+                width: auto;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .footer {
+    &__wrap {
+      padding: 40px 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer {
+    &__wrap {
+      gap: 38px;
+      padding: 40px 37px 40px 20px;
+    }
+
+    &__caption {
+      margin-bottom: 20px;
+    }
+    &__img {
+      width: 42px;
+      height: 50px;
+    }
+
+    &__navigation {
+      .navigation {
+        gap: 0px;
+      }
+    }
+
+    .socials {
+      gap: 15px;
+      margin-top: 19px;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .footer {
+    &__wrap {
+      gap: 36px;
+      padding: 40px 28px 40px 20px;
+    }
+
+    .contacts {
+      margin-bottom: 5px;
+    }
+  }
+}

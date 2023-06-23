@@ -1026,7 +1026,7 @@
 .bottom__container {
   position: relative;
   overflow: hidden;
-  height: 700px;
+  // height: 610px;
 }
 
 .GetStarted {
@@ -1035,6 +1035,7 @@
   overflow-y: visible;
   &__wrap {
     margin-top: 20px;
+    margin-bottom: 104px;
     text-align: center;
   }
 
@@ -1074,7 +1075,8 @@
       position: absolute;
       transform: rotate(90deg);
       left: 50px;
-      bottom: 380px;
+      // bottom: 380px;
+      bottom: 645px;
       z-index: -1;
     }
   }
@@ -1083,7 +1085,7 @@
 @media screen and (max-width: 1200px) {
   .GetStarted {
     &__wrap {
-      margin: 20px 20px 0px;
+      margin: 20px 20px 80px;
     }
     .text-second {
       width: auto;
@@ -1108,7 +1110,8 @@
         height: 340px;
         right: -56px;
         left: auto;
-        bottom: 135px;
+        bottom: 555px;
+        z-index: 1;
       }
     }
   }
@@ -1116,6 +1119,9 @@
 
 @media screen and (max-width: 500px) {
   .GetStarted {
+    &__wrap {
+      margin-bottom: 64px;
+    }
     &__icon {
       width: 49.845px;
       height: 46.01px;
@@ -1136,13 +1142,17 @@
       margin-top: 20px;
       gap: 20px;
     }
+
+    &__decoration_osc {
+      bottom: 510px;
+    }
   }
 }
 
 @media screen and (max-width: 350px) {
   .GetStarted {
     &__wrap {
-      margin: 10px 20px 0;
+      margin: 10px 20px 46px;
     }
 
     &__decoration {
@@ -1162,6 +1172,10 @@
 
     &__buttons {
       margin-top: 21px;
+    }
+
+    &__decoration_osc {
+      bottom: 505px;
     }
   }
 }
