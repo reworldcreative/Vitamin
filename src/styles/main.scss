@@ -33,6 +33,7 @@
 }
 
 .hero {
+  position: relative;
   &__wrap {
     margin-top: 138px;
   }
@@ -95,20 +96,23 @@
   &__decoration {
     &_ysc {
       position: absolute;
-      top: -145px;
+      // top: -145px;
+      top: -398px;
       left: 30.7%;
       transform: rotate(180deg);
       z-index: -1;
     }
     &_yc {
       position: absolute;
-      top: 170px;
+      // top: 170px;
+      top: -80px;
       right: 4%;
       z-index: -1;
     }
     &_osc {
       position: absolute;
-      top: 160%;
+      // top: 160%;
+      bottom: 35px;
       left: 42%;
       z-index: -1;
     }
@@ -145,9 +149,9 @@
 
 @media screen and (max-width: 1500px) {
   .hero {
-    &__decoration_osc {
-      top: 170%;
-    }
+    // &__decoration_osc {
+    //   top: 170%;
+    // }
 
     .column_second {
       img {
@@ -155,6 +159,14 @@
         width: 100%;
         height: auto;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .hero {
+    .column_first {
+      padding-bottom: 175px;
     }
   }
 }
