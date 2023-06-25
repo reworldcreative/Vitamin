@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap&_v=20230625135535" rel="stylesheet"> -->
+
+    <!-- swiper -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230625135535" /> -->
+
+    <link rel="stylesheet" href="styles/style.min.css?_v=20230625135535">
+</head>
+
+<body class="quiz">
+
+    <section class="quiz__top">
+        <a href="index.html">
+            <img class="quiz__logo" src="img/logo.svg" alt="logo" width="42px" height="50px">
+        </a>
+        <div class="quiz__step">
+            <p class="quiz__currentStep">1</p>
+            <p class="quiz__StepDivider">/</p>
+            <p class="quiz__totalStep">9</p>
+        </div>
+    </section>
+
+    <section class="quiz__body">
+        <div class="column column_first">
+            <p class="quiz__question">What’s your first name?</p>
+        </div>
+        <div class="column column_second">
+            <div class="quiz__questions">
+                <form action="" class="quiz__form">
+                    <fieldset class="quiz__questionContainer" id="quizQuestion1">
+                        <label class="quiz__lable" for="input-1">First Name</label>
+                        <div class="inputContainer">
+                            <input class="quiz__input" id="input-1" name="userName" type="text" placeholder="Alex">
+                            <button class="quiz__button" type="button">></button>
+                        </div>
+
+                        <div>
+                            <img class="quiz__decoration_oc" data-src="img/decorative/orange circle.svg"
+                                alt="orange circle" width="156px" height="156px" aria-hidden="true">
+                            <img class="quiz__decoration_ydc" data-src="img/decorative/quiz_decoration.svg"
+                                alt="yellow semicircles" width="400px" height="305px" aria-hidden="true">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="quiz__bottom">
+        <a class="quiz__backLink" href="index.html">
+            <span class="quiz__arrow"></span>
+            <p class="quiz__backText">Back</p>
+        </a>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230625135535"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="scripts/main.min.js?_v=20230625135535"></script>
+</body>
+
+</html>

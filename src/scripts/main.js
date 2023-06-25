@@ -129,4 +129,4 @@ $(window).resize(function () {
   checkSize();
 });
 
-$(window).lazyLoadXT();
+// $(window).lazyLoadXT();
