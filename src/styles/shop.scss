@@ -241,6 +241,9 @@
 @media screen and (max-width: 600px) {
   .shopHero {
     &-Banner {
+      &__title {
+        font-size: 16px;
+      }
       &-button-next,
       &-button-prev {
         display: none !important;
@@ -533,7 +536,7 @@
   .shop {
     &__wrap {
       width: 100%;
-      margin: 53px auto 62px;
+      margin: 20px auto 62px;
     }
     .packProduckItem__wrap {
       height: 320px;
@@ -612,6 +615,52 @@
     }
     .packProduckItem__wrap {
       height: 335px;
+    }
+  }
+}
+
+.shopBanner {
+  .shopHero-Banner__image {
+    width: 490px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .shopBanner {
+    .shopHero-Banner__image {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .shopBanner {
+    .column {
+      &_first {
+        margin-top: 29px;
+      }
+      &_second {
+        justify-content: center;
+      }
+    }
+    .shopHero-Banner {
+      padding: 45px 20px 20px !important;
+      &__image {
+        width: 200px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .shopBanner {
+    .column {
+      &_first {
+        margin-top: 47px;
+      }
+    }
+    .shopHero-Banner {
+      padding: 60px 15px 28px !important;
     }
   }
 }
