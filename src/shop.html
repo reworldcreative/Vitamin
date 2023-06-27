@@ -27,8 +27,7 @@
                         @@include('html/components/banner.html',{
                         title:"",
                         caption:"Don’t know what vitamins your body needs?",
-                        text:"Answer a few simple questions and automatically get a personalazed list of vitamins in
-                        minutes",
+                        text:"Answer a few simple questions and automatically get a personalazed list of vitamins in minutes",
                         image:"@img/vitamins/vitamin01.png",
                         imgW:"690px",
                         imgH:"690px",
@@ -74,17 +73,89 @@
 
         <section class="shop">
             <div class="shop__wrap">
-                <aside>
-                    <h3 class="shop__title">All categories</h3>
+                <aside class="shop__sidebar">
+                    <h3 class="shop__title active">All categories</h3>
                     <nav>
-                        <ul>
-                            <li><a href="#">Головна</a></li>
-                            <li><a href="#">Про нас</a></li>
-                            <li><a href="#">Контакти</a></li>
+                        <ul class="shop__navigation">
+                            <li><a class="shop__link" href="#">Vitamins & Dietary Supplements</a></li>
+                            <li><a class="shop__link" href="#">Weight Loss</a></li>
+                            <li><a class="shop__link" href="#">Minerals</a></li>
+                            <li><a class="shop__link" href="#">Antioxidants</a></li>
+                            <li><a class="shop__link" href="#">Probiotics</a></li>
+                            <li><a class="shop__link" href="#">Pain Relief</a></li>
+                            <li><a class="shop__link" href="#">Prenatal Vitamins</a></li>
+                            <li><a class="shop__link sale" href="#">Sale%</a></li>
                         </ul>
                     </nav>
                 </aside>
+
+                <div class="shop__list">
+                    @@include('html/components/packProduckItem.html',{
+                    image:"@img/vitamins/vitamin_4.png",
+                    class:"Vitamins & Dietary Supplements",
+                    classColor:"purple",
+                    name:"Ortho B Complex",
+                    price:"$61.98",
+                    priceDiscount:"",
+                    showBadge:"",
+                    })
+
+                    @@include('html/components/packProduckItem.html',{
+                    image:"@img/vitamins/vitamin_6.png",
+                    class:"Vitamins & Dietary Supplements",
+                    classColor:"purple",
+                    name:"Metagenics - 500-C Methoxyflavone",
+                    price:"$61.98",
+                    priceDiscount:"",
+                    showBadge:"",
+                    })
+
+                    @@include('html/components/packProduckItem.html',{
+                    image:"@img/vitamins/vitamin_4.png",
+                    class:"Vitamins & Dietary Supplements",
+                    classColor:"purple",
+                    name:"Ortho Molecular - Vitamin D",
+                    price:"$61.98",
+                    priceDiscount:"",
+                    showBadge:"",
+                    })
+
+                    @@include('html/components/packProduckItem.html',{
+                        image:"@img/vitamins/vitamin_4.png",
+                        class:"Vitamins & Dietary Supplements",
+                        classColor:"purple",
+                        name:"Ortho Molecular - Vitamin K2",
+                        price:"$61.98",
+                        priceDiscount:"",
+                        showBadge:"",
+                    })
+
+                    @@include('html/components/packProduckItem.html',{
+                        image:"@img/vitamins/vitamin_7.png",
+                        class:"Weight Loss",
+                        classColor:"purple",
+                        name:"Core Restore BT 1 Kit",
+                        price:"$61.98",
+                        priceDiscount:"",
+                        showBadge:"",
+                    })
+
+                    @@include('html/components/packProduckItem.html',{
+                        image:"@img/vitamins/vitamin_3.png",
+                        class:"Vitamins & Dietary Supplements",
+                        classColor:"purple",
+                        name:"Ortho Molecular - Reacted Magnesium ",
+                        price:"$61.98",
+                        priceDiscount:"",
+                        showBadge:"",
+                    })
+
+                    <button class="View-more-button">
+                        View more
+                    </button>
+                </div>
             </div>
+        
         </section>
     </main>
 

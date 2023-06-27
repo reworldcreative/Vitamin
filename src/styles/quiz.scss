@@ -44,7 +44,7 @@
     }
 
     &_second {
-      background: #faf8f6;
+      background: $Main-Orange_bg;
       max-width: 50%;
       height: 100vh;
     }
@@ -421,13 +421,13 @@
 
 @media screen and (max-width: 1000px) {
   .quiz {
-    background: #faf8f6;
+    background: $Main-Orange_bg;
     &__body {
       // display: block;
       height: 100vh;
       align-items: center;
       display: grid;
-      background: #faf8f6;
+      background: $Main-Orange_bg;
     }
 
     &__logo {
@@ -451,7 +451,7 @@
       // padding-bottom: 10px;
       // height: 50vh;
       height: fit-content;
-      background: #faf8f6;
+      background: $Main-Orange_bg;
     }
 
     &__question {
@@ -615,7 +615,7 @@
       z-index: 3;
       bottom: 15px;
       padding: 0px 20px 0px;
-      background: #faf8f6;
+      background: $Main-Orange_bg;
     }
   }
 }

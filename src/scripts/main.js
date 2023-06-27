@@ -158,6 +158,21 @@ function checkSize() {
       // IscheckSize = true;
     }
   }
+
+  if ($(window).width() < 1300) {
+    if ($(".shop__title")) {
+      $(".shop__title").click(function (event) {
+        var panel = $(".shop__navigation")[0];
+        this.classList.toggle("active");
+        var computedStyle = window.getComputedStyle(panel);
+        if (computedStyle.display === "grid") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "grid";
+        }
+      });
+    }
+  }
 }
 checkSize();
 $(window).resize(function () {
