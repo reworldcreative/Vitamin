@@ -1,0 +1,371 @@
+.shopHero {
+  &__wrap {
+    padding-top: 20px;
+  }
+
+  &__slider {
+    overflow-y: visible !important;
+    overflow-x: clip !important;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    // padding-left: 11.2%;
+    padding-left: 2.6%;
+    // justify-content: center;
+  }
+
+  &-Banner {
+    height: 472px !important;
+    align-items: center;
+    display: flex !important;
+    &.purple {
+      background-color: $Goods-purple_Text;
+    }
+    &.violet {
+      background-color: $Goods-purple;
+    }
+    &.blue {
+      background-color: $Goods-Blue_Text;
+    }
+
+    &.main {
+      .column {
+        &_second {
+          top: -15px;
+        }
+      }
+    }
+    // padding: 93px 70px;
+    padding: 0px 70px;
+    border-radius: 24px;
+    display: flex;
+    position: relative;
+    width: 70% !important;
+    margin: 0px auto;
+    .column {
+      max-width: 50%;
+
+      &_second {
+        position: absolute;
+        right: 0px;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        // top: -30px;
+      }
+    }
+
+    &__title {
+      color: $Main-White;
+      font-size: 20px;
+      font-family: Effra;
+      opacity: 0.69;
+      margin: 0px;
+      margin-bottom: 15px;
+      &:empty {
+        margin-bottom: 0px;
+      }
+    }
+
+    &__caption {
+      color: $Main-White;
+      font-size: 50px;
+      font-family: "Effra", sans-serif;
+      font-weight: 500;
+      margin: 0px;
+      margin-bottom: 25px;
+    }
+
+    &__text {
+      color: $Main-White;
+      width: 70%;
+      font-size: 18px;
+      line-height: 25px;
+      font-family: "Open Sans", sans-serif;
+      opacity: 0.69;
+      margin: 0px;
+      margin-bottom: 30px;
+    }
+
+    .quiz-button {
+      display: block;
+      width: fit-content;
+      background-color: $Main-White;
+      color: $Main-Dark_Text;
+      font-size: 20px;
+      padding: 20px 69px;
+    }
+
+    &__image {
+      // width: 100%;
+      width: 690px;
+      object-fit: scale-down;
+    }
+
+    &-button-prev:after,
+    &-button-next:after {
+      background: $Main-White;
+      color: $Main-Dark_Text;
+      padding: 28px 30px;
+      border-radius: 50%;
+      font-size: 10px !important;
+    }
+    &-button-prev {
+      left: 10.8% !important;
+    }
+    &-button-next {
+      right: 10.8% !important;
+    }
+
+    &-pagination {
+      display: none;
+    }
+  }
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: $Main-White;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .shopHero {
+    .swiper-wrapper {
+      padding-left: 4.2%;
+    }
+    &-Banner {
+      &__image {
+        width: 100%;
+      }
+      &-button-prev {
+        left: 4.2% !important;
+      }
+      &-button-next {
+        right: 16% !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .shopHero {
+    .swiper-wrapper {
+      padding-left: 3%;
+    }
+    &-Banner {
+      &-button-prev {
+        left: 3% !important;
+      }
+      &-button-next {
+        right: 13% !important;
+      }
+
+      .column {
+        max-width: 55%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .shopHero {
+    .swiper-wrapper {
+      padding-left: 10%;
+    }
+    &-Banner {
+      display: grid !important;
+      height: fit-content !important;
+      padding: 50px 20px !important;
+
+      &-button-prev {
+        left: 10% !important;
+      }
+      &-button-next {
+        right: 8% !important;
+      }
+      &.main {
+        .column {
+          &_second {
+            top: 0px;
+          }
+        }
+      }
+      .column {
+        max-width: 100%;
+        &_first {
+          order: 2;
+        }
+        &_second {
+          position: relative;
+        }
+      }
+
+      &__image {
+        height: 350px;
+      }
+
+      &__caption {
+        text-align: center;
+        font-size: 39px;
+      }
+      &__text {
+        width: 100%;
+        text-align: center;
+      }
+      &__title {
+        text-align: center;
+      }
+
+      .quiz-button {
+        margin: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .shopHero {
+    &-Banner {
+      &__caption {
+        @include font-size(37px);
+      }
+
+      &__image {
+        height: 250px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .shopHero {
+    &-Banner {
+      &-button-next,
+      &-button-prev {
+        display: none !important;
+      }
+      &-pagination {
+        display: block;
+        position: absolute !important;
+        bottom: 55px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .shopHero {
+    .swiper-wrapper {
+      padding: 0px;
+    }
+    &-Banner {
+      width: 90% !important;
+      &__image {
+        height: 180px;
+      }
+
+      &__caption {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+
+      &__text {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+
+      .quiz-button {
+        font-size: 16px;
+        padding: 15px 30px;
+      }
+
+      &-pagination {
+        bottom: 30px !important;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .shopHero {
+    &__wrap {
+      padding-top: 0px;
+      height: 475px !important;
+      overflow: clip !important;
+    }
+    &-Banner {
+      border-radius: 0px;
+      padding: 45px 20px 70px !important;
+      &-pagination {
+        bottom: 40px !important;
+      }
+
+      &.main {
+        .column {
+          &_second {
+            top: -20px;
+          }
+        }
+      }
+
+      &__text {
+        line-height: 20px;
+        margin-bottom: 22px;
+      }
+
+      &-pagination {
+        bottom: 68px !important;
+        gap: 17px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .shopHero {
+    &__wrap {
+      height: 465px !important;
+    }
+    &-Banner {
+      padding: 45px 20px 70px 15px !important;
+      &-pagination {
+        bottom: 40px !important;
+      }
+
+      &__image {
+        height: 152px;
+      }
+
+      &.main {
+        .column {
+          &_second {
+            top: -20px;
+          }
+        }
+      }
+
+      &__text {
+        margin-bottom: 19px;
+      }
+
+      &-pagination {
+        bottom: 68px !important;
+      }
+    }
+  }
+}
+
+.shop {
+  &__wrap {
+  }
+
+  &__title {
+    color: $Main-Orange;
+    font-size: 22px;
+    font-family: "Effra", sans-serif;
+    margin: 0px;
+  }
+}

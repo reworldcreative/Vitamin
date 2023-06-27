@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"shop"
+})
+
+<body>
+    @@include('html/header.html',{})
+
+    <main>
+        <section class="shopHero">
+            <div class="shopHero__wrap">
+                <div class="shopHero__slider swiper">
+                    <div class="swiper-wrapper">
+                        <!-- <div class="shopHero-Banner swiper-slide purple main">
+                            <div class="column column_first">
+                                <h2 class="shopHero-Banner__caption">Don’t know what vitamins your body needs?</h2>
+                                <p class="shopHero-Banner__text">Answer a few simple questions and automatically
+                                    get a personalazed list of vitamins in minutes</p>
+                                @@include('html/components/quizButton.html',{})
+                            </div>
+                            <div class="column column_second">
+                                <img class="shopHero-Banner__image" src="@img/vitamins/vitamin01.png" alt="vitamin"
+                                    width="690px" height="690px">
+                            </div>
+                        </div> -->
+                        @@include('html/components/banner.html',{
+                        title:"",
+                        caption:"Don’t know what vitamins your body needs?",
+                        text:"Answer a few simple questions and automatically get a personalazed list of vitamins in
+                        minutes",
+                        image:"@img/vitamins/vitamin01.png",
+                        imgW:"690px",
+                        imgH:"690px",
+                        color:"purple main",
+                        })
+                        <div class="shopHero-Banner swiper-slide violet">
+                            <div class="column column_first">
+                                <p class="shopHero-Banner__title">You may also like</p>
+                                <h2 class="shopHero-Banner__caption">Vitamins & Dietary Supplements</h2>
+                                <p class="shopHero-Banner__text">Answer a few simple questions and automatically
+                                    get a personalazed list of vitamins in minutes</p>
+                                @@include('html/components/quizButton.html',{})
+                            </div>
+                            <div class="column column_second">
+                                <img class="shopHero-Banner__image" src="@img/vitamins/vitamin_4.png" alt="vitamin"
+                                    width="363px" height="406px">
+                            </div>
+                        </div>
+                        <div class="shopHero-Banner swiper-slide blue">
+                            <div class="column column_first">
+                                <p class="shopHero-Banner__title">You may also like</p>
+                                <h2 class="shopHero-Banner__caption">Pain Relief Products</h2>
+                                <p class="shopHero-Banner__text">Answer a few simple questions and automatically
+                                    get a personalazed list of vitamins in minutes</p>
+                                @@include('html/components/quizButton.html',{})
+                            </div>
+                            <div class="column column_second">
+                                <img class="shopHero-Banner__image" src="@img/vitamins/vitamin_5.png" alt="vitamin"
+                                    width="414px" height="252px">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="shopHero-Banner-pagination swiper-pagination"></div>
+
+                        <div class="shopHero-Banner-button-prev swiper-button-prev"></div>
+                        <div class="shopHero-Banner-button-next swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="shop">
+            <div class="shop__wrap">
+                <aside>
+                    <h3 class="shop__title">All categories</h3>
+                    <nav>
+                        <ul>
+                            <li><a href="#">Головна</a></li>
+                            <li><a href="#">Про нас</a></li>
+                            <li><a href="#">Контакти</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

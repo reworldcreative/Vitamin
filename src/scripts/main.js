@@ -87,6 +87,41 @@ window.addEventListener("DOMContentLoaded", function () {
         },
       });
     }
+
+    if ($(".shopHero__slider").length > 0) {
+      const shopHeroBanner = new Swiper(".shopHero__slider", {
+        slidesPerView: 1.2,
+        spaceBetween: 50,
+        centeredSlides: true,
+
+        breakpoints: {
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          500: {
+            slidesPerView: 1.2,
+            spaceBetween: 15,
+          },
+          1000: {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
+          },
+          1500: {
+            slidesPerView: 1.2,
+            spaceBetween: 50,
+          },
+        },
+        navigation: {
+          nextEl: ".shopHero-Banner-button-next",
+          prevEl: ".shopHero-Banner-button-prev",
+        },
+        pagination: {
+          el: ".shopHero-Banner-pagination",
+          clickable: true,
+        },
+      });
+    }
   };
 
   document.body.appendChild(swiperScript);
