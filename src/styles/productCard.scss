@@ -26,7 +26,8 @@
 
     &_second {
       margin-top: 44px;
-      padding-bottom: 60px;
+      // padding-bottom: 60px;
+      padding-bottom: 125px;
       border-bottom: 1px solid #f2f2f2;
       justify-content: center;
       display: flex;
@@ -259,7 +260,7 @@
     display: grid;
     gap: 30px;
 
-    width: 95%;
+    width: 90%;
 
     .section-title {
       font-size: 26px;
@@ -279,7 +280,7 @@
     margin: 0px;
     padding: 0px;
     list-style: none;
-    gap: 25px;
+    gap: 20px;
     display: grid;
   }
 
@@ -288,6 +289,10 @@
     // align-items: flex-start;
     display: flex;
     align-items: baseline;
+    .section-text {
+      line-height: 26px;
+    }
+
     &::before {
       // content: "-";
       // color: $Main-Orange;
@@ -302,21 +307,26 @@
       content: "";
       background: #ff7d4e;
       min-width: 20px;
-      margin-right: 20px;
+      margin-right: 30px;
+      // margin-right: 20px;
       height: 2px;
     }
   }
 
   .descriptionContainer {
-    margin-top: 30px;
-    // .section-title {
-    //   margin-bottom: 30px;
-    // }
+    margin-top: 60px;
+    width: 100%;
+    .section-title {
+      margin-bottom: 10px;
+    }
+    .section-text {
+      width: 58%;
+    }
   }
 
   &__information {
-    display: grid;
-    gap: 10px;
+    display: flex;
+    justify-content: space-between;
     padding: 30px 0px;
     border-bottom: 1px solid #f2f2f2;
   }
@@ -347,6 +357,10 @@
     &__delivery {
       width: 100%;
     }
+
+    &__description {
+      width: 100%;
+    }
   }
 }
 
@@ -363,6 +377,12 @@
 
     .row {
       display: block;
+    }
+
+    .column {
+      &_second {
+        padding-bottom: 60px;
+      }
     }
 
     &__image {
@@ -383,12 +403,38 @@
       }
     }
 
+    .descriptionContainer {
+      margin-top: 60px;
+
+      .section-text {
+        width: 100%;
+      }
+    }
+
     &__wrapper {
       margin-top: 0px;
     }
 
     &__delivery {
       width: auto;
+    }
+
+    &__list {
+      gap: 25px;
+      // .section-text{
+      //       line-height: 27px;
+      // }
+
+      .productCard__listItem::before {
+        margin-right: 20px;
+      }
+    }
+
+    &__information {
+      display: grid;
+      gap: 10px;
+      padding: 30px 0px;
+      border-bottom: 1px solid #f2f2f2;
     }
   }
 }
@@ -486,10 +532,16 @@
         font-size: 20px;
         line-height: 24px;
       }
+      .descriptionContainer {
+        margin-top: 35px;
+        .section-title {
+          margin-bottom: 0px;
+        }
+      }
 
       .section-text {
         font-size: 14px;
-        line-height: 26px;
+        line-height: 23px;
       }
 
       .sub-title {
@@ -521,6 +573,20 @@
     &__autoship {
       gap: 5px;
       margin-top: 25px;
+    }
+
+    &__list {
+      gap: 27px;
+    }
+
+    &__description {
+      gap: 31px;
+    }
+
+    &__information {
+      .section-text {
+        line-height: 24px;
+      }
     }
   }
 }
