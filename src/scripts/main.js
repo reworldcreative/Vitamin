@@ -11,6 +11,8 @@ $(document).ready(function () {
   $(".burger-menu .close-button").click(function (event) {
     $(".burger-menu").toggleClass("active");
   });
+
+  counter();
 });
 
 // Завантаження стилів після першого відображення сторінки
@@ -150,12 +152,20 @@ function checkSize() {
       $(".burger-menu__header")[0].append($(".profile__img")[0]);
       // IscheckSize = true;
     }
+    if ($(".productCard__autoship_text").length > 0) {
+      $(".productCard__autoship_textFirst")[0].textContent = "Deliver every";
+    }
   }
 
   if ($(window).width() > 500) {
     if ($(".header__buttons").length > 0) {
       $(".header__buttons")[0].prepend($(".profile__img")[0]);
       // IscheckSize = true;
+    }
+
+    if ($(".productCard__autoship_text").length > 0) {
+      $(".productCard__autoship_textFirst")[0].textContent =
+        "Autoship this item every";
     }
   }
 
@@ -180,3 +190,19 @@ $(window).resize(function () {
 });
 
 // $(window).lazyLoadXT();
+function counter() {
+  if ($(".number-counter").length > 0) {
+    $(".number-counter.minus-button").click(function () {
+      var $input = $(this).parent().find(".productCard__number");
+      var count = parseInt($input[0].textContent) - 1;
+      count = count < 1 ? 1 : count;
+      $input[0].textContent = count;
+      return false;
+    });
+    $(".number-counter.plus-button").click(function () {
+      var $input = $(this).parent().find(".productCard__number");
+      $input[0].textContent = parseInt($input[0].textContent) + 1;
+      return false;
+    });
+  }
+}

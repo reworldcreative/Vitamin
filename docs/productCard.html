@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>personal Pack</title>
+    <title>product</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles/style.min.css?_v=20230628161556">
 </head>
 
-<body>
+<body id="productCard">
     <nav class="burger-menu">
     <div class="burger-menu__header">
         <button class="close-button" aria-label="close menu">
@@ -60,124 +60,71 @@
         </div>
     </div>
 </header>
+    <main>
+        <section class="productCard">
+            <div class="row">
+                <div class="column column_first">
+                    <img class="productCard__image" src="img/vitamins/vitamin_6.png" alt="vitamin" width="430px"
+                        height="470px">
 
-    <main class="personalPack-main">
-        <section class="personal-hero">
-            <div class="personal-hero__wrap">
-                <h1 class="section-title">Alex, we made personalized pack for you!</h1>
-                <p class="personal-hero__caption">Recommenadation</p>
-                <p class="personal-hero__text">Your recommendation is based on your answers and our database of clinical
-                    research. This health plan, made just for you, is recommended for you to feel your best today while
-                    supporting long-term health.</p>
-            </div>
+                    <img class="productCard__decoration_ysc" data-src="img/decorative/yellow semicircle.svg"
+                        alt="yellow semicircle" aria-hidden="true" width="120px" height="250px">
+                </div>
+                <div class="column column_second">
+                    <div class="column__wrap">
+                        <a class="productCard__back" href="#">Back to shop</a>
 
-            <div class="personal-hero__decoration">
-                <img class="decoration__yhc" data-src="img/decorative/yellow half semicircle.svg"
-                    alt="yellow halfcircle" aria-hidden="true" width="158px" height="158px">
-                <img class="decoration__osc" data-src="img/decorative/orange semicircle.svg" alt="orange semicircle"
-                    aria-hidden="true" width="280px" height="145px">
-            </div>
-        </section>
+                        <div class="productCard__wrapper">
+                            <p class="productCard__class">Vitamins & Dietary Supplements</p>
+                            <h1 class="productCard__name">Metagenics - 500-C Methoxyflavone</h1>
+                        </div>
 
-        <section class="personalPackList">
-            <img class="personalPackList__decoration_yc" data-src="img/decorative/yellow circle.svg"
-                alt="yellow circle" width="122px" height="122px">
-            <div class="personalPackList__wrap">
-                <h2 class="personalPackList__caption">Your Personalized Pack</h2>
+                        <div class="productCard__container">
+                            <div class="productCard__jar">
+                                <img class="productCard__icon" src="img/icons/icon_bottle.svg" alt="icon bottle"
+                                    width="50px" height="60px">
+                                <div>
+                                    <p class="productCard__amount">90 Capsules</p>
+                                    <p class="productCard__weight">500 mg plastic can</p>
+                                </div>
+                            </div>
 
-                <ul class="personalPackList__list">
-                    <li class="personalPackList__item">
-                        <article class="packProduckItem">
-    <div class="packProduckItem__wrap">
-        <div class="packProduckItem__badge ">
-            -45%
-        </div>
-        <div class="packProduckItem__image">
-            <picture><source srcset="img/vitamins/vitamin_2.webp" type="image/webp"><img src="img/vitamins/vitamin_2.png" alt="vitamin's jar" width="186px" height="209px"></picture>
-        </div>
+                            <div class="productCard__counter">
+                                <button class="productCard__counter_button number-counter minus-button">-</button>
+                                <p class="productCard__number">1</p>
+                                <button class="productCard__counter_button number-counter plus-button">+</button>
+                            </div>
+                        </div>
 
-        <div class="packProduckItem__container">
-            <p class="packProduckItem__class purple">Vitamins & Dietary Supplements</p>
-            <p class="packProduckItem__name">Ortho Molecular Products Orthomega 820</p>
-            <div class="packProduckItem__priceContainer">
-                <p class="packProduckItem__price">$61.98</p>
-                <p class="packProduckItem__price packProduckItem__priceDiscount"></p>
-            </div>
-        </div>
-    </div>
-</article>
-                    </li>
-                    <li class="personalPackList__item">
-                        <article class="packProduckItem">
-    <div class="packProduckItem__wrap">
-        <div class="packProduckItem__badge ">
-            -45%
-        </div>
-        <div class="packProduckItem__image">
-            <picture><source srcset="img/vitamins/vitamin_3.webp" type="image/webp"><img src="img/vitamins/vitamin_3.png" alt="vitamin's jar" width="186px" height="209px"></picture>
-        </div>
+                        <div class="productCard__delivery">
+                            <div class="productCard__autoship">
+                                <p class="productCard__autoship_text"> <span
+                                        class="productCard__autoship_textFirst">Autoship this item every</span>
+                                    <select class="days-ayto-delivery" name="days-ayto-delivery">
+                                        <option value="7">7</option>
+                                        <option value="14">14</option>
+                                        <option value="30" selected>30</option>
+                                    </select>
+                                    days
+                                </p>
 
-        <div class="packProduckItem__container">
-            <p class="packProduckItem__class green">Minerals</p>
-            <p class="packProduckItem__name">Ortho Molecular - Reacted Magnesium</p>
-            <div class="packProduckItem__priceContainer">
-                <p class="packProduckItem__price">$61.98</p>
-                <p class="packProduckItem__price packProduckItem__priceDiscount"></p>
-            </div>
-        </div>
-    </div>
-</article>
-                    </li>
-                    <li class="personalPackList__item">
-                        <article class="packProduckItem">
-    <div class="packProduckItem__wrap">
-        <div class="packProduckItem__badge show">
-            -45%
-        </div>
-        <div class="packProduckItem__image">
-            <picture><source srcset="img/vitamins/vitamin_2.webp" type="image/webp"><img src="img/vitamins/vitamin_2.png" alt="vitamin's jar" width="186px" height="209px"></picture>
-        </div>
+                                <label class="productCard__autoship_switch switch">
+                                    <input type="checkbox">
+                                    <span class="toggler round"></span>
+                                </label>
+                            </div>
 
-        <div class="packProduckItem__container">
-            <p class="packProduckItem__class purple">Vitamins & Dietary Supplements</p>
-            <p class="packProduckItem__name">Ortho Molecular Products Orthomega 820</p>
-            <div class="packProduckItem__priceContainer">
-                <p class="packProduckItem__price">$61.98</p>
-                <p class="packProduckItem__price packProduckItem__priceDiscount">$61.98</p>
-            </div>
-        </div>
-    </div>
-</article>
-                    </li>
-                    <li class="personalPackList__item">
-                        <article class="packProduckItem">
-    <div class="packProduckItem__wrap">
-        <div class="packProduckItem__badge ">
-            -45%
-        </div>
-        <div class="packProduckItem__image">
-            <picture><source srcset="img/vitamins/vitamin_3.webp" type="image/webp"><img src="img/vitamins/vitamin_3.png" alt="vitamin's jar" width="186px" height="209px"></picture>
-        </div>
+                            <div class="productCard__price">
+                                <p class="productCard__price_number">$61.98</p>
 
-        <div class="packProduckItem__container">
-            <p class="packProduckItem__class purple">Vitamins & Dietary Supplements</p>
-            <p class="packProduckItem__name">Ortho Molecular Products - Reacted Selenium</p>
-            <div class="packProduckItem__priceContainer">
-                <p class="packProduckItem__price">$61.98</p>
-                <p class="packProduckItem__price packProduckItem__priceDiscount"></p>
-            </div>
-        </div>
-    </div>
-</article>
-                    </li>
-                </ul>
-                <a href="#" class="action-button @@class">
-    Continue
-</a>
+                                <button class="addButton">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-
     <footer class="footer">
     <div class="footer__wrap">
 
@@ -270,7 +217,6 @@
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
     <script src="scripts/main.min.js?_v=20230628161556"></script>
-
 </body>
 
 </html>

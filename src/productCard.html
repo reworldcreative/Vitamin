@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"product"
+})
+
+<body id="productCard">
+    @@include('html/header.html',{})
+    <main>
+        <section class="productCard">
+            <div class="row">
+                <div class="column column_first">
+                    <img class="productCard__image" src="@img/vitamins/vitamin_6.png" alt="vitamin" width="430px"
+                        height="470px">
+
+                    <img class="productCard__decoration_ysc" data-src="@img/decorative/yellow semicircle.svg"
+                        alt="yellow semicircle" aria-hidden="true" width="120px" height="250px">
+                </div>
+                <div class="column column_second">
+                    <div class="column__wrap">
+                        <a class="productCard__back" href="#">Back to shop</a>
+
+                        <div class="productCard__wrapper">
+                            <p class="productCard__class">Vitamins & Dietary Supplements</p>
+                            <h1 class="productCard__name">Metagenics - 500-C Methoxyflavone</h1>
+                        </div>
+
+                        <div class="productCard__container">
+                            <div class="productCard__jar">
+                                <img class="productCard__icon" src="@img/icons/icon_bottle.svg" alt="icon bottle"
+                                    width="50px" height="60px">
+                                <div>
+                                    <p class="productCard__amount">90 Capsules</p>
+                                    <p class="productCard__weight">500 mg plastic can</p>
+                                </div>
+                            </div>
+
+                            <div class="productCard__counter">
+                                <button class="productCard__counter_button number-counter minus-button">-</button>
+                                <p class="productCard__number">1</p>
+                                <button class="productCard__counter_button number-counter plus-button">+</button>
+                            </div>
+                        </div>
+
+                        <div class="productCard__delivery">
+                            <div class="productCard__autoship">
+                                <p class="productCard__autoship_text"> <span
+                                        class="productCard__autoship_textFirst">Autoship this item every</span>
+                                    <select class="days-ayto-delivery" name="days-ayto-delivery">
+                                        <option value="7">7</option>
+                                        <option value="14">14</option>
+                                        <option value="30" selected>30</option>
+                                    </select>
+                                    days
+                                </p>
+
+                                <label class="productCard__autoship_switch switch">
+                                    <input type="checkbox">
+                                    <span class="toggler round"></span>
+                                </label>
+                            </div>
+
+                            <div class="productCard__price">
+                                <p class="productCard__price_number">$61.98</p>
+
+                                <button class="addButton">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>
