@@ -1,0 +1,197 @@
+.SubscriptionProduct {
+  padding: 30px 43px 30px 40px;
+  background-color: $Main-Orange_bg;
+
+  display: flex;
+  border-radius: 16px;
+
+  &__container {
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  &__info {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+
+  &__image {
+    // padding: 4% 17px 3%;
+    padding: 0px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 170px;
+
+    &.mint {
+      background-color: $Goods-Mint;
+    }
+
+    &.pink {
+      background-color: $Goods-Pink;
+    }
+
+    &.purple {
+      background-color: $Goods-purple;
+    }
+
+    border-radius: 8px;
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &__class {
+    color: $Goods-Mint_Text;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0px;
+    margin-bottom: 5px;
+
+    &.mint {
+      color: $Goods-Mint_Text;
+    }
+
+    &.pink {
+      color: $Goods-Pink_Text;
+    }
+
+    &.purple {
+      color: $Goods-purple_Text;
+    }
+  }
+
+  &__name {
+    color: $Main-Dark_Text;
+    font-size: 20px;
+    font-family: "Effra", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+  }
+
+  &__price {
+    color: $Main-Dark_Text;
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0px;
+  }
+
+  &__delivery {
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__days {
+    color: $Main-Dark_Text;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.5;
+    margin: 0px;
+    margin-bottom: 4px;
+  }
+
+  &__deliveryDate {
+    color: $Main-Dark_Text;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+  }
+
+  .Unsubscribe-button {
+    padding: 15px 35px;
+    color: $Red;
+    background: transparent;
+    text-align: center;
+    font-size: 16px;
+    font-family: "Effra", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 100px;
+    border: 2px solid rgba(211, 45, 44, 0.2);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .SubscriptionProduct {
+    display: grid;
+    gap: 20px;
+
+    &__container {
+      margin: 0px;
+    }
+
+    &__delivery {
+      display: grid;
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .SubscriptionProduct {
+    padding: 20px;
+    &__class {
+      font-size: 12px;
+    }
+
+    &__image {
+      height: 132px;
+    }
+
+    &__name {
+      font-size: 16px;
+    }
+
+    &__info {
+      gap: 10px;
+      align-items: center;
+      padding-bottom: 20px;
+    }
+
+    &__price {
+      font-size: 16px;
+    }
+
+    &__days {
+      font-size: 12px;
+    }
+
+    &__delivery {
+      justify-content: unset;
+      padding-top: 18px;
+    }
+
+    &__deliveryDate {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .SubscriptionProduct {
+    &__class {
+      width: 105%;
+    }
+  }
+}
