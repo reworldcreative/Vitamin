@@ -10,6 +10,7 @@
 
     <main>
         <section class="profile profileOverview">
+            <div class="profileOverview__savedBanner">&#10003; Changes successfully saved</div>
             <div class="profile__wrap row">
                 <div class="column column_first">
                     <aside class="profile__sidebar">
@@ -92,7 +93,19 @@
                                 placeholder="8 029 876 56 21">
                         </div>
 
-                        <button class="SaveButton" tupe="button">Save</button>
+                        <div class="inputContainer">
+                            <label class="profileOverview__lable" for="personaWholesale">Wholesale purchase
+                                permission</label>
+                            <div class="inputInnerContainer">
+                                <input class="profileOverview__input" id="personaWholesale" name="personaWholesale"
+                                    type="text" placeholder="123qwer.pdf">
+                                <button class="profileOverview__UpButton" type="button">Update</button>
+                                <!-- <input type="file" id="personaWholesaleFile" name="personaWholesaleFile"> -->
+                            </div>
+                        </div>
+                        <div style="width: 100%;">
+                            <button class="SaveButton" tupe="button">Save</button>
+                        </div>
                     </form>
                 </div>
             </div>
