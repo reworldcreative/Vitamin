@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Profile"
+})
+
+<body>
+
+    @@include('html/header.html',{})
+
+    <main>
+        <section class="profile profileOrders">
+            <div class="profile__wrap row">
+                <div class="column column_first">
+                    <aside class="profile__sidebar">
+                        <nav>
+                            <ul class="profile__navigation">
+                                <li><a class="profile__link" href="profileSubscriptions.html">Subscriptions</a></li>
+                                <li><a class="profile__link active" href="profileOrders.html">Orders</a></li>
+                                <li><a class="profile__link" href="#">Account Overview</a></li>
+                                <li><a class="profile__link" href="#">Payment methods</a></li>
+                                <li><a class="profile__link" href="#">Change Password</a></li>
+                                <li><a class="profile__link sale" href="#">Sign out</a></li>
+                            </ul>
+                        </nav>
+                    </aside>
+                </div>
+                <div class="column column_second">
+                    <h1 class="section-title">Orders</h1>
+                    <div class="profile__container">
+                        <ul class="profileOrders__list">
+                            <li class="profileOrders__item">
+                                <div class="profileOrders__info">
+                                    <div>
+                                        <time datetime="2020-05-18" class="profileOrders__order-date">18 May
+                                            2020</time>
+                                        <p class="profileOrders__id">No 67824-6786</p>
+                                    </div>
+                                    <p class="profileOrders__shipping">Shipping</p>
+                                    <span class="down-arrow">></span>
+                                </div>
+
+                                <div class="profileOrders__accordion">
+                                    <ul class="profileOrders__orderList">
+                                        <li class="profileOrders__orderItem">
+                                            @@include('html/components/SubscriptionProduct.html',{
+                                            image:"@img/vitamins/vitamin_3.png",
+                                            class:"Minerals",
+                                            name:"Standard Process Thymus PMG 90 Tablets",
+                                            amount:"2",
+                                            price:"$84.00",
+                                            date:"28th Apr 2020",
+                                            timerange:"30",
+                                            color:"mint",
+                                            })
+                                        </li>
+                                        <li class="profileOrders__orderItem">
+                                            @@include('html/components/SubscriptionProduct.html',{
+                                            image:"@img/vitamins/vitamin_8.png",
+                                            class:"Prenatal Vitamins",
+                                            name:"Ortho Molecular Products Adrene Vive Capsules",
+                                            amount:"1",
+                                            price:"$31.26",
+                                            date:"19th Apr 2020",
+                                            timerange:"30",
+                                            color:"pink",
+                                            })
+                                        </li>
+                                        <li class="profileOrders__orderItem">
+                                            @@include('html/components/SubscriptionProduct.html',{
+                                            image:"@img/vitamins/vitamin_6.png",
+                                            class:"Vitamins & Dietary Supplements",
+                                            name:"Metagenics - 500-C Methoxyflavone",
+                                            amount:"3",
+                                            price:"$32.45",
+                                            date:"15th Apr 2020",
+                                            timerange:"40",
+                                            color:"purple",
+                                            })
+                                        </li>
+                                    </ul>
+
+                                    <div class="profileOrders__order">
+                                        <div>
+                                            <p class="profileOrders__amount">Order amount:</p>
+                                            <div class="profileOrders__totalPrice">$180.90</div>
+                                        </div>
+                                        <button class="addTCard-button">Add to cart</button>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <ul class="profileOrders__list">
+                            <li class="profileOrders__item">
+                                <div class="profileOrders__info">
+                                    <div>
+                                        <time datetime="2020-05-18" class="profileOrders__order-date">18 May
+                                            2020</time>
+                                        <p class="profileOrders__id">No 67824-6786</p>
+                                    </div>
+                                    <p class="profileOrders__shipping">Shipping</p>
+                                    <span class="down-arrow">></span>
+                                </div>
+
+                                <div class="profileOrders__accordion">
+                                    <ul class="profileOrders__orderList">
+                                        <li class="profileOrders__orderItem">
+                                            @@include('html/components/SubscriptionProduct.html',{
+                                            image:"@img/vitamins/vitamin_3.png",
+                                            class:"Minerals",
+                                            name:"Standard Process Thymus PMG 90 Tablets",
+                                            amount:"2",
+                                            price:"$84.00",
+                                            date:"28th Apr 2020",
+                                            timerange:"30",
+                                            color:"mint",
+                                            })
+                                        </li>
+                                        <li class="profileOrders__orderItem">
+                                            @@include('html/components/SubscriptionProduct.html',{
+                                            image:"@img/vitamins/vitamin_8.png",
+                                            class:"Prenatal Vitamins",
+                                            name:"Ortho Molecular Products Adrene Vive Capsules",
+                                            amount:"1",
+                                            price:"$31.26",
+                                            date:"19th Apr 2020",
+                                            timerange:"30",
+                                            color:"pink",
+                                            })
+                                        </li>
+                                    </ul>
+
+                                    <div class="profileOrders__order">
+                                        <div>
+                                            <p class="profileOrders__amount">Order amount:</p>
+                                            <div class="profileOrders__totalPrice">$180.90</div>
+                                        </div>
+                                        <button class="addTCard-button">Add to cart</button>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <ul class="profileOrders__list">
+                            <li class="profileOrders__item">
+                                <div class="profileOrders__info">
+                                    <div>
+                                        <time datetime="2020-05-18" class="profileOrders__order-date">18 May
+                                            2020</time>
+                                        <p class="profileOrders__id">No 67824-6786</p>
+                                    </div>
+                                    <p class="profileOrders__shipping">Shipping</p>
+                                    <span class="down-arrow">></span>
+                                </div>
+
+                                <div class="profileOrders__accordion">
+                                    <ul class="profileOrders__orderList">
+                                        <li class="profileOrders__orderItem">
+                                            @@include('html/components/SubscriptionProduct.html',{
+                                            image:"@img/vitamins/vitamin_3.png",
+                                            class:"Minerals",
+                                            name:"Standard Process Thymus PMG 90 Tablets",
+                                            amount:"2",
+                                            price:"$84.00",
+                                            date:"28th Apr 2020",
+                                            timerange:"30",
+                                            color:"mint",
+                                            })
+                                        </li>
+                                        <li class="profileOrders__orderItem">
+                                            @@include('html/components/SubscriptionProduct.html',{
+                                            image:"@img/vitamins/vitamin_8.png",
+                                            class:"Prenatal Vitamins",
+                                            name:"Ortho Molecular Products Adrene Vive Capsules",
+                                            amount:"1",
+                                            price:"$31.26",
+                                            date:"19th Apr 2020",
+                                            timerange:"30",
+                                            color:"pink",
+                                            })
+                                        </li>
+                                    </ul>
+
+                                    <div class="profileOrders__order">
+                                        <div>
+                                            <p class="profileOrders__amount">Order amount:</p>
+                                            <div class="profileOrders__totalPrice">$180.90</div>
+                                        </div>
+                                        <button class="addTCard-button">Add to cart</button>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

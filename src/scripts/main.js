@@ -12,6 +12,19 @@ $(document).ready(function () {
     $(".burger-menu").toggleClass("active");
   });
 
+  if ($(".profileOrders .down-arrow").length > 0) {
+    $(".profileOrders .down-arrow").click(function (event) {
+      var panel = event.target.parentElement.nextElementSibling;
+      this.classList.toggle("active");
+      var computedStyle = window.getComputedStyle(panel);
+      if (computedStyle.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+
   counter();
 });
 
