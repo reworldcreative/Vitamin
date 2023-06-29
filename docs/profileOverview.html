@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404</title>
+    <title>Profile</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,7 @@
 </head>
 
 <body>
+
     <nav class="burger-menu">
     <div class="burger-menu__header">
         <button class="close-button" aria-label="close menu">
@@ -60,21 +61,98 @@
         </div>
     </div>
 </header>
+
     <main>
-        <section class="errorSection">
-            <div class="errorSection__wrap">
-                <img class="errorSection__img" src="img/404.svg" alt="404" width="490px" height="202px">
-                <div class="errorSection__container">
-                    <h1 class="errorSection__caption">Page not found</h1>
-                    <p class="errorSection__text">Unfortunately, the page you requested is out of date or does not exist
-                    </p>
-                    <a href="index.html" class="action-button @@class">
-    Go to main page
-</a>
+        <section class="profile profileOverview">
+            <div class="profile__wrap row">
+                <div class="column column_first">
+                    <aside class="profile__sidebar">
+                        <nav>
+                            <ul class="profile__navigation">
+                                <li><a class="profile__link" href="profileSubscriptions.html">Subscriptions</a></li>
+                                <li><a class="profile__link" href="profileOrders.html">Orders</a></li>
+                                <li><a class="profile__link active" href="profileOverview.html">Account Overview</a>
+                                </li>
+                                <li><a class="profile__link" href="#">Payment methods</a></li>
+                                <li><a class="profile__link" href="#">Change Password</a></li>
+                                <li><a class="profile__link sale" href="#">Sign out</a></li>
+                            </ul>
+                        </nav>
+                    </aside>
+                </div>
+                <div class="column column_second">
+                    <div class="profileOverview__top">
+                        <h1 class="section-title">Account Overview</h1>
+                        <p class="profileOverview__customer">Regular customer</p>
+                    </div>
+
+                    <form action="" class="profileOverview__form">
+                        <div class="inputContainer">
+                            <label class="profileOverview__lable" for="personalName">First Name</label>
+                            <input class="profileOverview__input" id="personalName" name="personalName" type="text"
+                                placeholder="John">
+                        </div>
+
+                        <div class="inputContainer">
+                            <label class="profileOverview__lable" for="personalLastName">Last Name</label>
+                            <input class="profileOverview__input" id="personalLastName" name="personalLastName"
+                                type="text" placeholder="Smith">
+                        </div>
+
+                        <div class="inputContainer">
+                            <label class="profileOverview__lable" for="personalAddressLine1">Address Line 1</label>
+                            <input class="profileOverview__input" id="personalAddressLine1" name="personalAddressLine1"
+                                type="text" placeholder="Hilton st. 123">
+                        </div>
+
+                        <div class="inputContainer">
+                            <label class="profileOverview__lable" for="personalAddressLine2">Address Line 2</label>
+                            <input class="profileOverview__input" id="personalAddressLine2" name="personalAddressLine2"
+                                type="text" placeholder="">
+                        </div>
+
+                        <div class="inputContainer">
+                            <label class="profileOverview__lable" for="personaCity">City</label>
+                            <input class="profileOverview__input" id="personaCity" name="personaCity" type="text"
+                                placeholder="New York">
+                        </div>
+
+                        <div class="inputContainer inputContainer__ZIP">
+                            <div class="inputContainer">
+                                <label class="profileOverview__lable" for="personaState">State / Province</label>
+                                <select class="profileOverview__input" id="personaState" name="personaState">
+                                    <option value="NY" selected>NY</option>
+                                    <option value="FL">FL</option>
+                                    <option value="WA">WA</option>
+                                </select>
+                            </div>
+
+                            <div class="inputContainer">
+                                <label class="profileOverview__lable" for="personaZIP">ZIP / Postal Code</label>
+                                <input class="profileOverview__input" id="personaZIP" name="personaZIP" type="text"
+                                    placeholder="213 822">
+                            </div>
+                        </div>
+
+                        <div class="inputContainer">
+                            <label class="profileOverview__lable" for="personaEmail">Email</label>
+                            <input class="profileOverview__input" id="personaEmail" name="personaEmail" type="email"
+                                placeholder="johnsmith@gmail.com">
+                        </div>
+
+                        <div class="inputContainer">
+                            <label class="profileOverview__lable" for="personaPhone">Phone Number</label>
+                            <input class="profileOverview__input" id="personaPhone" name="personaPhone" type="email"
+                                placeholder="8 029 876 56 21">
+                        </div>
+
+                        <button class="SaveButton" tupe="button">Save</button>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
+
     <footer class="footer">
     <div class="footer__wrap">
 
@@ -165,7 +243,6 @@
 </footer>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230629194220"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-
     <script src="scripts/main.min.js?_v=20230629194220"></script>
 </body>
 
