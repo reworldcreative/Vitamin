@@ -12,18 +12,7 @@
         <section class="profile profileOrders">
             <div class="profile__wrap row">
                 <div class="column column_first">
-                    <aside class="profile__sidebar">
-                        <nav>
-                            <ul class="profile__navigation">
-                                <li><a class="profile__link" href="profileSubscriptions.html">Subscriptions</a></li>
-                                <li><a class="profile__link active" href="profileOrders.html">Orders</a></li>
-                                <li><a class="profile__link" href="profileOverview.html">Account Overview</a></li>
-                                <li><a class="profile__link" href="#">Payment methods</a></li>
-                                <li><a class="profile__link" href="#">Change Password</a></li>
-                                <li><a class="profile__link sale" href="#">Sign out</a></li>
-                            </ul>
-                        </nav>
-                    </aside>
+                    @@include('html/components/profileSidebar.html',{})
                 </div>
                 <div class="column column_second">
                     <h1 class="section-title">Orders</h1>

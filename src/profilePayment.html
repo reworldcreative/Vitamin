@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Profile"
+})
+
+<body>
+
+    @@include('html/header.html',{})
+
+    <main>
+        <section class="profile profilePayment">
+            <div class="profile__savedBanner">&#10003; Changes successfully saved</div>
+            <div class="profile__wrap row">
+                <div class="column column_first">
+                    @@include('html/components/profileSidebar.html',{})
+                </div>
+                <div class="column column_second">
+                    <h1 class="section-title">Payment methods</h1>
+
+                    <div class="profilePayment__form_wrapper">
+                        <form class="profilePayment__form">
+                            <div class="back-card">
+                                <div class="card-stripe"></div>
+                                <div class="inputCard inputCard-cvv">
+                                    <label class="inputCard__lable" for="cvc-cvv">CVC</label>
+                                    <input class="inputCard__input" id="cvc-cvv" name="cvc-cvv" type="text"
+                                        placeholder="***" maxlength="3" pattern="[b](3)">
+                                </div>
+                            </div>
+                            <div class="front-card">
+                                <div class="inputCard">
+                                    <label class="inputCard__lable" for="card-number">Card Number</label>
+                                    <input class="inputCard__input" id="card-number" name="card-number" type="text"
+                                        placeholder="6477 1693 3042 6031" maxlength="16" pattern="[b](16)">
+                                </div>
+                                <div class="card-logos">
+                                    <img src="@img/payments/Payment_logos_stripe.svg" alt="stripe logos" width="83"
+                                        height="23px">
+                                    <img src="@img/payments/Payment_logos_ssl.svg" alt="stripe logos" width="23"
+                                        height="23px">
+                                    <img src="@img/payments/Payment_logos_mastercard.svg" alt="stripe logos" width="23"
+                                        height="23px">
+                                    <img src="@img/payments/Payment_logos_visa.svg" alt="stripe logos" width="23"
+                                        height="23px">
+                                    <img src="@img/payments/Payment_logos_as.svg" alt="stripe logos" width="23"
+                                        height="23px">
+                                    <img src="@img/payments/Payment_logos_2.svg" alt="stripe logos" width="23"
+                                        height="23px">
+                                </div>
+
+                                <div class="card-second">
+                                    <div class="inputCard inputCard-Expiration">
+                                        <label class="inputCard__lable" for="card-Expiration">Expiration</label>
+                                        <input class="inputCard__input" id="card-Expiration" name="card-Expiration"
+                                            type="text" placeholder="12/21" maxlength="4" pattern="[b]">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <button class="SaveButton" tupe="button">Save</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    @@include('html/footer.html',{})
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>

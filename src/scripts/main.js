@@ -196,6 +196,22 @@ function checkSize() {
       });
     }
   }
+
+  if ($(window).width() < 800) {
+    if ($(".profilePayment__form .back-card .inputCard").length > 0) {
+      $(".profilePayment__form .front-card .card-second")[0].append(
+        $(".profilePayment__form .back-card .inputCard")[0]
+      );
+    }
+  }
+
+  if ($(window).width() > 800) {
+    if ($(".profilePayment__form .card-second .inputCard-cvv").length > 0) {
+      $(".profilePayment__form .back-card")[0].append(
+        $(".profilePayment__form .card-second .inputCard-cvv")[0]
+      );
+    }
+  }
 }
 checkSize();
 $(window).resize(function () {
