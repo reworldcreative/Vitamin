@@ -1,0 +1,187 @@
+.SignIn {
+  &__password {
+    margin-top: 15px;
+    position: relative;
+    align-items: center;
+
+    &_recover {
+      position: absolute;
+      right: 24px;
+      text-decoration: none;
+      color: $Main-Dark;
+      text-align: center;
+      font-size: 14px;
+      font-family: "Open Sans", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  &__bottom {
+    margin-top: 55px;
+    border-top: 1px solid #f2f2f2;
+    &_title {
+      color: $Main-Dark;
+      text-align: center;
+      font-size: 20px;
+      font-family: "Effra", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin: 0px auto;
+      margin-top: -15px;
+      background: $Main-White;
+      width: fit-content;
+      padding: 0px 20px;
+    }
+  }
+
+  &__list {
+    margin: 0px;
+    margin-top: 35px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    position: relative;
+    left: -120px;
+  }
+
+  &__item {
+    display: flex;
+    background: $Main-Orange_bg;
+    border-radius: 12px;
+    padding: 20px 60px 20px 16px;
+    align-items: center;
+    gap: 40px;
+    &_name {
+      color: $Main-Dark;
+      text-align: center;
+      font-size: 20px;
+      font-family: "Effra", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      margin: 0px;
+    }
+  }
+  .RecoverPassword {
+    &__wrap {
+      margin-top: 9.31vh;
+      margin-bottom: 8.3vh;
+    }
+    &__lable {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .SignIn {
+    &__list {
+      left: 0px;
+      justify-content: center;
+    }
+
+    .RecoverPassword__inputWrap {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .SignIn {
+    &__list {
+      display: grid;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .SignIn {
+    .RecoverPassword {
+      &__inputWrap {
+        width: 100%;
+      }
+      &__button {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .SignIn {
+    .RecoverPassword {
+      &__wrap {
+        margin-top: 0.31vh;
+        margin-bottom: 8.3vh;
+        padding: 35px 20px 62px;
+      }
+
+      &__lable {
+        margin-bottom: 17px;
+      }
+
+      &__password {
+        margin-top: 10px;
+      }
+
+      &__button {
+        margin-top: 15px;
+        padding: 19px 0px;
+      }
+    }
+
+    &__bottom {
+      margin-top: 56px;
+      &_title {
+        font-size: 16px;
+      }
+    }
+
+    &__list {
+      justify-content: flex-start;
+      gap: 10px;
+      margin-top: 45px;
+    }
+
+    &__item {
+      width: 100%;
+      gap: 0px;
+      padding: 11px 65px 11px 16px;
+      &_name {
+        font-size: 16px;
+        margin-left: 68px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .SignIn {
+    &__item {
+      width: auto;
+      padding: 11px 90px 11px 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .SignIn {
+    &__item {
+      padding: 11px 20px;
+
+      &_name {
+        margin-left: 20px;
+      }
+    }
+
+    &__list {
+      justify-content: center;
+    }
+  }
+}

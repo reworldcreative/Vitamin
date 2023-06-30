@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Sign In"
+})
+
+<body>
+
+    <main>
+        <section class="RecoverPassword SignIn">
+            <div class="RecoverPassword__image">
+                <img class="RecoverPassword__logo" src="@img/logo.svg" alt="logo" width="42px" height="50px">
+
+            </div>
+            <div class="RecoverPassword__wrap">
+                <h1 class="section-title">Sign in with email</h1>
+
+                <div class="RecoverPassword__inputWrap">
+                    <label class="RecoverPassword__lable" for="SignInEmail">Please enter your e-mail and
+                        password:</label>
+                    <input class="profileOverview__input" id="SignInEmail" name="SignInEmail" type="email"
+                        placeholder="Email">
+                </div>
+
+                <div class="RecoverPassword__inputWrap SignIn__password">
+                    <input class="profileOverview__input" id="SignInPassword" name="SignInPassword" type="password"
+                        placeholder="Password">
+                    <a class="SignIn__password_recover" href="RecoverPassword.html">Forgot password?</a>
+                </div>
+
+                <button class="RecoverPassword__button">Sign in</button>
+
+                <div class="SignIn__bottom">
+                    <p class="SignIn__bottom_title">or sign in with...</p>
+
+                    <ul class="SignIn__list">
+                        <li class="SignIn__item">
+                            <img class="SignIn__item_image" src="@img/icons/Google_logo.svg" alt="google logo"
+                                width="32px" height="32px">
+                            <p class="SignIn__item_name">Google</p>
+                        </li>
+
+                        <li class="SignIn__item">
+                            <img class="SignIn__item_image" src="@img/icons/Apple_logo.svg" alt="Apple logo"
+                                width="32px" height="32px">
+                            <p class="SignIn__item_name">Apple</p>
+                        </li>
+                        <li class="SignIn__item">
+                            <img class="SignIn__item_image" src="@img/icons/Facebook_logo.svg" alt="Facebook logo"
+                                width="32px" height="32px">
+                            <p class="SignIn__item_name">Facebook</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="RecoverPassword__lable">
+                Don't have an account?
+                <a class="RecoverPassword__lable_accent" href="#">Create one</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>
