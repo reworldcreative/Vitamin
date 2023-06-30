@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"checkout"
+})
+
+<body>
+
+    <main>
+        <section class="checkoutFin">
+            <img class="checkoutFin__logo" src="@img/logo.svg" alt="logo" width="168px" height="200px">
+            <h1 class="section-title">Thanks for your order!</h1>
+            <p class="checkoutFin__text">Your order is now being processed, and will be despatched shortly.</p>
+
+            @@include('html/components/actionButton.html',{
+            link:"index.html",
+            text:"Go to main page",
+            })
+            <p class="checkoutFin__subtext">If you have any problems with your order, please contact us by telephone
+                on +44 (0)20 7424 2800 (Mon-Fri, 10am-6pm GMT).</p>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="scripts/main.min.js"></script>
+</body>
+
+</html>
