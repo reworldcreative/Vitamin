@@ -892,3 +892,44 @@
     }
   }
 }
+
+.profileChangePassword {
+  &__form {
+    margin-top: 29px;
+    display: grid;
+    gap: 32px;
+  }
+
+  .column_second {
+    max-width: 32%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .profileChangePassword {
+    .column_second {
+      max-width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .profileChangePassword {
+    .column_second {
+      max-width: initial;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .profileChangePassword {
+    &__form {
+      margin-top: 11px;
+      gap: 27px;
+    }
+
+    .profile__wrap {
+      margin: 30px 20px 64px;
+    }
+  }
+}
