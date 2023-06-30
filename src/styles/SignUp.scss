@@ -1,0 +1,172 @@
+.SignUp {
+  &__wrap {
+    margin: 30px auto 40px;
+  }
+  &__radio {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+  }
+  input[type="radio"] {
+    position: absolute;
+  }
+
+  input[type="radio"]:checked + label {
+    background: $Main-Orange;
+    color: $Main-White;
+  }
+
+  &__radioLable {
+    color: $Main-Dark_Text;
+    text-align: center;
+    font-size: 20px;
+    font-family: Effra;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 20px 70px;
+    border-radius: 12px;
+  }
+
+  &__wrap {
+    padding: 60px 119px;
+  }
+
+  .inputContainer__radio {
+    padding: 13px;
+    border-radius: 16px;
+    border: 1px solid #e6e6e6;
+    display: flex;
+    // justify-content: center;
+    // gap: 12px;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+
+  .SignIn {
+    &__list {
+      left: 0px;
+      margin-bottom: 35px;
+    }
+  }
+
+  &__text {
+    color: $Main-Dark_Text;
+    text-align: center;
+    font-size: 20px;
+    font-family: "Effra", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0px;
+  }
+
+  &__container {
+    display: grid;
+    gap: 17px;
+    width: 65%;
+    margin: 40px auto 0px;
+  }
+
+  &__Wholesale {
+    position: relative;
+    // display: flex;
+    display: none;
+    align-items: center;
+  }
+
+  .RecoverPassword {
+    &__button {
+      width: 65%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .SignUp {
+    &__wrap {
+      padding: 60px 20px;
+    }
+    &__container {
+      width: 100%;
+    }
+    .RecoverPassword {
+      &__button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .SignUp {
+    &__wrap {
+      padding: 5px 20px;
+      margin: 30px auto 72px;
+    }
+    .SignIn {
+      &__list {
+        justify-content: flex-start;
+        margin-top: 30px;
+        margin-bottom: 45px;
+      }
+      &__item {
+        width: 100%;
+      }
+    }
+
+    .inputContainer__radio {
+      margin-bottom: 35px;
+    }
+
+    &__radioLable {
+      font-size: 16px;
+      padding: 14px 30px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &__container {
+      gap: 13px;
+    }
+
+    .RecoverPassword__button {
+      font-size: 16px;
+      padding: 18px 0px;
+
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .SignUp {
+    .SignIn__item {
+      padding: 11px 40px 11px 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .SignUp {
+    &__radioLable {
+      font-size: 14px;
+      padding: 14px;
+    }
+    .SignIn {
+      &__item {
+        padding: 11px 20px;
+
+        &_name {
+          margin-left: 20px;
+        }
+      }
+
+      &__list {
+        justify-content: flex-start;
+      }
+    }
+  }
+}

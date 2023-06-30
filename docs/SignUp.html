@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap&_v=20230630211055" rel="stylesheet"> -->
+
+    <!-- swiper -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230630211055" /> -->
+
+    <link rel="stylesheet" href="styles/style.min.css?_v=20230630211055">
+</head>
+
+<body>
+
+    <main>
+        <section class="RecoverPassword SignUp">
+            <div class="RecoverPassword__image">
+                <img class="RecoverPassword__logo" src="img/logo.svg" alt="logo" width="42px" height="50px">
+
+            </div>
+            <div class="RecoverPassword__wrap SignUp__wrap">
+                <div class="inputContainer inputContainer__radio">
+                    <input class="SignUp__radio" type="radio" name="SignUp__radio" id="SignUp__radioRegular"
+                        value="Regular" checked>
+                    <label class="SignUp__radioLable" for="SignUp__radioRegular">Regular customer</label>
+
+                    <input class="SignUp__radio" type="radio" name="SignUp__radio" id="SignUp__radioWholesale"
+                        value="Wholesale">
+                    <label class="SignUp__radioLable" for="SignUp__radioWholesale">Wholesale customer</label>
+
+                </div>
+
+                <h1 class="section-title">Sign up with</h1>
+
+                <ul class="SignIn__list">
+                    <li class="SignIn__item">
+                        <img class="SignIn__item_image" src="img/icons/Google_logo.svg" alt="google logo" width="32px"
+                            height="32px">
+                        <p class="SignIn__item_name">Google</p>
+                    </li>
+
+                    <li class="SignIn__item">
+                        <img class="SignIn__item_image" src="img/icons/Apple_logo.svg" alt="Apple logo" width="32px"
+                            height="32px">
+                        <p class="SignIn__item_name">Apple</p>
+                    </li>
+                    <li class="SignIn__item">
+                        <img class="SignIn__item_image" src="img/icons/Facebook_logo.svg" alt="Facebook logo"
+                            width="32px" height="32px">
+                        <p class="SignIn__item_name">Facebook</p>
+                    </li>
+                </ul>
+
+                <p class="SignUp__text">or sign up using your email address...</p>
+
+                <div class="SignUp__container">
+                    <input class="profileOverview__input" id="SignUpEmail" name="SignUpEmail" type="email"
+                        placeholder="Email">
+                    <input class="profileOverview__input" id="SignUpFirstName" name="SignUpFirstName" type="text"
+                        placeholder="First Name">
+                    <input class="profileOverview__input" id="SignUpLastName" name="SignUpLastName" type="text"
+                        placeholder="Last Name">
+                    <input class="profileOverview__input" id="SignUpPassword" name="SignUpPassword" type="password"
+                        placeholder="Password">
+                    <div class="SignUp__Wholesale">
+                        <input class="profileOverview__input" id="SignUpWholesale" name="SignUpWholesale" type="text"
+                            placeholder="Wholesale purchase permission">
+                        <button class="profileOverview__UpButton" type="button">Update</button>
+                    </div>
+                </div>
+
+                <button class="RecoverPassword__button">Create my account</button>
+
+            </div>
+
+            <div class="RecoverPassword__lable">
+                Don't have an account?
+                <a class="RecoverPassword__lable_accent" href="#">Create one</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230630211055"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="scripts/main.min.js?_v=20230630211055"></script>
+</body>
+
+</html>
