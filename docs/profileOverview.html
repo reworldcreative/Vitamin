@@ -8,12 +8,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap&_v=20230701092542" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap&_v=20230701164129" rel="stylesheet"> -->
 
     <!-- swiper -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230701092542" /> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230701164129" /> -->
 
-    <link rel="stylesheet" href="styles/style.min.css?_v=20230701092542">
+    <link rel="stylesheet" href="styles/style.min.css?_v=20230701164129">
 </head>
 
 <body>
@@ -29,10 +29,25 @@
         </div> -->
     </div>
     <ul class="burger-menu__navigation">
-        <li class="burger-menu__item"><a href="#" class="burger-menu__link">Shop</a></li>
+        <li class="burger-menu__item"><a href="shop.html" class="burger-menu__link">Shop</a></li>
         <li class="burger-menu__item"><a href="#" class="burger-menu__link">Information</a></li>
-        <li class="burger-menu__item"><a href="#" class="burger-menu__link accent">Take the quiz</a></li>
+        <li class="burger-menu__item"><a href="quiz.html" class="burger-menu__link accent">Take the quiz</a></li>
     </ul>
+
+    <!-- <div class="burger-menu__ShopBottom">
+        <p class="burger-menu__ShopBottom_title">Don’t know what vitamins your body needs?</p>
+        <p class="burger-menu__ShopBottom_text">Answer a few simple questions and automatically
+            get a personalazed list of vitamins in minutes</p>
+        <a href="quiz.html" class="quiz-button @@class">
+            Take the quiz
+        </a>
+    </div> -->
+
+    <div class="burger-menu__bottom">
+        <a class="footer__text" href="mailto:support@medstogo.com">support@medstogo.com</a>
+        <p class="burger__copyright">© 2020 Vitamins.com / All rights reserved</p>
+    </div>
+
 </nav>
 <header class="header">
     <div class="header__wrap">
@@ -68,15 +83,21 @@
             <div class="profile__wrap row">
                 <div class="column column_first">
                     <aside class="profile__sidebar">
-    <nav>
-        <ul class="profile__navigation">
-            <li><a class="profile__link active" href="profileSubscriptions.html">Subscriptions</a></li>
-            <li><a class="profile__link" href="profileOrders.html">Orders</a></li>
-            <li><a class="profile__link" href="profileOverview.html">Account Overview</a>
+    <nav class="profile__navbar">
+        <ul class="profile__navigation burger-menu__navigation">
+            <li class="profile__menuItem burger-menu__item"><a class="profile__link active burger-menu__link"
+                    href="profileSubscriptions.html">Subscriptions</a></li>
+            <li class="profile__menuItem burger-menu__item"><a class="profile__link burger-menu__link"
+                    href="profileOrders.html">Orders</a></li>
+            <li class="profile__menuItem burger-menu__item"><a class="profile__link burger-menu__link"
+                    href="profileOverview.html">Account Overview</a>
             </li>
-            <li><a class="profile__link" href="profilePayment.html">Payment methods</a></li>
-            <li><a class="profile__link" href="profileChangePassword.html">Change Password</a></li>
-            <li><a class="profile__link sale" href="#">Sign out</a></li>
+            <li class="profile__menuItem burger-menu__item"><a class="profile__link burger-menu__link"
+                    href="profilePayment.html">Payment methods</a></li>
+            <li class="profile__menuItem burger-menu__item"><a class="profile__link burger-menu__link"
+                    href="profileChangePassword.html">Change Password</a></li>
+            <li class="profile__menuItem burger-menu__item"><button class="profile__link burger-menu__link sale">Sign
+                    out</button></li>
         </ul>
     </nav>
 </aside>
@@ -254,9 +275,9 @@
         </div>
     </div>
 </footer>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230701092542"
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230701164129"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="scripts/main.min.js?_v=20230701092542"></script>
+    <script src="scripts/main.min.js?_v=20230701164129"></script>
 </body>
 
 </html>

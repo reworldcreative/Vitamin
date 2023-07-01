@@ -22,11 +22,15 @@
     padding: 0px;
     gap: 45px;
   }
+  &__menuItem {
+    margin: 0px;
+  }
 
   &__link {
     color: $Main-Dark_Text;
     text-decoration: none;
     font-size: 22px;
+    line-height: unset;
     letter-spacing: -0.2px;
     font-family: "Effra", sans-serif;
     font-style: normal;
@@ -37,6 +41,10 @@
 
     &.sale {
       color: $Red;
+      padding: 0px;
+      background: none;
+      border: none;
+      cursor: pointer;
     }
   }
 

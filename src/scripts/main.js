@@ -6,10 +6,12 @@ functions.isWebp();
 $(document).ready(function () {
   $(".burger-button").click(function (event) {
     $(".burger-menu").toggleClass("active");
+    stopScroll();
   });
 
   $(".burger-menu .close-button").click(function (event) {
     $(".burger-menu").toggleClass("active");
+    stopScroll();
   });
 
   if ($(".profileOrders .down-arrow").length > 0) {
@@ -23,6 +25,14 @@ $(document).ready(function () {
         panel.style.display = "block";
       }
     });
+  }
+
+  function stopScroll() {
+    if ($(".burger-menu").hasClass("active")) {
+      $("body").css("overflow", "hidden");
+    } else {
+      $("body").css("overflow", "auto");
+    }
   }
 
   counter();
@@ -168,6 +178,33 @@ function checkSize() {
     if ($(".productCard__autoship_text").length > 0) {
       $(".productCard__autoship_textFirst")[0].textContent = "Deliver every";
     }
+
+    if ($(".profile__navbar .profile__navigation").length > 0) {
+      $(".burger-menu .burger-menu__navigation").html(
+        $(".profile__navbar .profile__navigation").html()
+      );
+    }
+
+    if ($(".shop .shop__navigation").length > 0) {
+      $(".burger-menu .burger-menu__navigation").html(
+        $(".shop .shop__navigation").html()
+      );
+
+      $(".burger-menu .burger-menu__navigation").prepend(
+        `<li><a class="shop__link" href="#">All categories</a></li>`
+      );
+
+      $(".burger-menu .burger-menu__navigation").after(
+        `<div class="burger-menu__ShopBottom">
+        <p class="burger-menu__ShopBottom_title">Don’t know what vitamins your body needs?</p>
+        <p class="burger-menu__ShopBottom_text">Answer a few simple questions and automatically
+            get a personalazed list of vitamins in minutes</p>
+        <a href="quiz.html" class="quiz-button @@class">
+            Take the quiz
+        </a>
+    </div>`
+      );
+    }
   }
 
   if ($(window).width() > 500) {
@@ -237,12 +274,12 @@ function counter() {
 }
 
 var signUpRadioWholesale;
-if ($("#SignUp__radioWholesale")) {
-  signUpRadioWholesale = document.getElementById("SignUp__radioWholesale");
+if ($("#SignUp__radioWholesale").length > 0) {
+  signUpRadioWholesale = $("#SignUp__radioWholesale")[0];
 }
 var signUpWholesale;
-if ($(".SignUp__Wholesale")) {
-  signUpWholesale = document.querySelector(".SignUp__Wholesale");
+if ($(".SignUp__Wholesale").length > 0) {
+  signUpWholesale = $(".SignUp__Wholesale")[0];
 }
 
 function toggleSignUpWholesale() {
@@ -253,8 +290,65 @@ function toggleSignUpWholesale() {
   }
 }
 
-toggleSignUpWholesale();
+if ($("#SignUp__radioWholesale").length > 0) {
+  toggleSignUpWholesale();
+}
 
-if ($("#SignUp__radioWholesale")) {
-  signUpRadioWholesale.addEventListener("change", toggleSignUpWholesale);
+if ($(".SignUp__radio").length > 0) {
+  $(".SignUp__radio").each((index, element) => {
+    $(element).on("change", toggleSignUpWholesale);
+  });
+}
+
+var quzQuestions = [
+  "What’s your first name?",
+  "Do you smoke?",
+  "What is your eating habits?",
+  "How frequently do you consume alcoholic beverages?",
+  "How frequently do you have cold/flu symptoms?",
+  "Describe your stress level",
+  "Have you ever been diagnosted with high blood glucose level?",
+  "Tell us what you want to focus on",
+  "What’s your email address?",
+];
+
+var currentQuestion = 0;
+function changeQuestion() {
+  $(".quiz #quiz__currentStep")[0].textContent = currentQuestion + 1;
+  $(".quiz #quiz__totalStep")[0].textContent = quzQuestions.length;
+  $(".quiz #quiz__question")[0].textContent = quzQuestions[currentQuestion];
+  $(".quiz .quiz__questionContainer").css("display", "none");
+  $(".quiz #quizQuestion" + (currentQuestion + 1)).css("display", "grid");
+}
+
+if ($(".quiz .quiz__button").length > 0) {
+  $(".quiz .quiz__button").each((index, element) => {
+    $(element).on("click", () => {
+      currentQuestion++;
+      if (currentQuestion > quzQuestions.length - 1) {
+        window.location.href = "404.html";
+        console.log("dddd");
+      }
+      changeQuestion();
+    });
+  });
+}
+
+if ($(".quiz .quiz__backLink").length > 0) {
+  $(".quiz .quiz__backLink").on("click", () => {
+    currentQuestion--;
+    if (currentQuestion < 0) {
+      window.location.href = "index.html";
+    }
+    changeQuestion();
+  });
+}
+
+if ($(".quiz__radioLable").length > 0) {
+  $(".quiz__radioLable").each((index, element) => {
+    $(element).on("click", () => {
+      currentQuestion++;
+      changeQuestion();
+    });
+  });
 }

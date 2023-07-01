@@ -26,6 +26,7 @@
   position: fixed;
   background-color: $Main-White;
   z-index: 10;
+  overflow: scroll;
 
   transition: 0.5s ease-in-out;
 
@@ -50,14 +51,16 @@
     list-style: none;
     padding: 40px 20px;
     margin: 0px;
+    gap: 30px;
+    display: grid;
   }
 
-  &__item {
-    margin-bottom: 30px;
-    &:last-child {
-      margin-bottom: 0px;
-    }
-  }
+  // &__item {
+  //   margin-bottom: 30px;
+  //   &:last-child {
+  //     margin-bottom: 0px;
+  //   }
+  // }
 
   &__link {
     font-family: "Effra", sans-serif;
@@ -71,6 +74,56 @@
 
     &.accent {
       color: $Main-Orange;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid #f2f2f2;
+
+    padding: 40px 20px 50px;
+    display: grid;
+    gap: 15px;
+  }
+
+  .burger__copyright {
+    color: $Main-Dark_Text;
+    font-size: 12px;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.3;
+    margin: 0px;
+  }
+
+  &__ShopBottom {
+    border-top: 1px solid #f2f2f2;
+    padding: 40px 20px 50px;
+    display: grid;
+
+    &_title {
+      margin: 0px;
+      margin-bottom: 15px;
+      color: $Main-Dark_Text;
+      text-align: center;
+      font-size: 18px;
+      font-family: "Effra", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    &_text {
+      margin: 0px;
+      margin-bottom: 25px;
+      color: $Main-Dark_Text;
+      text-align: center;
+      font-size: 14px;
+      font-family: "Open Sans", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      opacity: 0.5;
     }
   }
 }
