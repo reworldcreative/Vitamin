@@ -235,3 +235,26 @@ function counter() {
     });
   }
 }
+
+var signUpRadioWholesale;
+if ($("#SignUp__radioWholesale")) {
+  signUpRadioWholesale = document.getElementById("SignUp__radioWholesale");
+}
+var signUpWholesale;
+if ($(".SignUp__Wholesale")) {
+  signUpWholesale = document.querySelector(".SignUp__Wholesale");
+}
+
+function toggleSignUpWholesale() {
+  if (signUpRadioWholesale.checked) {
+    signUpWholesale.style.display = "flex";
+  } else {
+    signUpWholesale.style.display = "none";
+  }
+}
+
+toggleSignUpWholesale();
+
+if ($("#SignUp__radioWholesale")) {
+  signUpRadioWholesale.addEventListener("change", toggleSignUpWholesale);
+}
