@@ -21,6 +21,7 @@
   .cart__img {
     position: relative;
     padding: 3px 5px;
+    cursor: pointer;
     &_alert {
       background-color: $Main-Orange;
       border-radius: 50%;

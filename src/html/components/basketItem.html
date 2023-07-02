@@ -1,0 +1,46 @@
+<div class="basket__item_container">
+    <div class="basket__imageWrap @@color">
+        <img class="basket__image" src="@@image" alt="vitamin" width="85px" height="92px">
+    </div>
+
+    <div>
+        <div class="basket__item_top">
+            <h2 class="basket__item_name">@@name</h2>
+            <button class="close-button delete" aria-label="delete element">
+                <img src="@img/icons/Close.svg" alt="Close icon" width="14" height="14" aria-hidden="true">
+            </button>
+        </div>
+
+        <div class="basket__item_amount">
+            <div class="productCard__counter">
+                <button class="productCard__counter_button number-counter minus-button">-</button>
+                <p class="productCard__number">1</p>
+                <button class="productCard__counter_button number-counter plus-button">+</button>
+            </div>
+
+            <div class="basket__item_price">
+                <div class="basket__item_priceNumber ">$125.00</div>
+                <!-- <div class="basket__item_priceSale">$84.00</div> -->
+            </div>
+        </div>
+
+        <div class="basket__item_ship productCard__autoship">
+            <!-- <input type="checkbox" class="basket__checkbox" id="basket__Autoship" name="Autoship"
+                value="Autoship"> -->
+
+            <input type="checkbox" class="basket__checkbox" id="basket__Autoship@@id" name="Autoship" value="Autoship">
+            <label for="basket__Autoship@@id"></label>
+            <p class="productCard__autoship_text"> <span class="productCard__autoship_textFirst">Autoship
+                    every</span>
+                <select class="days-ayto-delivery" name="days-ayto-delivery">
+                    <option value="7">7</option>
+                    <option value="14">14</option>
+                    <option value="30" selected>30</option>
+                </select>
+                days
+            </p>
+
+
+        </div>
+    </div>
+</div>

@@ -27,8 +27,21 @@ $(document).ready(function () {
     });
   }
 
+  $(".cart__img").click(function (event) {
+    $(".basket").toggleClass("active");
+    stopScroll();
+  });
+
+  $(".basket .close-button").click(function (event) {
+    $(".basket").toggleClass("active");
+    stopScroll();
+  });
+
   function stopScroll() {
-    if ($(".burger-menu").hasClass("active")) {
+    if (
+      $(".burger-menu").hasClass("active") ||
+      $(".basket").hasClass("active")
+    ) {
       $("body").css("overflow", "hidden");
     } else {
       $("body").css("overflow", "auto");
@@ -213,7 +226,7 @@ function checkSize() {
       // IscheckSize = true;
     }
 
-    if ($(".productCard__autoship_text").length > 0) {
+    if ($(".productCard .productCard__autoship_text").length > 0) {
       $(".productCard__autoship_textFirst")[0].textContent =
         "Autoship this item every";
     }
