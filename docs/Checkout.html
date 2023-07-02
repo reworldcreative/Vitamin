@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap&_v=20230702204237" rel="stylesheet"> -->
+
+    <!-- swiper -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230702204237" /> -->
+
+    <link rel="stylesheet" href="styles/style.min.css?_v=20230702204237">
+</head>
+
+<body>
+    <main class="Checkout">
+        <section class="Checkout__top">
+            <a class="Checkout__logo" href="index.html">
+                <img src="img/logo.svg" alt="logo" width="42px" height="50px">
+            </a>
+        </section>
+        <div class="Checkout__wrap">
+            <div class="Checkout__column Checkout__column_first">
+                <div>
+                    <h1 class="Checkout__title">Delivery Information</h1>
+                    <form action="" class="Checkout__form profileOverview__form">
+                        <div class="inputContainer">
+                            <label class="profileOverview__lable" for="personalName">First Name</label>
+                            <input class="profileOverview__input" id="personalName" name="personalName" type="text"
+                                placeholder="John">
+                        </div>
+
+                        <div class="inputContainer">
+                            <label class="profileOverview__lable" for="personalLastName">Last Name</label>
+                            <input class="profileOverview__input" id="personalLastName" name="personalLastName"
+                                type="text" placeholder="Smith">
+                        </div>
+
+                        <div class="inputContainer">
+                            <label class="profileOverview__lable" for="personalAddressLine1">Address Line 1</label>
+                            <input class="profileOverview__input" id="personalAddressLine1" name="personalAddressLine1"
+                                type="text" placeholder="Hilton st. 123">
+                        </div>
+
+                        <div class="inputContainer">
+                            <label class="profileOverview__lable" for="personalAddressLine2">Address Line 2</label>
+                            <input class="profileOverview__input" id="personalAddressLine2" name="personalAddressLine2"
+                                type="text" placeholder="">
+                        </div>
+
+                        <div class="inputContainer">
+                            <label class="profileOverview__lable" for="personaCity">City</label>
+                            <input class="profileOverview__input" id="personaCity" name="personaCity" type="text"
+                                placeholder="New York">
+                        </div>
+
+                        <div class="inputContainer inputContainer__ZIP">
+                            <div class="inputContainer">
+                                <label class="profileOverview__lable" for="personaState">State / Province</label>
+                                <select class="profileOverview__input" id="personaState" name="personaState">
+                                    <option value="NY" selected>NY</option>
+                                    <option value="FL">FL</option>
+                                    <option value="WA">WA</option>
+                                </select>
+                            </div>
+
+                            <div class="inputContainer">
+                                <label class="profileOverview__lable" for="personaZIP">ZIP / Postal Code</label>
+                                <input class="profileOverview__input" id="personaZIP" name="personaZIP" type="text"
+                                    placeholder="213 822">
+                            </div>
+                        </div>
+
+                        <div class="inputContainer">
+                            <label class="profileOverview__lable" for="personaEmail">Email</label>
+                            <input class="profileOverview__input" id="personaEmail" name="personaEmail" type="email"
+                                placeholder="johnsmith@gmail.com">
+                        </div>
+
+                        <div class="inputContainer">
+                            <label class="profileOverview__lable" for="personaPhone">Phone Number</label>
+                            <input class="profileOverview__input" id="personaPhone" name="personaPhone" type="email"
+                                placeholder="8 029 876 56 21">
+                        </div>
+                    </form>
+                </div>
+
+                <div>
+                    <h2 class="Checkout__title">Biling</h2>
+
+                    <form class="Checkout__form-Billing">
+
+                        <div class="inputContainer inputContainer-number">
+                            <label class="profileOverview__lable" for="cCheckoutard-number">Card Number</label>
+                            <input class="profileOverview__input" id="Checkoutcard-number" name="cCheckoutard-number"
+                                type="text" placeholder="XXXX XXXX XXXX XXXX" maxlength="16" pattern="[b](16)">
+                        </div>
+
+                        <div class="inputContainer inputContainer-Expiration">
+                            <label class="profileOverview__lable" for="card-Expiration">Expiration</label>
+                            <input class="profileOverview__input" id="card-Expiration" name="card-Expiration"
+                                type="text" placeholder="MM/YY" maxlength="4" pattern="[b]">
+                        </div>
+
+                        <div class="inputContainer inputContainer-CVC">
+                            <label class="profileOverview__lable" for="Checkout__cvc-cvv">CVC</label>
+                            <input class="profileOverview__input" id="Checkout__cvc-cvv" name="Checkout__cvc-cvv"
+                                type="text" placeholder="CVC" maxlength="3" pattern="[b](3)">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="Checkout__column Checkout__column_second">
+                <div class="Checkout__accordion">
+                    <img src="img/icons/Cart.svg" alt="packet icon" width="32px" height="32px">
+                    <div class="Checkout__money_item total">
+                        <p class="Checkout__money_name">Today’s total</p>
+                        <div class="Checkout__money_count">$129.66</div>
+                    </div>
+                </div>
+                <ul class="Checkout__list">
+                    <li class="Checkout__product">
+                        <div class="Checkout__product_imageWrap pink">
+                            <picture><source srcset="img/vitamins/vitamin_8.webp" type="image/webp"><img src="img/vitamins/vitamin_8.png" alt="vitamin" width="49px" height="55px"></picture>
+                        </div>
+                        <p class="Checkout__product_name"><span class="Checkout__product_amount">1</span> x Ortho
+                            Molecular Products 5-HTP Capsules</p>
+
+                        <div class="Checkout__price">
+                            <p class="Checkout__price_number">$61.98</p>
+                            <!-- <p class="Checkout__price_number sale">$61.98</p> -->
+                        </div>
+                    </li>
+
+                    <li class="Checkout__product">
+                        <div class="Checkout__product_imageWrap purple">
+                            <picture><source srcset="img/vitamins/vitamin_6.webp" type="image/webp"><img src="img/vitamins/vitamin_6.png" alt="vitamin" width="49px" height="55px"></picture>
+                        </div>
+                        <p class="Checkout__product_name"><span class="Checkout__product_amount">3</span> x Standard
+                            Process Thymus PMG 90 Tablets</p>
+
+                        <div class="Checkout__price">
+                            <p class="Checkout__price_number discount">$125.00</p>
+                            <p class="Checkout__price_number sale">$61.98</p>
+                        </div>
+                    </li>
+
+                    <li class="Checkout__product">
+                        <div class="Checkout__product_imageWrap mint">
+                            <picture><source srcset="img/vitamins/vitamin_3.webp" type="image/webp"><img src="img/vitamins/vitamin_3.png" alt="vitamin" width="49px" height="55px"></picture>
+                        </div>
+                        <p class="Checkout__product_name"><span class="Checkout__product_amount">1</span> x Ortho
+                            Molecular Products 5-HTP Capsules</p>
+
+                        <div class="Checkout__price">
+                            <p class="Checkout__price_number discount">$125.00</p>
+                            <p class="Checkout__price_number sale">$61.98</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="Checkout__money">
+                    <div class="Checkout__money_item">
+                        <p class="Checkout__money_name">Subtotal</p>
+                        <div class="Checkout__money_count">$120.46</div>
+                    </div>
+                    <div class="Checkout__money_item">
+                        <p class="Checkout__money_name">Discount</p>
+                        <div class="Checkout__money_count sale">-$31.20</div>
+                    </div>
+                    <div class="Checkout__money_item">
+                        <p class="Checkout__money_name">Shipping</p>
+                        <div class="Checkout__money_count">$9.20</div>
+                    </div>
+
+                    <div class="Checkout__money_item total">
+                        <p class="Checkout__money_name">Today’s Total:</p>
+                        <div class="Checkout__money_count">$129.66</div>
+                    </div>
+                </div>
+
+                <button class="Checkout__button">
+                    Place order
+                </button>
+            </div>
+        </div>
+
+        <section class="Checkout__footer">
+            <div class="Checkout__footer_links">
+                <a href="#" class="profileOverview__lable">Return Policy</a>
+                <a href="#" class="profileOverview__lable">Privacy Policy</a>
+                <a href="#" class="profileOverview__lable">Terms & Conditions</a>
+            </div>
+            <div class="Checkout__card-logos">
+                <img src="img/payments/Payment_logos_stripe.svg" alt="stripe logos" width="107" height="30px">
+                <img src="img/payments/Payment_logos_ssl.svg" alt="stripe logos" width="35px" height="35px">
+                <img src="img/payments/Payment_logos_mastercard.svg" alt="stripe logos" width="35px" height="35px">
+                <img src="img/payments/Payment_logos_visa.svg" alt="stripe logos" width="35px" height="35px">
+                <img src="img/payments/Payment_logos_as.svg" alt="stripe logos" width="35px" height="35px">
+                <img src="img/payments/Payment_logos_2.svg" alt="stripe logos" width="35px" height="35px">
+            </div>
+        </section>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230702204237"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="scripts/main.min.js?_v=20230702204237"></script>
+</body>
+
+</html>
