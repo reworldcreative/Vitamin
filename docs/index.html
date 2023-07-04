@@ -8,12 +8,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap&_v=20230702204237" rel="stylesheet"> -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap&_v=20230704161423" rel="stylesheet"> -->
 
     <!-- swiper -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230702204237" /> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230704161423" /> -->
 
-    <link rel="stylesheet" href="styles/style.min.css?_v=20230702204237">
+    <link rel="stylesheet" href="styles/style.min.css?_v=20230704161423">
 </head>
 
 <body id="mainPage">
@@ -52,14 +52,14 @@
 
     <div class="basket__top">
         <p class="basket__title">Cart</p>
-        <button class="close-button" aria-label="close basket">
+        <button class="close-button close-cart" aria-label="close basket">
             <img src="img/icons/Close.svg" alt="Close icon" width="18" height="18" aria-hidden="true">
         </button>
     </div>
 
     <div class="basket__empty">
         <p class="basket__empty_text">Your cart is empty</p>
-        <img class="basket__empty_bg" data-src="img/logo.svg" alt="logo bg" width="294px" height="350px">
+        <img class="basket__empty_bg" src="img/logo.svg" alt="logo bg" width="294px" height="350px">
     </div>
 
     <ul class="basket__list">
@@ -69,7 +69,7 @@
         <picture><source srcset="img/vitamins/vitamin_8.webp" type="image/webp"><img class="basket__image" src="img/vitamins/vitamin_8.png" alt="vitamin" width="85px" height="92px"></picture>
     </div>
 
-    <div>
+    <div style="width: 100%;">
         <div class="basket__item_top">
             <h2 class="basket__item_name">Ortho Molecular Products CereVive Capsules</h2>
             <button class="close-button delete" aria-label="delete element">
@@ -86,7 +86,7 @@
 
             <div class="basket__item_price">
                 <div class="basket__item_priceNumber ">$125.00</div>
-                <!-- <div class="basket__item_priceSale">$84.00</div> -->
+                <div class="basket__item_priceSale">$84.00</div>
             </div>
         </div>
 
@@ -117,7 +117,7 @@
         <picture><source srcset="img/vitamins/vitamin_6.webp" type="image/webp"><img class="basket__image" src="img/vitamins/vitamin_6.png" alt="vitamin" width="85px" height="92px"></picture>
     </div>
 
-    <div>
+    <div style="width: 100%;">
         <div class="basket__item_top">
             <h2 class="basket__item_name">Standard Process Thymus PMG 90 Tablets</h2>
             <button class="close-button delete" aria-label="delete element">
@@ -134,55 +134,7 @@
 
             <div class="basket__item_price">
                 <div class="basket__item_priceNumber ">$125.00</div>
-                <!-- <div class="basket__item_priceSale">$84.00</div> -->
-            </div>
-        </div>
-
-        <div class="basket__item_ship productCard__autoship">
-            <!-- <input type="checkbox" class="basket__checkbox" id="basket__Autoship" name="Autoship"
-                value="Autoship"> -->
-
-            <input type="checkbox" class="basket__checkbox" id="basket__Autoship2" name="Autoship" value="Autoship">
-            <label for="basket__Autoship2"></label>
-            <p class="productCard__autoship_text"> <span class="productCard__autoship_textFirst">Autoship
-                    every</span>
-                <select class="days-ayto-delivery" name="days-ayto-delivery">
-                    <option value="7">7</option>
-                    <option value="14">14</option>
-                    <option value="30" selected>30</option>
-                </select>
-                days
-            </p>
-
-
-        </div>
-    </div>
-</div>
-        </li>
-        <li class="basket__item">
-            <div class="basket__item_container">
-    <div class="basket__imageWrap purple">
-        <picture><source srcset="img/vitamins/vitamin_6.webp" type="image/webp"><img class="basket__image" src="img/vitamins/vitamin_6.png" alt="vitamin" width="85px" height="92px"></picture>
-    </div>
-
-    <div>
-        <div class="basket__item_top">
-            <h2 class="basket__item_name">Standard Process Thymus PMG 90 Tablets</h2>
-            <button class="close-button delete" aria-label="delete element">
-                <img src="img/icons/Close.svg" alt="Close icon" width="14" height="14" aria-hidden="true">
-            </button>
-        </div>
-
-        <div class="basket__item_amount">
-            <div class="productCard__counter">
-                <button class="productCard__counter_button number-counter minus-button">-</button>
-                <p class="productCard__number">1</p>
-                <button class="productCard__counter_button number-counter plus-button">+</button>
-            </div>
-
-            <div class="basket__item_price">
-                <div class="basket__item_priceNumber ">$125.00</div>
-                <!-- <div class="basket__item_priceSale">$84.00</div> -->
+                <div class="basket__item_priceSale">$84.00</div>
             </div>
         </div>
 
@@ -619,15 +571,15 @@
     
 
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230702204237"
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230704161423"
         integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
     <!-- swiper -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230702204237"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20230704161423"></script> -->
 
     <!-- Lazy Load XT jQuery plugin -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyloadxt/1.1.0/jquery.lazyloadxt.min.js?_v=20230702204237" integrity="sha512-3vivnUcccTdHsFyh6mAPtdxQ09Ihk1PbBajJ0PSshJftB7ekRxDmMsM4aKS0Ja1bfgkUgde71N2k1sDzQ9NvTg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-    <script src="scripts/main.min.js?_v=20230702204237"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyloadxt/1.1.0/jquery.lazyloadxt.min.js?_v=20230704161423" integrity="sha512-3vivnUcccTdHsFyh6mAPtdxQ09Ihk1PbBajJ0PSshJftB7ekRxDmMsM4aKS0Ja1bfgkUgde71N2k1sDzQ9NvTg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <script src="scripts/main.min.js?_v=20230704161423"></script>
     
 </body>
 

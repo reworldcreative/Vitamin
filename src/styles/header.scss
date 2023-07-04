@@ -1,5 +1,7 @@
 @import "components/burger";
 .header {
+  z-index: 20;
+  position: relative;
   &__wrap {
     padding: 30px 30px 25px 35px;
     margin: 0px;

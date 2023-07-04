@@ -2,14 +2,14 @@
 
     <div class="basket__top">
         <p class="basket__title">Cart</p>
-        <button class="close-button" aria-label="close basket">
+        <button class="close-button close-cart" aria-label="close basket">
             <img src="@img/icons/Close.svg" alt="Close icon" width="18" height="18" aria-hidden="true">
         </button>
     </div>
 
     <div class="basket__empty">
         <p class="basket__empty_text">Your cart is empty</p>
-        <img class="basket__empty_bg" data-src="@img/logo.svg" alt="logo bg" width="294px" height="350px">
+        <img class="basket__empty_bg" src="@img/logo.svg" alt="logo bg" width="294px" height="350px">
     </div>
 
     <ul class="basket__list">
@@ -19,14 +19,6 @@
             image:"@img/vitamins/vitamin_8.png",
             name:"Ortho Molecular Products CereVive Capsules",
             color:"pink",
-            })
-        </li>
-        <li class="basket__item">
-            @@include('./basketItem.html',{
-            id:"2",
-            image:"@img/vitamins/vitamin_6.png",
-            name:"Standard Process Thymus PMG 90 Tablets",
-            color:"purple",
             })
         </li>
         <li class="basket__item">
