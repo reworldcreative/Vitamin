@@ -2,7 +2,7 @@ import * as functions from "./modules/functions.js";
 
 functions.isWebp();
 // functions.changeImages();
-
+var pathToServer = "http://localhost:1337";
 $(document).ready(function () {
   if ($(".burger-button").length > 0) {
     $(".burger-button").click(function (event) {
@@ -79,27 +79,6 @@ $(document).ready(function () {
 
       localStorage.setItem("basketItemsData", JSON.stringify(itemsData));
       window.location.href = "Checkout.html";
-    });
-  }
-
-  if ($(".packProduckItem").length > 0) {
-    $(".packProduckItem").click(function (event) {
-      var productObject = {
-        productImage: this.querySelectorAll(".packProduckItem__image img")[0]
-          .src,
-        productName: this.querySelectorAll(".packProduckItem__name")[0]
-          .textContent,
-        productClass: this.querySelectorAll(".packProduckItem__class")[0]
-          .textContent,
-        productPrice: this.querySelectorAll(".packProduckItem__price")[0]
-          .textContent,
-        productPriceDiscount: this.querySelectorAll(
-          ".packProduckItem__priceDiscount"
-        )[0].textContent,
-      };
-      var productObjectString = JSON.stringify(productObject);
-      localStorage.setItem("productObject", productObjectString);
-      window.location.href = "productCard.html";
     });
   }
 
@@ -416,8 +395,150 @@ $(document).ready(function () {
   basketDelete();
   checkBasketLength();
   basketTotalPriceChange();
+
+  if ($(".shop").length > 0) {
+    $.ajax({
+      url:
+        pathToServer +
+        "/api/products?populate=image&populate=class&populate=class.vitamins_color",
+      method: "GET",
+      data: {},
+      dataType: "json",
+      success: function (response) {
+        // Обробка успішно отриманих даних
+
+        // const shopLIst = $(".shop .shop__list");
+        response.data.forEach(function (element) {
+          createShopListElement(element);
+        });
+      },
+      error: function (xhr, status, error) {
+        // Обробка помилки
+        console.error(error);
+      },
+    });
+  }
 });
 
+if ($(".product-sort").length > 0) {
+  $(".product-sort").each(function () {
+    $(this).click(function (event) {
+      updateProductList(
+        event.target.textContent,
+        "/api/products?filters[class][name][$eqi]="
+      );
+    });
+  });
+}
+
+if ($(".product-sale").length > 0) {
+  $(".product-sale").each(function () {
+    $(this).click(function (event) {
+      updateProductList(
+        event.target.textContent,
+        "/api/products?filters[discountPrice][$notNull]=''"
+      );
+    });
+  });
+}
+
+function updateProductList(sortBy, filter) {
+  sortBy = sortBy.includes("&") ? sortBy.replace("&", "%26") : sortBy;
+  // %26 екранування символу  &
+  $.ajax({
+    url:
+      pathToServer +
+      filter +
+      sortBy +
+      "&populate=image&populate=class&populate=class.vitamins_color",
+    method: "GET",
+    data: {},
+    dataType: "json",
+    success: function (response) {
+      // Очищення списку товарів
+      $(".shop__list").empty();
+
+      response.data.forEach(function (element) {
+        createShopListElement(element);
+      });
+    },
+    error: function (xhr, status, error) {
+      // Обробка помилки
+      console.error(error);
+    },
+  });
+}
+
+function createShopListElement(element) {
+  var productImage;
+  var isWebpDocument = document.documentElement.className;
+  if (isWebpDocument === "webp") {
+    productImage =
+      pathToServer + element.attributes.image.data[0].attributes.url;
+  } else {
+    productImage =
+      pathToServer + element.attributes.image.data[1].attributes.url;
+  }
+  var discountPrice;
+  if (element.attributes.discountPrice !== null) {
+    discountPrice = element.attributes.discountPrice;
+  } else {
+    discountPrice = "";
+  }
+
+  var elementColor =
+    element.attributes.class.data.attributes.vitamins_color.data.attributes
+      .name;
+  var shopItem = $("<article>").addClass("packProduckItem").html(`
+<div class="packProduckItem__wrap">
+    <div class="packProduckItem__badge ">
+        -45%
+    </div>
+    <div class="packProduckItem__image">
+        <img src="${productImage}" alt="vitamin's jar" width="186px" height="209px">
+    </div>
+
+    <div class="packProduckItem__container">
+        <p class="packProduckItem__class" style="color: ${elementColor};">${element.attributes.class.data.attributes.name}</p>
+        <p class="packProduckItem__name">${element.attributes.name}</p>
+        <div class="packProduckItem__priceContainer">
+            <p class="packProduckItem__price">${element.attributes.price}</p>
+            <p class="packProduckItem__price packProduckItem__priceDiscount">${discountPrice}</p>
+        </div>
+    </div>
+</div>
+          
+`);
+
+  if (element.attributes.discountPrice !== null) {
+    shopItem.find(".packProduckItem__price")[0].classList.add("discount");
+  }
+  $(".shop .shop__list").prepend(shopItem);
+}
+
+function packProduckItemClick() {
+  if ($(".packProduckItem").length > 0) {
+    $(".packProduckItem").click(function (event) {
+      var productObject = {
+        productImage: this.querySelectorAll(".packProduckItem__image img")[0]
+          .src,
+        productName: this.querySelectorAll(".packProduckItem__name")[0]
+          .textContent,
+        productClass: this.querySelectorAll(".packProduckItem__class")[0]
+          .textContent,
+        productPrice: this.querySelectorAll(".packProduckItem__price")[0]
+          .textContent,
+        productPriceDiscount: this.querySelectorAll(
+          ".packProduckItem__priceDiscount"
+        )[0].textContent,
+      };
+      var productObjectString = JSON.stringify(productObject);
+      localStorage.setItem("productObject", productObjectString);
+      window.location.href = "productCard.html";
+    });
+  }
+}
+$(document).on("click", ".packProduckItem", packProduckItemClick);
 $(document).on("click", ".productCard__counter_button", counter);
 
 function saveBasketToStorage() {
