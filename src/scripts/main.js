@@ -135,18 +135,6 @@ $(document).ready(function () {
         .find(".productCard__name")
         .text();
 
-      // var itemPriceDiscount =
-      //   parseFloat(
-      //     $(this)
-      //       .closest(".column__wrap")
-      //       .find(".packProduckItem__priceDiscount")
-      //       .text()
-      //       .replace("$", "")
-      //   ) *
-      //   parseInt(
-      //     $(this).closest(".column__wrap").find(".productCard__number").text()
-      //   ).toFixed(2);
-
       var itemName = $(this)
         .closest(".column__wrap")
         .find(".productCard__name")
@@ -166,7 +154,6 @@ $(document).ready(function () {
       firstPriceDiscountElement = isNaN(firstPriceDiscountValue)
         ? ""
         : "$" + firstPriceDiscountElement;
-      console.log(firstPriceDiscountValue);
 
       if (existingItem.length > 0) {
         var numberElement = existingItem.find(".productCard__number");
@@ -332,29 +319,19 @@ $(document).ready(function () {
   }
 
   if ($(".Checkout").length > 0) {
-    // Отримати збережені дані з localStorage
     const basketItemsData = localStorage.getItem("basketItemsData");
     var totalPrice = 0;
-    // Перевірити, чи є збережені дані
     if (basketItemsData) {
-      // Розпакувати збережені дані з JSON у масив об'єктів
       const itemsData = JSON.parse(basketItemsData);
-
-      // Пройтися по кожному об'єкту з даними
       itemsData.forEach((itemData) => {
-        // Отримати потрібні значення з об'єкта
         const imageSrc = itemData.image;
         const itemName = itemData.name;
         const itemNumber = itemData.number;
         const itemPriceNumber = itemData.priceNumber;
-        const itemPriceSale = itemData.priceSale;
+        var itemPriceSale = itemData.priceSale;
 
-        // Використовуйте отримані значення за потреби
-        // console.log("Image source:", imageSrc);
-        // console.log("Item name:", itemName);
-        // console.log("Item number:", itemNumber);
-        // console.log("Item price number:", itemPriceNumber);
-        // console.log("Item price sale:", itemPriceSale);
+        itemPriceSale = parseFloat(itemData.priceSale);
+        itemPriceSale = isNaN(itemPriceSale) ? "" : itemPriceSale;
 
         var newLi = $("<li>").addClass("Checkout__product").html(`
                         <div class="Checkout__product_imageWrap pink">
@@ -405,16 +382,12 @@ $(document).ready(function () {
       data: {},
       dataType: "json",
       success: function (response) {
-        // Обробка успішно отриманих даних
-
-        // const shopLIst = $(".shop .shop__list");
         response.data.forEach(function (element) {
           createShopListElement(element);
         });
       },
       error: function (xhr, status, error) {
-        // Обробка помилки
-        console.error(error);
+        console.log(error);
       },
     });
   }
@@ -442,6 +415,213 @@ if ($(".product-sale").length > 0) {
   });
 }
 
+if ($(".createAccount").length > 0) {
+  $(".createAccount").click(function (event) {
+    event.preventDefault();
+
+    var userData = {
+      username: $("#SignUpFirstName").val(),
+      LastName: $("#SignUpLastName").val(),
+      email: $("#SignUpEmail").val(),
+      password: $("#SignUpPassword").val(),
+    };
+
+    $.ajax({
+      url: pathToServer + "/api/auth/local/register",
+      method: "POST",
+      data: userData,
+      dataType: "json",
+      success: function (response) {
+        localStorage.setItem("jwt", response.jwt);
+        localStorage.setItem("user", JSON.stringify(userData));
+        window.location.replace("profileOverview.html");
+      },
+      error: function (xhr, status, error) {
+        console.log(error);
+      },
+    });
+  });
+}
+
+if ($(".profileOverview__form").length > 0) {
+  var jwt = localStorage.getItem("jwt");
+  var userDataObject = JSON.parse(localStorage.getItem("user"));
+
+  if (userDataObject) {
+    $("#personalName")[0].value = userDataObject.username;
+    $("#personalLastName")[0].value = userDataObject.LastName;
+    $("#personaEmail")[0].value = userDataObject.email;
+    $("#personalAddressLine1")[0].value = userDataObject.AddressLine1;
+    $("#personalAddressLine2")[0].value = userDataObject.AddressLine2;
+    $("#personaCity")[0].value = userDataObject.City;
+    $("#personaState")[0].value = userDataObject.state;
+    $("#personaZIP")[0].value = userDataObject.ZIP;
+    $("#personaPhone")[0].value = userDataObject.PhoneNumber;
+  }
+  $("#profileOverview-SaveButton").click(function (event) {
+    event.preventDefault();
+    if (jwt) {
+      var updateUserData = {
+        username: $("#personalName").val(),
+        email: $("#personaEmail").val(),
+        LastName: $("#personalLastName").val(),
+        AddressLine1: $("#personalAddressLine1").val(),
+        AddressLine2: $("#personalAddressLine2").val(),
+        City: $("#personaCity").val(),
+        state: $("#personaState").val(),
+        ZIP: $("#personaZIP").val(),
+        PhoneNumber: $("#personaPhone").val(),
+      };
+
+      $.ajax({
+        url: pathToServer + "/api/users/" + userDataObject.id,
+        method: "PUT",
+        data: updateUserData,
+        dataType: "json",
+        headers: {
+          Authorization: `Bearer ${jwt}`,
+        },
+        success: function (response) {
+          localStorage.setItem("user", JSON.stringify(response));
+        },
+        error: function (xhr, status, error) {
+          console.log(error);
+        },
+      });
+    }
+  });
+}
+
+var currentPagePath = window.location.pathname;
+var isSignInPage = currentPagePath.includes("SignIn.html");
+
+if (isSignInPage) {
+  var jwt = localStorage.getItem("jwt");
+  if (jwt) {
+    window.location.replace("profileOverview.html");
+  } else {
+    if ($(".SignInBtn").length > 0) {
+      $(".SignInBtn").click(function (event) {
+        event.preventDefault();
+
+        var userData = {
+          identifier: $("#SignInEmail").val(),
+          password: $("#SignInPassword").val(),
+        };
+
+        $.ajax({
+          url: pathToServer + "/api/auth/local",
+          method: "POST",
+          data: userData,
+          dataType: "json",
+          success: function (response) {
+            localStorage.setItem("jwt", response.jwt);
+            localStorage.setItem("user", JSON.stringify(response.user));
+            window.location.replace("profileOverview.html");
+          },
+          error: function (xhr, status, error) {
+            console.log(error);
+          },
+        });
+      });
+    }
+  }
+}
+
+if ($(".SignOut")[0]) {
+  $(".SignOut").click(function (event) {
+    localStorage.removeItem("jwt");
+    localStorage.removeItem("user");
+    window.location.replace("SignIn.html");
+  });
+}
+
+if ($("#Order")[0]) {
+  $("#Order").click(function (event) {
+    var productList = [];
+    $(".Checkout__product").each(function () {
+      var amount = parseInt($(this).find(".Checkout__product_amount").text());
+      var discount = parseFloat(
+        $(this).find(".Checkout__price_number.discount").text().replace("$", "")
+      );
+      var sale = parseFloat(
+        $(this).find(".Checkout__price_number.sale").text().replace("$", "")
+      );
+      var name = $(this)
+        .find(".Checkout__product_name")
+        .text()
+        .replace(/^\d+\s*x\s*/, "")
+        .trim();
+      var product = {
+        name: name,
+        amount: amount,
+        price: {
+          productPrice: discount,
+          salePrice: sale,
+        },
+      };
+      productList.push(product);
+    });
+
+    var orderData = {
+      data: {
+        address: {
+          Name: $("#personalName").val(),
+          LastName: $("#personalLastName").val(),
+          Email: $("#personaEmail").val(),
+          AddressLine1: $("#personalAddressLine1").val(),
+          AddressLine2: $("#personalAddressLine2").val(),
+          City: $("#personaCity").val(),
+          State: $("#personaState").val(),
+          ZIP: $("#personaZIP").val(),
+          Phone: $("#personaPhone").val(),
+        },
+        products: productList,
+      },
+    };
+
+    var inputs = $(".Checkout__form .profileOverview__input");
+    var inputsErrors = $(".Checkout__form .input__error");
+    var isValid = true;
+    for (var i = 0; i < inputsErrors.length; i++) {
+      inputsErrors[i].textContent = "";
+      inputs[i].classList.remove("error");
+    }
+
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].value.trim() === "") {
+        inputsErrors[i].textContent = "Required";
+        inputs[i].classList.add("error");
+        isValid = false;
+      } else if (!new RegExp(inputs[i].pattern).test(inputs[i].value)) {
+        inputsErrors[i].textContent = "enter valid data";
+        inputs[i].classList.add("error");
+        isValid = false;
+      }
+    }
+
+    if (isValid) {
+      $.ajax({
+        url: pathToServer + "/api/orders",
+        method: "POST",
+        data: JSON.stringify(orderData),
+        dataType: "json",
+        contentType: "application/json",
+        success: function (response) {
+          localStorage.removeItem("basketItemsData");
+          localStorage.removeItem("basketList");
+          localStorage.removeItem("productObject");
+
+          window.location.replace("Checkout_fin.html");
+        },
+        error: function (xhr, status, error) {
+          console.log(error);
+        },
+      });
+    }
+  });
+}
+
 function updateProductList(sortBy, filter) {
   sortBy = sortBy.includes("&") ? sortBy.replace("&", "%26") : sortBy;
   // %26 екранування символу  &
@@ -455,7 +635,6 @@ function updateProductList(sortBy, filter) {
     data: {},
     dataType: "json",
     success: function (response) {
-      // Очищення списку товарів
       $(".shop__list").empty();
 
       response.data.forEach(function (element) {
@@ -463,8 +642,7 @@ function updateProductList(sortBy, filter) {
       });
     },
     error: function (xhr, status, error) {
-      // Обробка помилки
-      console.error(error);
+      console.log(error);
     },
   });
 }
@@ -499,10 +677,14 @@ function createShopListElement(element) {
     </div>
 
     <div class="packProduckItem__container">
-        <p class="packProduckItem__class" style="color: ${elementColor};">${element.attributes.class.data.attributes.name}</p>
+        <p class="packProduckItem__class" style="color: ${elementColor};">${
+    element.attributes.class.data.attributes.name
+  }</p>
         <p class="packProduckItem__name">${element.attributes.name}</p>
         <div class="packProduckItem__priceContainer">
-            <p class="packProduckItem__price">${element.attributes.price}</p>
+            <p class="packProduckItem__price">${
+              "$" + element.attributes.price
+            }</p>
             <p class="packProduckItem__price packProduckItem__priceDiscount">${discountPrice}</p>
         </div>
     </div>
@@ -550,7 +732,6 @@ window.addEventListener("beforeunload", function (event) {
   // event.preventDefault();
 });
 
-// Завантаження стилів після першого відображення сторінки
 function loadCSS(url) {
   var link = document.createElement("link");
   link.rel = "stylesheet";

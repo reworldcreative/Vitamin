@@ -9,6 +9,12 @@
   &__image {
     width: 100%;
     text-align: center;
+
+    img {
+      width: auto;
+      max-width: 190px;
+      object-fit: scale-down;
+    }
   }
 
   &__container {
@@ -89,6 +95,7 @@
     &__image {
       img {
         width: 131px;
+        max-width: 131px;
         height: 142px;
       }
     }
@@ -100,6 +107,7 @@
     &__image {
       img {
         width: 91.245px;
+        max-width: 92px;
         height: 102.367px;
       }
     }
@@ -167,6 +175,7 @@
     &__image {
       img {
         width: 171.17px;
+        max-width: 172px;
         height: 191.192px;
       }
     }

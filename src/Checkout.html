@@ -19,31 +19,36 @@
                         <div class="inputContainer">
                             <label class="profileOverview__lable" for="personalName">First Name</label>
                             <input class="profileOverview__input" id="personalName" name="personalName" type="text"
-                                placeholder="John">
+                                placeholder="John" pattern="[A-Za-z]+" required>
+                            <div class="input__error"></div>
                         </div>
 
                         <div class="inputContainer">
                             <label class="profileOverview__lable" for="personalLastName">Last Name</label>
                             <input class="profileOverview__input" id="personalLastName" name="personalLastName"
-                                type="text" placeholder="Smith">
+                                type="text" placeholder="Smith" pattern="[A-Za-z]+" required>
+                            <div class="input__error"></div>
                         </div>
 
                         <div class="inputContainer">
                             <label class="profileOverview__lable" for="personalAddressLine1">Address Line 1</label>
                             <input class="profileOverview__input" id="personalAddressLine1" name="personalAddressLine1"
-                                type="text" placeholder="Hilton st. 123">
+                                type="text" placeholder="Hilton st. 123" required>
+                            <div class="input__error"></div>
                         </div>
 
                         <div class="inputContainer">
                             <label class="profileOverview__lable" for="personalAddressLine2">Address Line 2</label>
                             <input class="profileOverview__input" id="personalAddressLine2" name="personalAddressLine2"
-                                type="text" placeholder="">
+                                type="text" placeholder="" required>
+                            <div class="input__error"></div>
                         </div>
 
                         <div class="inputContainer">
                             <label class="profileOverview__lable" for="personaCity">City</label>
                             <input class="profileOverview__input" id="personaCity" name="personaCity" type="text"
-                                placeholder="New York">
+                                placeholder="New York" pattern="[A-Za-z]+" required>
+                            <div class="input__error"></div>
                         </div>
 
                         <div class="inputContainer inputContainer__ZIP">
@@ -54,25 +59,30 @@
                                     <option value="FL">FL</option>
                                     <option value="WA">WA</option>
                                 </select>
+                                <div class="input__error"></div>
                             </div>
 
                             <div class="inputContainer">
                                 <label class="profileOverview__lable" for="personaZIP">ZIP / Postal Code</label>
                                 <input class="profileOverview__input" id="personaZIP" name="personaZIP" type="text"
-                                    placeholder="213 822">
+                                    placeholder="213 822" pattern="\d{6}" required>
+                                <div class="input__error"></div>
                             </div>
                         </div>
 
                         <div class="inputContainer">
                             <label class="profileOverview__lable" for="personaEmail">Email</label>
                             <input class="profileOverview__input" id="personaEmail" name="personaEmail" type="email"
-                                placeholder="johnsmith@gmail.com">
+                                placeholder="johnsmith@gmail.com"
+                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+                            <div class="input__error"></div>
                         </div>
 
                         <div class="inputContainer">
                             <label class="profileOverview__lable" for="personaPhone">Phone Number</label>
                             <input class="profileOverview__input" id="personaPhone" name="personaPhone" type="email"
-                                placeholder="8 029 876 56 21">
+                                placeholder="8 029 876 56 21" pattern="\d" required>
+                            <div class="input__error"></div>
                         </div>
                     </form>
                 </div>
@@ -171,7 +181,7 @@
                     </div>
                 </div>
 
-                <button class="Checkout__button">
+                <button class="Checkout__button" id="Order">
                     Place order
                 </button>
             </div>
