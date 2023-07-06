@@ -2,7 +2,8 @@ import * as functions from "./modules/functions.js";
 
 functions.isWebp();
 // functions.changeImages();
-var pathToServer = "http://localhost:1337";
+var pathToServer = "https://vitamin-bd.onrender.com";
+// local - "http://localhost:1337"
 $(document).ready(function () {
   if ($(".burger-button").length > 0) {
     $(".burger-button").click(function (event) {

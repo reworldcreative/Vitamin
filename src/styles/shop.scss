@@ -655,6 +655,12 @@
       }
     }
   }
+
+  .shopHero-Banner {
+    .column_second {
+      justify-content: center;
+    }
+  }
 }
 
 @media screen and (max-width: 360px) {
