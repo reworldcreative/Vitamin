@@ -381,9 +381,9 @@ $(document).ready(function () {
         "/api/products?populate=image&populate=class&populate=class.vitamins_color",
       method: "GET",
       data: {},
-      headers: {
-        "Cache-Control": "max-age=3600",
-      },
+      // headers: {
+      //   "Cache-Control": "max-age=3600",
+      // },
       dataType: "json",
       success: function (response) {
         response.data.forEach(function (element) {
@@ -638,9 +638,9 @@ function updateProductList(sortBy, filter) {
     method: "GET",
     data: {},
     dataType: "json",
-    headers: {
-      "Cache-Control": "max-age=3600",
-    },
+    // headers: {
+    //   "Cache-Control": "max-age=3600",
+    // },
     success: function (response) {
       $(".shop__list").empty();
 
