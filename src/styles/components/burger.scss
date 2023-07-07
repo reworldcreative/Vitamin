@@ -32,6 +32,7 @@
 
   &.active {
     display: block;
+    z-index: 40;
   }
   &__header {
     padding: 19px 20px;
