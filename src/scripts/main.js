@@ -374,6 +374,9 @@ $(document).ready(function () {
   checkBasketLength();
   basketTotalPriceChange();
 
+  // кількість на сторінці
+  // &pagination[pageSize]=8
+
   if ($(".shop").length > 0) {
     $.ajax({
       url:
@@ -647,6 +650,10 @@ function updateProductList(sortBy, filter) {
       response.data.forEach(function (element) {
         createShopListElement(element);
       });
+      var ViewButton = $("<button>")
+        .addClass("View-more-button")
+        .html(`View more`);
+      $(".shop__list").append(ViewButton);
     },
     error: function (xhr, status, error) {
       console.log(error);
