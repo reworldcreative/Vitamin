@@ -86,9 +86,17 @@
       opacity: 0.69;
       margin: 0px;
       margin-bottom: 30px;
+
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      max-height: 100px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    .quiz-button {
+    .quiz-button,
+    .action-button {
       display: block;
       width: fit-content;
       background-color: $Main-White;
@@ -268,6 +276,16 @@
         height: 180px;
       }
 
+      & .column_second {
+        margin-top: -20px;
+      }
+
+      &.main {
+        & .column_second {
+          margin-top: 20px;
+        }
+      }
+
       &__caption {
         font-size: 24px;
         margin-bottom: 15px;
@@ -284,7 +302,7 @@
       }
 
       &-pagination {
-        bottom: 30px !important;
+        bottom: 50px !important;
       }
     }
   }
@@ -322,6 +340,7 @@
         gap: 17px;
         display: flex;
         justify-content: center;
+        bottom: 50px !important;
       }
     }
   }
@@ -660,6 +679,26 @@
     .column_second {
       justify-content: center;
     }
+    &.main {
+      .shopHero-Banner__image {
+        max-width: 350px;
+      }
+    }
+    &__image {
+      max-width: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .shopHero-Banner-pagination {
+    position: relative !important;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .shopHero-Banner-pagination {
+    position: absolute !important;
   }
 }
 

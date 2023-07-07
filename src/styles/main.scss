@@ -995,6 +995,12 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .reviews__swiper {
+    padding-right: 20px !important;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .reviews {
     &__wrap {

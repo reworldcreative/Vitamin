@@ -144,13 +144,14 @@
     }
 
     &__list {
-      justify-content: flex-start;
+      justify-content: center;
       gap: 10px;
       margin-top: 45px;
     }
 
     &__item {
       width: 100%;
+      box-sizing: border-box;
       gap: 0px;
       padding: 11px 65px 11px 16px;
       &_name {
@@ -161,17 +162,54 @@
   }
 }
 
+@media screen and (max-width: 380px) {
+  .SignIn {
+    &__list {
+      justify-content: flex-start;
+    }
+
+    &__item {
+      box-sizing: content-box;
+      padding: 11px 85px 11px 16px;
+      &_name {
+        font-size: 16px;
+        margin-left: 35px;
+      }
+    }
+  }
+}
 @media screen and (max-width: 370px) {
   .SignIn {
+    &__list {
+      justify-content: center;
+    }
     &__item {
       width: auto;
-      padding: 11px 90px 11px 16px;
+      // padding: 11px 90px 11px 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .SignIn {
+    &__list {
+      justify-content: flex-start;
+    }
+    &__item {
+      width: 100%;
+      padding: 11px 65px 11px 16px;
+      &_name {
+        margin-left: 16px;
+      }
     }
   }
 }
 
 @media screen and (max-width: 310px) {
   .SignIn {
+    &__list {
+      justify-content: center;
+    }
     &__item {
       padding: 11px 20px;
 

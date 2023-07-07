@@ -802,7 +802,7 @@ window.addEventListener("DOMContentLoaded", function () {
 
         breakpoints: {
           300: {
-            slidesPerView: 1.1,
+            slidesPerView: 1,
             spaceBetween: 10,
           },
           600: {
@@ -909,8 +909,9 @@ function checkSize() {
         `<li><a class="shop__link" href="#">All categories</a></li>`
       );
 
-      $(".burger-menu .burger-menu__navigation").after(
-        `<div class="burger-menu__ShopBottom">
+      if ($(".burger-menu .burger-menu__ShopBottom").length == 0) {
+        $(".burger-menu .burger-menu__navigation").after(
+          `<div class="burger-menu__ShopBottom">
         <p class="burger-menu__ShopBottom_title">Don’t know what vitamins your body needs?</p>
         <p class="burger-menu__ShopBottom_text">Answer a few simple questions and automatically
             get a personalazed list of vitamins in minutes</p>
@@ -918,7 +919,8 @@ function checkSize() {
             Take the quiz
         </a>
     </div>`
-      );
+        );
+      }
     }
   }
 
@@ -931,6 +933,10 @@ function checkSize() {
     if ($(".productCard .productCard__autoship_text").length > 0) {
       $(".productCard__autoship_textFirst")[0].textContent =
         "Autoship this item every";
+    }
+
+    if ($(".burger-menu .burger-menu__ShopBottom").length > 0) {
+      $(".burger-menu .burger-menu__ShopBottom").remove();
     }
   }
 

@@ -106,7 +106,7 @@
     }
     .SignIn {
       &__list {
-        justify-content: flex-start;
+        // justify-content: flex-start;
         margin-top: 30px;
         margin-bottom: 45px;
       }
@@ -144,7 +144,18 @@
 @media screen and (max-width: 370px) {
   .SignUp {
     .SignIn__item {
-      padding: 11px 40px 11px 16px;
+      box-sizing: border-box;
+      // padding: 11px 40px 11px 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .SignUp {
+    .SignIn {
+      &__item {
+        box-sizing: content-box;
+      }
     }
   }
 }
@@ -157,15 +168,12 @@
     }
     .SignIn {
       &__item {
+        box-sizing: border-box;
         padding: 11px 20px;
 
         &_name {
           margin-left: 20px;
         }
-      }
-
-      &__list {
-        justify-content: flex-start;
       }
     }
   }

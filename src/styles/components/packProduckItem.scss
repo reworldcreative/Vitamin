@@ -43,6 +43,13 @@
     margin: 0px;
     margin-bottom: 19px;
     width: 265px;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    max-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__priceContainer {

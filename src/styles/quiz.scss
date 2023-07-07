@@ -35,6 +35,9 @@
   &__row {
     display: flex;
     width: 100%;
+    overflow: scroll;
+    height: 0vh;
+    min-height: 70%;
   }
 
   .column {
@@ -545,6 +548,13 @@
         margin-top: 0px;
       }
     }
+
+    #quizQuestion8 {
+      width: 70vw;
+      .inputContainer__radio {
+        margin-left: -10%;
+      }
+    }
   }
 }
 
@@ -573,6 +583,14 @@
       padding: 19px;
       // width: 100%;
       // width: -webkit-fill-available;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .quiz {
+    &__questions {
+      justify-content: flex-start;
     }
   }
 }
