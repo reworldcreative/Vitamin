@@ -832,7 +832,7 @@ window.addEventListener("DOMContentLoaded", function () {
             spaceBetween: 10,
           },
           500: {
-            slidesPerView: 1.2,
+            slidesPerView: 1.3,
             spaceBetween: 15,
           },
           1000: {
@@ -840,7 +840,7 @@ window.addEventListener("DOMContentLoaded", function () {
             spaceBetween: 20,
           },
           1500: {
-            slidesPerView: 1.2,
+            slidesPerView: 1.28,
             spaceBetween: 50,
           },
         },

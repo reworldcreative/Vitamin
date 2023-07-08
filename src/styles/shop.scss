@@ -12,7 +12,7 @@
     display: flex;
     // padding-left: 11.2%;
     // padding-left: 2.6%;
-    padding-left: 7.6%;
+    // padding-left: 7.6%;
     // justify-content: center;
   }
 
@@ -180,7 +180,7 @@
 @media screen and (max-width: 1000px) {
   .shopHero {
     .swiper-wrapper {
-      padding-left: 10%;
+      // padding-left: 10%;
     }
     &-Banner {
       display: grid !important;
@@ -263,6 +263,10 @@
         bottom: 55px !important;
       }
     }
+
+    .swiper-slide {
+      height: 100vh !important;
+    }
   }
 }
 
@@ -272,7 +276,7 @@
       padding: 0px;
     }
     &-Banner {
-      width: 90% !important;
+      width: 92% !important;
       &__image {
         height: 180px;
       }
@@ -306,6 +310,18 @@
         bottom: 50px !important;
       }
     }
+
+    .swiper-slide {
+      height: auto !important;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .shopHero {
+    &-Banner {
+      width: 91% !important;
+    }
   }
 }
 
@@ -318,6 +334,7 @@
     }
     &-Banner {
       border-radius: 0px;
+      width: 90% !important;
       padding: 45px 20px 70px !important;
       &-pagination {
         bottom: 40px !important;
@@ -545,7 +562,7 @@
   .shop {
     &__wrap {
       display: block;
-      margin-top: 20px;
+      margin-top: 50px;
     }
 
     &__title {
@@ -581,7 +598,7 @@
   .shop {
     &__wrap {
       width: 100%;
-      margin: 20px auto 62px;
+      margin: 50px auto 62px;
     }
     .packProduckItem__wrap {
       height: 320px;
