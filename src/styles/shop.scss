@@ -101,7 +101,7 @@
       width: fit-content;
       background-color: $Main-White;
       color: $Main-Dark_Text;
-      font-size: 20px;
+      font-size: 18px;
       padding: 20px 69px;
     }
 
@@ -405,6 +405,7 @@
     font-size: 22px;
     font-family: "Effra", sans-serif;
     text-decoration: none;
+    margin: 0px;
 
     &.sale {
       color: $Red;
