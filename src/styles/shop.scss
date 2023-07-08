@@ -626,7 +626,7 @@
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 370px) {
   .shop {
     &__wrap {
       margin: 20px auto 62px;
@@ -672,6 +672,8 @@
       }
       &__image {
         width: 200px;
+        max-width: 200px;
+        object-fit: scale-down;
       }
     }
   }
