@@ -35,9 +35,12 @@
   &__row {
     display: flex;
     width: 100%;
-    overflow: scroll;
-    height: 0vh;
-    min-height: 70%;
+    // overflow: scroll;
+    // height: auto;
+    // overflow-y: scroll;
+    // overflow-x: clip;
+    // height: 100vh;
+    // min-height: 70%;
   }
 
   .column {
@@ -416,9 +419,18 @@
 
 @media screen and (max-width: 1300px) {
   .quiz {
+    &__question {
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .quiz {
     #quizQuestion8 {
       .inputContainer__radio {
-        margin-left: -22%;
+        margin-left: -20%;
       }
     }
   }
@@ -426,13 +438,21 @@
 
 @media screen and (max-width: 1000px) {
   .quiz {
+    &__top {
+      position: relative;
+    }
     background: $Main-Orange_bg;
     &__body {
       // display: block;
-      height: 100vh;
+      height: 80vh;
       align-items: center;
       display: grid;
       background: $Main-Orange_bg;
+    }
+
+    &__bottom {
+      position: relative;
+      bottom: -20px;
     }
 
     &__logo {
@@ -446,8 +466,10 @@
     .column_second {
       // height: 47vh;
       // height: auto;
-      height: fit-content;
+      height: inherit;
       max-width: 100%;
+      // overflow-y: scroll;
+      // overflow-x: clip;
     }
 
     .column_first {
@@ -457,6 +479,7 @@
       // height: 50vh;
       height: fit-content;
       background: $Main-Orange_bg;
+      // margin-top: 15%;
     }
 
     &__question {
@@ -482,11 +505,32 @@
 
     &__questionContainer {
       .inputContainer {
+        &__radio {
+          overflow: scroll;
+          max-height: 60vh;
+        }
         .quiz__button {
           background-color: #dddddd;
           font-size: 30px;
           padding: 19px 30px;
         }
+      }
+    }
+
+    #quizQuestion8 {
+      .inputContainer__radio {
+        margin-left: -15%;
+        width: 80vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .quiz {
+    #quizQuestion8 {
+      .inputContainer__radio {
+        margin-left: -19%;
       }
     }
   }
@@ -552,7 +596,35 @@
     #quizQuestion8 {
       width: 70vw;
       .inputContainer__radio {
-        margin-left: -10%;
+        margin-left: -14%;
+      }
+      .quiz__radioLable {
+        width: 29%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .quiz {
+    #quizQuestion8 {
+      .inputContainer__radio {
+        gap: 10px 15px;
+      }
+      .quiz__radioLable {
+        width: 30%;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+    }
+
+    #quizQuestion4,
+    #quizQuestion5,
+    #quizQuestion8 {
+      max-height: 50vh;
+      .inputContainer__radio {
+        // width: max-content;
       }
     }
   }
@@ -567,7 +639,8 @@
       align-items: baseline;
       padding: 0px 20px 0vh;
     }
-    #quizQuestion2 {
+    #quizQuestion2,
+    #quizQuestion7 {
       .inputContainer__radio {
         display: flex;
       }
@@ -575,6 +648,13 @@
       .quiz__radioLable {
         width: 100%;
         padding: 41px;
+      }
+    }
+
+    #quizQuestion8 {
+      width: 70vw;
+      .inputContainer__radio {
+        margin-left: 10%;
       }
     }
     &__radioLable {
@@ -590,7 +670,23 @@
 @media screen and (max-width: 400px) {
   .quiz {
     &__questions {
-      justify-content: flex-start;
+      // justify-content: flex-start;
+    }
+
+    &__form {
+      width: 100%;
+    }
+
+    #quizQuestion4,
+    #quizQuestion5 {
+      .inputContainer__radio {
+        // width: 100vw;
+        // justify-content: flex-start;
+      }
+
+      &__radioLable {
+        width: 100%;
+      }
     }
   }
 }
