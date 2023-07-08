@@ -11,7 +11,8 @@
   .swiper-wrapper {
     display: flex;
     // padding-left: 11.2%;
-    padding-left: 2.6%;
+    // padding-left: 2.6%;
+    padding-left: 7.6%;
     // justify-content: center;
   }
 
@@ -385,6 +386,7 @@
     margin: 53px auto 100px;
     width: 77.7%;
     display: flex;
+    gap: 70px;
   }
 
   &__sidebar {
@@ -442,8 +444,8 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: end;
-    width: 100%;
+    justify-content: start;
+    width: 80%;
     gap: 32px;
   }
 
@@ -492,6 +494,26 @@
   }
 }
 
+@media screen and (max-width: 1795px) {
+  .shop {
+    &__wrap {
+      gap: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 1750px) {
+  .shop {
+    &__wrap {
+      gap: 0px;
+    }
+
+    &__list {
+      width: 100%;
+    }
+  }
+}
+
 @media screen and (max-width: 1700px) {
   .shop {
     &__wrap {
@@ -499,7 +521,7 @@
     }
 
     &__sidebar {
-      width: 30%;
+      width: 20%;
     }
   }
 }
@@ -510,6 +532,7 @@
       width: 97%;
       padding: 0px 20px;
       box-sizing: border-box;
+      gap: 0px;
     }
 
     &__sidebar {
@@ -576,6 +599,10 @@
       height: 280px;
     }
   }
+
+  .shopHero .swiper-wrapper {
+    padding-left: 0%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -607,6 +634,16 @@
       margin-top: 15px;
       display: flex;
     }
+  }
+
+  .shopHero-Banner-pagination {
+    bottom: 20px !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .shopHero-Banner-pagination {
+    bottom: 50px !important;
   }
 }
 
