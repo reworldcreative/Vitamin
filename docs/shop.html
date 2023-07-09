@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap&_v=20230709210222" rel="stylesheet"> -->
+
+    <!-- swiper -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20230709210222" /> -->
+
+    <link rel="stylesheet" href="styles/style.min.css?_v=20230709210222">
+</head>
+
+<body>
+    <nav class="burger-menu">
+    <div class="burger-menu__header">
+        <button class="close-button" aria-label="close menu">
+            <img src="img/icons/Close.svg" alt="Close icon" width="18" height="18" aria-hidden="true">
+        </button>
+
+        <!-- <div class="profile__img">
+            <img src="img/icons/Profile.svg" alt="profile logo" width="26" height="26">
+        </div> -->
+    </div>
+    <ul class="burger-menu__navigation">
+        <li class="burger-menu__item"><a href="shop.html" class="burger-menu__link">Shop</a></li>
+        <li class="burger-menu__item"><a href="#" class="burger-menu__link">Information</a></li>
+        <li class="burger-menu__item"><a href="quiz.html" class="burger-menu__link accent">Take the quiz</a></li>
+    </ul>
+
+    <!-- <div class="burger-menu__ShopBottom">
+        <p class="burger-menu__ShopBottom_title">Don’t know what vitamins your body needs?</p>
+        <p class="burger-menu__ShopBottom_text">Answer a few simple questions and automatically
+            get a personalazed list of vitamins in minutes</p>
+        <a href="quiz.html" class="quiz-button @@class">
+            Take the quiz
+        </a>
+    </div> -->
+
+    <div class="burger-menu__bottom">
+        <a class="footer__text" href="mailto:support@medstogo.com">support@medstogo.com</a>
+        <p class="burger__copyright">© 2020 Vitamins.com / All rights reserved</p>
+    </div>
+
+</nav>
+<aside class="basket">
+
+    <div class="basket__top">
+        <p class="basket__title">Cart</p>
+        <button class="close-button close-cart" aria-label="close basket">
+            <img src="img/icons/Close.svg" alt="Close icon" width="18" height="18" aria-hidden="true">
+        </button>
+    </div>
+
+    <div class="basket__empty">
+        <p class="basket__empty_text">Your cart is empty</p>
+        <img class="basket__empty_bg" src="img/logo.svg" alt="logo bg" width="294px" height="350px">
+    </div>
+
+    <ul class="basket__list">
+
+    </ul>
+
+    <div class="basket__bottom">
+        <button class="basket__order-button">
+            Check Out •&nbsp<div class="basket__totalPrice"> $156.58</div>
+        </button>
+
+        <p class="basket__bottom_minimunOrder">Minimum order amount is $700</p>
+    </div>
+</aside>
+
+<div class="basket__bg"></div>
+<header class="header">
+    <div class="header__wrap">
+        <button class="burger-button" aria-label="open menu">
+            <span class="burger-button__line" aria-hidden="true"></span>
+            <span class="burger-button__line" aria-hidden="true"></span>
+            <span class="burger-button__line" aria-hidden="true"></span>
+        </button>
+
+        <a href="index.html" class="header__logo">
+            <img src="img/logo.svg" alt="company logo" width="42" height="50">
+        </a>
+
+        <div class="header__buttons">
+            <a href="SignIn.html" class="profile__img">
+                <img src="img/icons/Profile.svg" alt="profile logo" width="26" height="26">
+            </a>
+            <div class="cart__img">
+                <span class="cart__img_alert"></span>
+                <img src="img/icons/Cart.svg" alt="cart logo" width="22" height="26">
+            </div>
+
+            <a href="quiz.html" class="quiz-button @@class">
+    Take the quiz
+</a>
+        </div>
+    </div>
+</header>
+
+    <main>
+        <section class="shopHero">
+            <div class="shopHero__wrap">
+                <div class="shopHero__slider swiper">
+                    <div class="swiper-wrapper">
+                        <!-- <div class="shopHero-Banner swiper-slide purple main">
+                            <div class="column column_first">
+                                <h2 class="shopHero-Banner__caption">Don’t know what vitamins your body needs?</h2>
+                                <p class="shopHero-Banner__text">Answer a few simple questions and automatically
+                                    get a personalazed list of vitamins in minutes</p>
+                                <a href="quiz.html" class="quiz-button @@class">
+    Take the quiz
+</a>
+                            </div>
+                            <div class="column column_second">
+                                <img class="shopHero-Banner__image" src="img/vitamins/vitamin01.png" alt="vitamin"
+                                    width="690px" height="690px">
+                            </div>
+                        </div> -->
+                        <div class="shopHero-Banner swiper-slide purple main">
+    <div class="column column_first">
+        <p class="shopHero-Banner__title"></p>
+        <h2 class="shopHero-Banner__caption">Don’t know what vitamins your body needs?</h2>
+        <p class="shopHero-Banner__text">Answer a few simple questions and automatically get a personalazed list of vitamins in minutes</p>
+        
+        <a href="quiz.html" class="action-button quiz-button">
+            Take the quiz
+        </a>
+        
+    </div>
+    <div class="column column_second">
+        <picture><source srcset="img/vitamins/vitamin01.webp" type="image/webp"><img class="shopHero-Banner__image" src="img/vitamins/vitamin01.png" alt="vitamin" width="690px" height="690px"></picture>
+    </div>
+</div>
+                        <div class="shopHero-Banner swiper-slide violet">
+    <div class="column column_first">
+        <p class="shopHero-Banner__title">You may also like</p>
+        <h2 class="shopHero-Banner__caption">Vitamins & Dietary Supplements</h2>
+        <p class="shopHero-Banner__text">Answer a few simple questions and automatically get a personalazed list of vitamins in minutes</p>
+        
+        <a href="#shop" class="action-button quiz-button">
+             View category
+        </a>
+        
+    </div>
+    <div class="column column_second">
+        <picture><source srcset="img/vitamins/vitamin_4.webp" type="image/webp"><img class="shopHero-Banner__image" src="img/vitamins/vitamin_4.png" alt="vitamin" width="363px" height="406px"></picture>
+    </div>
+</div>
+
+                        <div class="shopHero-Banner swiper-slide blue">
+    <div class="column column_first">
+        <p class="shopHero-Banner__title">You may also like</p>
+        <h2 class="shopHero-Banner__caption">Pain Relief Products</h2>
+        <p class="shopHero-Banner__text">Answer a few simple questions and automatically get a personalazed list of vitamins in minutes</p>
+        
+        <a href="#shop" class="action-button quiz-button">
+             View category
+        </a>
+        
+    </div>
+    <div class="column column_second">
+        <picture><source srcset="img/vitamins/vitamin_5.webp" type="image/webp"><img class="shopHero-Banner__image" src="img/vitamins/vitamin_5.png" alt="vitamin" width="414px" height="252px"></picture>
+    </div>
+</div>
+
+                    </div>
+
+                    <div>
+                        <div class="shopHero-Banner-pagination swiper-pagination"></div>
+
+                        <div class="shopHero-Banner-button-prev swiper-button-prev"></div>
+                        <div class="shopHero-Banner-button-next swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="shop" id="shop">
+            <div class="shop__wrap">
+                <aside class="shop__sidebar">
+                    <h3 class="shop__title active">All categories</h3>
+                    <nav>
+                        <ul class="shop__navigation">
+                            <li>
+                                <p class="shop__link product-sort">Vitamins & Dietary Supplements</p>
+                            </li>
+                            <li>
+                                <p class="shop__link product-sort">Weight Loss</p>
+                            </li>
+                            <li>
+                                <p class="shop__link product-sort">Minerals</p>
+                            </li>
+                            <li>
+                                <p class="shop__link product-sort">Antioxidants</p>
+                            </li>
+                            <li>
+                                <p class="shop__link product-sort">Probiotics</p>
+                            </li>
+                            <li>
+                                <p class="shop__link product-sort">Pain Relief</p>
+                            </li>
+                            <li>
+                                <p class="shop__link product-sort">Prenatal Vitamins</p>
+                            </li>
+                            <li>
+                                <p class="shop__link sale product-sale">Sale%</p>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+
+                <div class="shop__list">
+                    
+
+                    <button class="View-more-button">
+                        View more
+                    </button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="shopBanner">
+            <div class="shopHero-Banner swiper-slide blue">
+    <div class="column column_first">
+        <p class="shopHero-Banner__title">You may also like</p>
+        <h2 class="shopHero-Banner__caption">Pain Relief Products</h2>
+        <p class="shopHero-Banner__text">Answer a few simple questions and automatically get a personalazed list of vitamins in minutes</p>
+        
+        <a href="#shop" class="action-button quiz-button">
+             View category
+        </a>
+        
+    </div>
+    <div class="column column_second">
+        <picture><source srcset="img/vitamins/vitamin_5.webp" type="image/webp"><img class="shopHero-Banner__image" src="img/vitamins/vitamin_5.png" alt="vitamin" width="414px" height="252px"></picture>
+    </div>
+</div>
+        </section>
+
+        <section class="shopReviews">
+            <div class="shopReviews__wrap">
+                <h2 class="section-title">What healthy and happy customer says</h2>
+                <div class="reviews__swiper swiper">
+    <ul class="reviews__list swiper-wrapper">
+        <li class="reviews__item swiper-slide">
+            <article class="respond">
+    <ul class="star__list">
+        <li class="star">
+            <img src="img/icons/star.svg" alt="star icon" width="19px" height="19px">
+        </li>
+        <li class="star">
+            <img src="img/icons/star.svg" alt="star icon" width="19px" height="19px">
+        </li>
+        <li class="star">
+            <img src="img/icons/star.svg" alt="star icon" width="19px" height="19px">
+        </li>
+        <li class="star">
+            <img src="img/icons/star.svg" alt="star icon" width="19px" height="19px">
+        </li>
+        <li class="star">
+            <img src="img/icons/star.svg" alt="star icon" width="19px" height="19px">
+        </li>
+    </ul>
+
+    <h3 class="respond__caption">Easy monitoring your weight goal!</h3>
+    <p class="respond__discription">Love Vitamins! The individual packets make it so easy to remember you daily vitamins and makes travelling easy!!! 👍🏽</p>
+
+    <div class="respond__person">
+        <picture><source srcset="img/persons/person1.webp" type="image/webp"><img class="person__icon" src="img/persons/person1.png" alt="man" width="48px" height="48px"></picture>
+        <h4 class="person__name">David S.</h4>
+    </div>
+</article>
+        </li>
+        <li class="reviews__item swiper-slide">
+            <article class="respond">
+    <ul class="star__list">
+        <li class="star">
+            <img src="img/icons/star.svg" alt="star icon" width="19px" height="19px">
+        </li>
+        <li class="star">
+            <img src="img/icons/star.svg" alt="star icon" width="19px" height="19px">
+        </li>
+        <li class="star">
+            <img src="img/icons/star.svg" alt="star icon" width="19px" height="19px">
+        </li>
+        <li class="star">
+            <img src="img/icons/star.svg" alt="star icon" width="19px" height="19px">
+        </li>
+        <li class="star">
+            <img src="img/icons/star.svg" alt="star icon" width="19px" height="19px">
+        </li>
+    </ul>
+
+    <h3 class="respond__caption">High quality vitamins & supplements</h3>
+    <p class="respond__discription">High quality vitamins & supplements, very easy on my stomach too. Great service! I really like the flexibility and options available in the subscriptions.</p>
+
+    <div class="respond__person">
+        <picture><source srcset="img/persons/person2.webp" type="image/webp"><img class="person__icon" src="img/persons/person2.png" alt="man" width="48px" height="48px"></picture>
+        <h4 class="person__name">Bridget T.</h4>
+    </div>
+</article>
+        </li>
+        <li class="reviews__item swiper-slide">
+            <article class="respond">
+    <ul class="star__list">
+        <li class="star">
+            <img src="img/icons/star.svg" alt="star icon" width="19px" height="19px">
+        </li>
+        <li class="star">
+            <img src="img/icons/star.svg" alt="star icon" width="19px" height="19px">
+        </li>
+        <li class="star">
+            <img src="img/icons/star.svg" alt="star icon" width="19px" height="19px">
+        </li>
+        <li class="star">
+            <img src="img/icons/star.svg" alt="star icon" width="19px" height="19px">
+        </li>
+        <li class="star">
+            <img src="img/icons/star.svg" alt="star icon" width="19px" height="19px">
+        </li>
+    </ul>
+
+    <h3 class="respond__caption">I love it</h3>
+    <p class="respond__discription">I love it. It makes me feel good each morning and then it also makes me feel accomplished. </p>
+
+    <div class="respond__person">
+        <picture><source srcset="img/persons/person3.webp" type="image/webp"><img class="person__icon" src="img/persons/person3.png" alt="man" width="48px" height="48px"></picture>
+        <h4 class="person__name">Jenna Y.</h4>
+    </div>
+</article>
+        </li>
+    </ul>
+</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+    <div class="footer__wrap">
+
+        <div class="footer__logo">
+            <img class="footer__img" data-src="img/logo.svg" alt="logo" width="85.5px" height="99px">
+            <p class="footer__copyright">© 2020 Vitamins.com / All rights reserved</p>
+        </div>
+
+        <div class="footer__navigation">
+
+            <nav class="navigation">
+                <div class="navigation__container">
+                    <h3 class="footer__caption">Shop</h3>
+
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a class="footer__text" href="#">Vitamins & Dietary Supplements</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="footer__text" href="#">Weight Loss</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="footer__text" href="#">Minerals</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="footer__text" href="#">Antioxidants</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="footer__text" href="#">Probiotics</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="footer__text" href="#">Pain Relief</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="footer__text" href="#">Prenatal Vitamins</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="navigation__container">
+                    <h3 class="footer__caption">Information</h3>
+
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a class="footer__text" href="#">Terms & Conditions</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="footer__text" href="#">Privacy Policy</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="footer__text" href="#">Shipping & Delivery</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="footer__text" href="#">Subscription Cycle & Billing</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="footer__text" href="#">Return Policy</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="contacts">
+                <h3 class="footer__caption">Contact</h3>
+                <address>
+                    <a class="footer__text" href="mailto:support@medstogo.com">support@medstogo.com</a>
+
+                    <ul class="socials">
+                        <li class="socials__item">
+                            <a class="socials__link" href="https://www.facebook.com" target="_blank">
+                                <img class="socials__image" src="img/icons/facebook.svg" alt="facebook icon"
+                                    width="22px" height="22px">
+                                <p class="socials__name">Facebook</p>
+                            </a>
+                        </li>
+                        <li class="socials__item">
+                            <a class="socials__link" href="https://www.instagram.com" target="_blank">
+                                <img class="socials__image" src="img/icons/instagram.svg" alt="instagram icon"
+                                    width="22px" height="22px">
+                                <p class="socials__name">Instagram</p>
+                            </a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20230709210222"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="scripts/main.min.js?_v=20230709210222"></script>
+</body>
+
+</html>
